@@ -108,30 +108,24 @@ Requirements
 
 Every function includes a complete docstring.
 
-Preferred format
+Preferred format (Google style)
 
 ```python
 def calculate_daily_revenue(customers, hourly_rate, fixed_rate):
-    """
-    Calculate the total parking revenue collected.
+    """Calculate the total parking revenue collected.
 
-    Parameters
-    ----------
-    customers : list[int]
-        Parking duration for each customer.
+    Args:
+        customers (list[int]): Parking duration for each customer.
+        hourly_rate (int): Cost per hour.
+        fixed_rate (int): Flat parking fee.
 
-    hourly_rate : int
-        Cost per hour.
-
-    fixed_rate : int
-        Flat parking fee.
-
-    Returns
-    -------
-    int
-        Total revenue collected.
+    Returns:
+        int: Total revenue collected.
     """
 ```
+
+Use Google-style docstrings for both functions and methods. Class-based
+assessments follow SPEC-005 (`43-oop-class-spec.md`).
 
 Every parameter must be documented.
 

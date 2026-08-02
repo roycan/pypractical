@@ -1,0 +1,21 @@
+title: Parking Garage Daily Report
+
+family: Minimum Cost
+
+difficulty: 1/5
+
+estimated_time: 15 minutes
+
+language: Python
+
+concepts:
+  - variables
+  - arithmetic
+  - if
+  - loops
+  - accumulators
+  - functions
+
+grading: automatic unittest
+
+version: 1.0

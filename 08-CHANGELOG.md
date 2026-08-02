@@ -127,6 +127,41 @@ YYYY-MM-DD
 
 ---
 
+# Actual Releases
+
+## Version 0.1.0 — Round 1 Foundation
+
+Release Date:
+
+2026-08-02
+
+### Added
+
+* SPEC-005 class-based (OOP) problem specification (`43-oop-class-spec.md`), extending
+  SPEC-001/SPEC-002 to cover classes, attributes, and methods.
+* Canonical function reference problem — Parking Garage Daily Report
+  (`Family-01-Minimum-Cost/01-Parking-Garage/`), 6 deliverables.
+* Canonical OOP reference problem — TV Recorder Scheduler
+  (`Family-02-Intro-OOP/01-TV-Recorder/`), 6 deliverables.
+* `metadata.yml` schema established (title, family, difficulty, estimated_time,
+  language, concepts, grading, version).
+* Round 1 plan with per-task feasibility/confidence scorecard
+  (`plans/round-1-foundation-plan.md`).
+
+### Improved
+
+* `41-python-template-spec.md` (SPEC-002): docstring standard set to Google style
+  bank-wide.
+* OOP placeholder rule documented in SPEC-005 (`__init__` and void methods use a bare
+  `return`; value methods use `return False`/`0`/`[]`/`""`/`None`).
+
+### Verified
+
+* All 26 unit tests pass by execution (12 parking-garage + 14 tv-recorder).
+* Every expected value independently verified by hand and by running the suites.
+
+---
+
 # Example Release
 
 ## Version 1.0.0

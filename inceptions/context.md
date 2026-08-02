@@ -30,9 +30,10 @@ Key facts:
 - **Grading model:** Automatic via Python `unittest` — score = percentage of passing tests
   (all tests carry equal weight).
 - **License:** Dual — CC BY-SA 4.0 (documents) + MIT (code).
-- **Current state:** The repository contains philosophy, templates, specs, and standards
-  **ONLY**. No actual assessment family directories exist yet — they are planned per the
-  roadmap. **Family 1 (Minimum Cost)** is the first planned release.
+- **Current state:** **Round 1 (Foundation) is COMPLETE.** The repo now contains two
+  canonical, spec-compliant, runnable reference problems plus a class-based spec
+  addendum (SPEC-005). Next: Round 2 scales the OOP families. See Section 23 for
+  progress, and `plans/round-1-foundation-plan.md` for the plan.
 
 ---
 
@@ -73,6 +74,8 @@ All links are relative from `inceptions/` (hence the `../` prefix).
   structure of student starter code
 - [`42-unittest-spec.md`](../42-unittest-spec.md) — SPEC-004: required structure of unittest
   files (**NOTE:** SPEC-003 is skipped/missing)
+- [`43-oop-class-spec.md`](../43-oop-class-spec.md) — SPEC-005: class-based (OOP) problem
+  spec, extending SPEC-001/SPEC-002 to classes (added in Round 1)
 
 ### Standards (STD system)
 
@@ -100,6 +103,17 @@ All links are relative from `inceptions/` (hence the `../` prefix).
 - [`LICENSE.md`](../LICENSE.md) — Dual licensing (CC BY-SA 4.0 + MIT)
 - [`licenseOur_promise.md`](../licenseOur_promise.md) — 6 cultural promises accompanying the
   license
+
+### Assessment Content & Plans (Round 1+)
+
+- [`Family-01-Minimum-Cost/01-Parking-Garage/`](../Family-01-Minimum-Cost/01-Parking-Garage/problem.md)
+  — canonical **function-based** reference problem (6 deliverables, 12 tests)
+- [`Family-02-Intro-OOP/01-TV-Recorder/`](../Family-02-Intro-OOP/01-TV-Recorder/problem.md)
+  — canonical **class-based (OOP)** reference problem (6 deliverables, 14 tests)
+- [`plans/round-1-foundation-plan.md`](../plans/round-1-foundation-plan.md) — Round 1 plan
+  and outcome (task scorecard + results)
+- `examples/` — legacy pre-spec snippets (parking-garage, internet-cafe, tv-recording);
+  kept as-is, superseded by the canonical `Family-NN/` versions
 
 ---
 
@@ -249,6 +263,10 @@ Key rules:
   **NO unnecessary imports**.
 - Python 3.10+ compatible.
 - Descriptive names: `parking_hours`, `total_revenue` (avoid `a`, `x`, `temp`, `list1`).
+- **Docstrings: Google style** (Args/Returns) across the whole bank (set in Round 1).
+- **Class-based (OOP) assessments:** follow **SPEC-005** (`43-oop-class-spec.md`), which
+  adapts these rules to classes and methods (e.g., `__init__`/void methods use a bare
+  `return` placeholder).
 
 ---
 
@@ -361,6 +379,7 @@ From [`61-markdown-style-std.md`](../61-markdown-style-std.md):
 | SPEC-001    | 40-problem-markdown-spec.md           | Problem Markdown structure |
 | SPEC-002    | 41-python-template-spec.md            | Starter code structure |
 | SPEC-004    | 42-unittest-spec.md                   | Unit test structure    |
+| SPEC-005    | 43-oop-class-spec.md                  | Class-based (OOP) spec |
 | STD-001     | 60-python-style-std.md                | Python style           |
 | STD-002     | 61-markdown-style-std.md              | Markdown style         |
 | (none)      | 66-assessment-scoring-std.md          | Scoring rules          |
@@ -481,9 +500,12 @@ Documented known issues — be aware of these when working in the repo:
 5. **Repository structure varies between docs:** `README.md` shows a simplified structure;
    `PROJECT_GUIDE.md` shows the detailed per-problem file layout. **Use PROJECT_GUIDE.md's
    structure as authoritative.**
-6. **No assessment content exists yet** — only philosophy, templates, specs, standards.
-   Family 1 (Minimum Cost: Parking Garage, Internet Café, Theme Park, Printing Center) is
-   the first planned.
+6. **Assessment content (Round 1 foundation):** two canonical reference problems now exist
+   — `Family-01-Minimum-Cost/01-Parking-Garage/` (function) and
+   `Family-02-Intro-OOP/01-TV-Recorder/` (OOP) — plus SPEC-005. Full isomorphic variants
+   per topic are built in Round 2. The legacy `examples/` snippets pre-date the specs and
+   are NOT compliant (they use `pass` and lack the test import/guard) — treat the
+   `Family-NN/` versions as canonical.
 
 ---
 
@@ -575,6 +597,14 @@ flowchart TD
 ```
 
 ---
+
+## 23. Round-by-Round Progress
+
+| Round | Scope | Status |
+|---|---|---|
+| Round 1 — Foundation | SPEC-005 addendum + 2 canonical references (function + OOP); Google docstrings standardized | ✅ Complete (2026-08-02); 26/26 tests pass |
+| Round 2 — OOP families | Scale OOP families in dependency order: SG 3 → 4 → 5 → 8 → 9 → 10 → 11 → 12 → 6 → 7 → 27; ~3-4 isomorphic problems each | ⏳ Not started |
+| Round 3 — Data handling | SG 18 (files) → 19 (analysis) → 20 (JSON); needs a file-I/O fixture pattern | ⏳ Not started |
 
 > **Note:** This file should be updated as the project evolves. It is a **living document**.
 > When new families are added, specs change, or conventions evolve, update this context file

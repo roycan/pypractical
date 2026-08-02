@@ -119,3 +119,21 @@ reveal which metadata is actually useful. This is the single biggest confidence 
 - Specs are authoritative over the legacy `examples/` (we upgrade, not relax specs).
 - Existing `examples/` files are left in place as legacy; compliant copies go to the
   `Family-NN/` structure.
+
+## Round 1 — Outcome (COMPLETE)
+
+All seven tasks delivered and verified by execution.
+
+| # | Task | Result |
+|---|---|---|
+| T1 | OOP class-based spec addendum | Done — [`../43-oop-class-spec.md`](../43-oop-class-spec.md), signed off |
+| T2 | Function reference (parking-garage) | Done — 12/12 tests pass |
+| T3 | OOP reference (tv-recording) | Done — 14/14 tests pass |
+| T4 | Verify expected values by execution | Done — both suites green |
+| T5 | `metadata.yml` (both) | Done — your schema, in scope |
+| T6 | `teacher_notes.md` (both) | Done |
+| T7 | Regression + spec checklist | Done |
+
+Docstring standard set to **Google style** bank-wide
+([`../41-python-template-spec.md`](../41-python-template-spec.md) updated).
+Round 2 (scale OOP families in dependency order) is now unblocked.
