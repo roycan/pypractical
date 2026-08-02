@@ -1,6 +1,6 @@
 # Teacher Notes — TV Recorder Scheduler
 
-> Family 02 · Intro to OOP · Assessment 01 · Difficulty 2/5 · ~20 minutes
+> Family 03 · Classes and Objects · Assessment 01 · Difficulty 2/5 · ~20 minutes
 
 ## Learning Objective
 

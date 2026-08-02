@@ -1,4 +1,4 @@
-"""Unit tests for TV Recorder Scheduler -- Family 02, Assessment 01."""
+"""Unit tests for TV Recorder Scheduler -- Family 03, Assessment 01."""
 
 import unittest
 

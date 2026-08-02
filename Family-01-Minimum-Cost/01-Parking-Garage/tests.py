@@ -60,5 +60,5 @@ class TestParkingGarage(unittest.TestCase):
         self.assertEqual(calculate_total_revenue([20], 100, 1500), 1500)
 
 
-if __name__ == "__main__":
-    unittest.main()
+# if __name__ == "__main__":
+#     unittest.main()

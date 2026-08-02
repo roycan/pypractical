@@ -1,4 +1,4 @@
-"""TV Recorder Scheduler -- Family 02, Assessment 01 (starter).
+"""TV Recorder Scheduler -- Family 03, Assessment 01 (starter).
 
 Complete the Program and Recorder classes. Do NOT modify minimum_recorders.
 """
