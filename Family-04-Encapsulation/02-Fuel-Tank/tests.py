@@ -2,7 +2,12 @@
 
 import unittest
 
-from solution import FuelTank
+try:
+    from solution import FuelTank
+except ModuleNotFoundError:
+    # Serverless runner injects student code into this namespace, so the
+    # imported names are already defined; local unittest still imports solution.py.
+    pass
 
 
 class TestFuelTank(unittest.TestCase):

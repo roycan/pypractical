@@ -2,7 +2,12 @@
 
 import unittest
 
-from solution import Interview, Interviewer, minimum_interviewers
+try:
+    from solution import Interview, Interviewer, minimum_interviewers
+except ModuleNotFoundError:
+    # Serverless runner injects student code into this namespace, so the
+    # imported names are already defined; local unittest still imports solution.py.
+    pass
 
 
 class TestInterviewSchedulerSystem(unittest.TestCase):

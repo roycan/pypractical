@@ -83,8 +83,18 @@ and the student's solution.
 Example
 
 ```python
-from solution import calculate_daily_revenue
+try:
+    from solution import calculate_daily_revenue
+except ModuleNotFoundError:
+    # Serverless runner injects student code into this namespace, so the
+    # imported names are already defined; local unittest still imports solution.py.
+    pass
 ```
+
+The `try/except` guard lets the same suite run in two places: a serverless
+runner injects the student's code into the test module's namespace (the names
+are already defined and `solution.py` is absent), while local `unittest`
+imports `solution.py` directly.
 
 Avoid unnecessary imports.
 

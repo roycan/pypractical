@@ -2,7 +2,12 @@
 
 import unittest
 
-from solution import Battery, Flashlight
+try:
+    from solution import Battery, Flashlight
+except ModuleNotFoundError:
+    # Serverless runner injects student code into this namespace, so the
+    # imported names are already defined; local unittest still imports solution.py.
+    pass
 
 
 class TestFlashlight(unittest.TestCase):

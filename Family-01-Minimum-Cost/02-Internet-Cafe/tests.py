@@ -2,7 +2,12 @@
 
 import unittest
 
-from solution import calculate_daily_revenue
+try:
+    from solution import calculate_daily_revenue
+except ModuleNotFoundError:
+    # Serverless runner injects student code into this namespace, so the
+    # imported names are already defined; local unittest still imports solution.py.
+    pass
 
 
 class TestInternetCafe(unittest.TestCase):

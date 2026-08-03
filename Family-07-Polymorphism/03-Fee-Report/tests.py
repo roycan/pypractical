@@ -2,7 +2,12 @@
 
 import unittest
 
-from solution import Report, Cash, Card
+try:
+    from solution import Report, Cash, Card
+except ModuleNotFoundError:
+    # Serverless runner injects student code into this namespace, so the
+    # imported names are already defined; local unittest still imports solution.py.
+    pass
 
 
 class TestFeeReport(unittest.TestCase):

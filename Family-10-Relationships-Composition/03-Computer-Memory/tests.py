@@ -2,7 +2,12 @@
 
 import unittest
 
-from solution import Module, Computer
+try:
+    from solution import Module, Computer
+except ModuleNotFoundError:
+    # Serverless runner injects student code into this namespace, so the
+    # imported names are already defined; local unittest still imports solution.py.
+    pass
 
 
 class TestComputer(unittest.TestCase):

@@ -2,7 +2,12 @@
 
 import unittest
 
-from solution import Meeting, Room, minimum_rooms
+try:
+    from solution import Meeting, Room, minimum_rooms
+except ModuleNotFoundError:
+    # Serverless runner injects student code into this namespace, so the
+    # imported names are already defined; local unittest still imports solution.py.
+    pass
 
 
 class TestMeetingRoomSystem(unittest.TestCase):
