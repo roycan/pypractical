@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contribute — use, adapt, and share | PyPractical</title>
+  <meta name="description" content="Use PyPractical in your classroom: clone, run the unit tests, and grade automatically. Adapt freely under a dual license — and share your improvements back.">
+  <meta name="theme-color" content="#FAF7F2">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contribute — PyPractical">
+  <meta property="og:description" content="Use, adapt, and share. Openly licensed; community improved.">
+  <meta property="og:image" content="../assets/img/photos/teacher-community.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bulma.min.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/markdown.css">
+  <script>(function(){try{var t=localStorage.getItem('pypra-theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body data-root="../">
+  <div data-include="nav"></div>
+
+  <main id="main">
+    <header class="hero">
+      <span class="wash" aria-hidden="true"></span>
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <span class="hero__badge"><span class="dot" aria-hidden="true"></span> Use & contribute</span>
+            <h1 class="hero__title">Use it. Adapt it. <em>Share it back.</em></h1>
+            <p class="hero__sub">PyPractical is openly licensed and made for adaptation. Run an assessment in your classroom today — and if you improve it, somewhere another teacher is working late who would benefit.</p>
+            <div class="hero__cta">
+              <a class="btn btn--lg" href="../assessment-families/">Browse assessments</a>
+              <a class="btn btn--ghost btn--lg" href="../workflow/">How assessments are made</a>
+            </div>
+          </div>
+          <div class="hero__art">
+            <img src="../assets/img/photos/teacher-community.webp" alt="Teachers collaborating internationally to improve open educational assessments." width="1280" height="853" loading="eager" decoding="async">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HOW TO USE -->
+    <section class="section">
+      <div class="container">
+        <div class="split">
+          <div>
+            <span class="eyebrow">Use it in minutes</span>
+            <h2>Clone, run, grade</h2>
+            <p class="muted">Every assessment ships with a <code>unittest</code> suite. Drop in a student's solution (or your own), run the tests, and read the score.</p>
+            <ol class="steps" style="margin-top:var(--s-5)">
+              <li class="steps__item"><div><h4>Clone the repository</h4><p>Use the GitHub link in the navbar.</p></div></li>
+              <li class="steps__item"><div><h4>Open an assessment folder</h4><p>Each one has <code>starter.py</code>, <code>solution.py</code>, and <code>tests.py</code>.</p></div></li>
+              <li class="steps__item"><div><h4>Run the tests</h4><p><code>python -m unittest tests.py -v</code></p></div></li>
+              <li class="steps__item"><div><h4>Read the score</h4><p>Passing tests ÷ total tests = the percentage score.</p></div></li>
+            </ol>
+          </div>
+          <div>
+            <div class="prose">
+              <pre data-lang="bash"><code># clone the repository (use the GitHub link above)
+git clone <repository-url>
+cd pypractical/Family-01-Minimum-Cost/01-Parking-Garage
+
+# grade a solution: replace starter.py contents, then run:
+python -m unittest tests.py -v
+
+# example output
+# test_daily_report_basic ... ok
+# test_daily_report_boundary ... ok
+# ...
+# score = passing_tests / total_tests * 100</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE PLEDGE -->
+    <section class="section section--alt">
+      <div class="container container-narrow">
+        <span class="eyebrow">That's not law. That's culture.</span>
+        <h2>The Educators' Pledge</h2>
+        <blockquote class="pullquote" style="margin-top:var(--s-4)">
+          “If you improve an assessment, please consider sharing it back. Somewhere, another teacher is working late, trying to create tomorrow's practical.”
+          <cite>— the Educators' Pledge</cite>
+        </blockquote>
+        <p class="muted" style="margin-top:var(--s-5)">It isn't a legal requirement — the license already grants every freedom. It's a cultural one: a request to make the next teacher's night a little easier.</p>
+      </div>
+    </section>
+
+    <!-- SIX PROMISES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How we contribute</span>
+          <h2>Six cultural promises</h2>
+          <p class="lead">Every contribution is guided by one question: <em>“Would we confidently use this in our own classroom tomorrow?”</em></p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card"><h3>Students before technology</h3><p class="muted">Tools serve learning — never the other way around.</p></article>
+          <article class="card"><h3>Teachers before convenience</h3><p class="muted">Reduce workload without reducing craft.</p></article>
+          <article class="card"><h3>Clarity over cleverness</h3><p class="muted">Readable beats impressive, every time.</p></article>
+          <article class="card"><h3>Admit mistakes openly</h3><p class="muted">Errors become improvements, not embarrassments.</p></article>
+          <article class="card"><h3>Improve when classrooms teach better ways</h3><p class="muted">Every classroom is a source of lessons.</p></article>
+          <article class="card"><h3>Confidently usable tomorrow</h3><p class="muted">If we wouldn't use it ourselves, it isn't ready.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LICENSE -->
+    <section class="section section--alt">
+      <div class="container container-narrow">
+        <span class="eyebrow">Licensed for freedom</span>
+        <h2>Dual license</h2>
+        <p class="muted" style="margin-top:var(--s-3)">PyPractical is free to use, adapt, and redistribute:</p>
+        <div class="grid grid--2" style="margin-top:var(--s-4)">
+          <div class="card"><span class="tag tag--accent">CC BY-SA 4.0</span><h3 style="margin-top:var(--s-2)">Documents</h3><p class="muted">Problems, notes, and all written materials — share-alike with attribution.</p></div>
+          <div class="card"><span class="tag tag--accent">MIT</span><h3 style="margin-top:var(--s-2)">Code</h3><p class="muted">Starter code, solutions, and test suites — permissive and commercial-friendly.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta">
+          <h2>Ready to contribute?</h2>
+          <p>Follow the workflow, respect the standards, and share your assessment back to the community.</p>
+          <div class="hero__cta" style="justify-content:center">
+            <a class="btn btn--lg" href="../workflow/">Start with the workflow</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="../assets/js/components.js"></script>
+</body>
+</html>

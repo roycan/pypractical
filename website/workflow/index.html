@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workflow — the assessment development cycle | PyPractical</title>
+  <meta name="description" content="Every PyPractical assessment follows a ten-step engineering workflow: from learning objective and story design through unit tests, classroom testing, and publication.">
+  <meta name="theme-color" content="#FAF7F2">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Workflow — PyPractical">
+  <meta property="og:description" content="A ten-step engineering workflow for building assessments teachers can trust.">
+  <meta property="og:image" content="../assets/img/photos/pypractical-workflow.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bulma.min.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/markdown.css">
+  <link rel="stylesheet" href="../assets/css/print.css">
+  <script>(function(){try{var t=localStorage.getItem('pypra-theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body data-root="../">
+  <div data-include="nav"></div>
+
+  <main id="main">
+    <header class="hero">
+      <span class="wash" aria-hidden="true"></span>
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <span class="hero__badge"><span class="dot" aria-hidden="true"></span> Workflow</span>
+            <h1 class="hero__title">From idea to <em>classroom-tested</em>.</h1>
+            <p class="hero__sub">PyPractical treats assessment development as an engineering process. Every practical follows the same ten-step journey — designed, tested, used, and improved.</p>
+          </div>
+          <div class="hero__art">
+            <img src="../assets/img/photos/pypractical-workflow.webp" alt="Workflow showing the lifecycle of a PyPractical assessment from idea through classroom feedback." width="1280" height="640" loading="eager" decoding="async">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="eyebrow">The development cycle</span>
+          <h2>Ten steps, one journey</h2>
+          <p class="lead">Each stage improves the assessment. Skipping stages leads to weaker assessments.</p>
+        </div>
+        <ol class="timeline" style="list-style:none;padding-left:var(--s-6)">
+          <li class="timeline__item"><span class="timeline__step">Step 1</span><h3>Identify the learning objective</h3><p class="muted">One primary objective — what should students learn?</p></li>
+          <li class="timeline__item"><span class="timeline__step">Step 2</span><h3>Design an authentic story</h3><p class="muted">A believable scenario that motivates the problem.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Step 3</span><h3>Write the problem statement</h3><p class="muted">Clarity that removes uncertainty without removing challenge.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Step 4</span><h3>Create the starter code</h3><p class="muted">Scaffolding that encourages thinking, not blank-filling.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Step 5</span><h3>Write the teacher solution</h3><p class="muted">A readable reference that verifies solvability.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Step 6</span><h3>Create unit tests</h3><p class="muted">Basic, boundary, mixed, and hidden cases.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Step 7</span><h3>Verify every expected value</h3><p class="muted">Independently verified — never on AI arithmetic alone.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Step 8</span><h3>Classroom testing</h3><p class="muted">The classroom is the ultimate review environment.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Step 9</span><h3>Improve the assessment</h3><p class="muted">No assessment is perfect. Improvement is expected.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Step 10</span><h3>Publish</h3><p class="muted">Only when it's ready for classroom use.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="eyebrow">The full document</span>
+          <h2>Workflow specification</h2>
+          <p class="muted">Rendered live from the repository. <button type="button" class="btn btn--ghost" style="padding:.4rem .8rem;font-size:var(--fs-sm)" onclick="window.print()">Print this page</button></p>
+        </div>
+        <div class="md-viewer" data-md="06-WORKFLOW.md"></div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta">
+          <h2>Build one yourself</h2>
+          <p>Follow the workflow to contribute an assessment your colleagues can trust.</p>
+          <div class="hero__cta" style="justify-content:center">
+            <a class="btn btn--lg" href="../contribute/">Contribute an assessment</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="../assets/vendor/marked.min.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/markdown-viewer.js"></script>
+</body>
+</html>

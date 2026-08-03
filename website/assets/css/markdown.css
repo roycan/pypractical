@@ -1,0 +1,74 @@
+/* =====================================================================
+   markdown.css — styling for Markdown Viewer output (.prose)
+   Used on reference pages that fetch a bundled .md document.
+   ===================================================================== */
+
+.prose { color: var(--text); font-size: var(--fs-base); line-height: var(--lh); max-width: none; }
+.prose > * + * { margin-top: var(--s-4); }
+
+/* Headings */
+.prose h1 { font-size: clamp(2rem, 4vw, 2.7rem); margin-top: var(--s-7); padding-bottom: var(--s-2); border-bottom: 2px solid var(--border); }
+.prose h2 { font-size: var(--fs-h2); margin-top: var(--s-7); padding-bottom: var(--s-2); border-bottom: 1px solid var(--border); }
+.prose h3 { font-size: var(--fs-h3); margin-top: var(--s-6); }
+.prose h4 { font-size: var(--fs-h4); margin-top: var(--s-5); color: var(--accent-ink); }
+.prose h1:first-child, .prose h2:first-child { margin-top: 0; }
+
+/* Text */
+.prose p, .prose li { color: var(--text); }
+.prose strong { color: var(--text); font-weight: 700; }
+.prose a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.prose a:hover { color: var(--accent); }
+
+/* Lists */
+.prose ul, .prose ol { padding-left: 1.4rem; }
+.prose li { margin-block: .35rem; }
+.prose li::marker { color: var(--accent-ink); }
+
+/* Blockquote (used heavily in the manifesto & philosophy docs) */
+.prose blockquote {
+  margin: var(--s-5) 0; padding: var(--s-4) var(--s-5);
+  border-left: 4px solid var(--accent); background: var(--surface-2);
+  border-radius: 0 var(--radius) var(--radius) 0; color: var(--text);
+  font-family: var(--font-serif); font-size: 1.15rem; font-style: italic;
+}
+.prose blockquote p { color: var(--text); }
+
+/* Horizontal rule (docs use --- as section breaks) */
+.prose hr { border: 0; height: 1px; background: var(--border); margin-block: var(--s-7); position: relative; }
+.prose hr::after {
+  content: "✦"; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+  background: var(--bg); color: var(--accent-deep); padding: 0 .6rem; font-size: .9rem;
+}
+
+/* Tables (some specs/standards use them) */
+.prose table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); overflow: hidden; border-radius: var(--radius); }
+.prose th, .prose td { border: 1px solid var(--border); padding: .6rem .8rem; text-align: left; vertical-align: top; }
+.prose thead th { background: var(--surface-2); font-weight: 700; color: var(--text); }
+.prose tbody tr:nth-child(even) td { background: var(--surface-2); }
+
+/* Inline code */
+.prose :not(pre) > code {
+  font-family: var(--font-mono); font-size: .9em; background: var(--surface-2);
+  border: 1px solid var(--border); padding: .14em .42em; border-radius: var(--radius-sm); color: var(--accent-ink);
+}
+
+/* Fenced code blocks — warm dark surface, readable in both themes */
+.prose pre {
+  background: var(--code-bg); color: var(--code-ink); border: 1px solid var(--code-border);
+  border-radius: var(--radius); padding: var(--s-4) var(--s-5); overflow-x: auto;
+  font-family: var(--font-mono); font-size: .92rem; line-height: 1.6; position: relative;
+}
+.prose pre code { background: none; border: 0; padding: 0; color: inherit; font-size: inherit; }
+.prose pre::before {
+  content: attr(data-lang); position: absolute; top: 0; right: 0;
+  font-family: var(--font-sans); font-size: var(--fs-xs); font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: rgba(242,235,221,.55);
+  background: rgba(255,255,255,.06); padding: .2rem .6rem; border-radius: 0 var(--radius) 0 var(--radius-sm);
+}
+
+/* Loading / error states for the Markdown Viewer */
+.md-viewer { min-height: 200px; position: relative; }
+.md-viewer__status { padding: var(--s-6); text-align: center; color: var(--text-faint); font-size: var(--fs-sm); }
+.md-viewer__status.error { color: var(--accent-ink); }
+
+/* Print: drop into print.css for spec/standard pages */

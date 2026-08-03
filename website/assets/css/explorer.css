@@ -1,0 +1,64 @@
+/* =====================================================================
+   explorer.css — Assessment Families / curriculum explorer.
+   Loaded only on /assessment-families/.
+   ===================================================================== */
+
+.explorer__stages { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-bottom: var(--s-5); }
+.stage-chip {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .55rem .9rem; border-radius: var(--radius-pill);
+  background: var(--surface); border: 1.5px solid var(--border); color: var(--text-soft);
+  font-family: var(--font-sans); font-weight: 600; font-size: var(--fs-sm); cursor: pointer; transition: var(--transition);
+}
+.stage-chip:hover { border-color: var(--accent); color: var(--text); }
+.stage-chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.stage-chip[aria-pressed="true"] .stage-chip__num { background: rgba(255,255,255,.25); color: #fff; }
+.stage-chip__num { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--surface-2); color: var(--accent-ink); font-size: var(--fs-xs); font-family: var(--font-serif); }
+.stage-chip[disabled] { opacity: .55; cursor: not-allowed; }
+.stage-chip[disabled] .stage-chip__count { color: var(--text-faint); font-style: italic; }
+
+.explorer__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-4); margin-bottom: var(--s-6); }
+.explorer__filters { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+.explorer__filters .lbl { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .1em; color: var(--text-faint); margin-right: .3rem; }
+.filter-chip {
+  padding: .35rem .7rem; border-radius: var(--radius-pill); border: 1px solid var(--border);
+  background: var(--surface); color: var(--text-soft); font-size: var(--fs-sm); cursor: pointer; transition: var(--transition);
+}
+.filter-chip:hover { border-color: var(--accent); }
+.filter-chip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-ink); }
+.explorer__summary { color: var(--text-faint); font-size: var(--fs-sm); }
+
+/* Family block */
+.family { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--s-5) var(--s-6); box-shadow: var(--shadow-sm); margin-bottom: var(--s-5); }
+.family__head { display: flex; align-items: baseline; gap: var(--s-3); flex-wrap: wrap; }
+.family__num { font-family: var(--font-mono); font-weight: 700; font-size: var(--fs-sm); color: var(--accent-ink); background: var(--accent-soft); padding: .2rem .5rem; border-radius: var(--radius-sm); }
+.family__title { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 700; }
+.family__blurb { color: var(--text-soft); margin-top: var(--s-2); max-width: 70ch; }
+.family__meta { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: var(--s-3); }
+
+/* Problem rows */
+.problems { margin-top: var(--s-4); display: grid; gap: var(--s-2); }
+.problem {
+  display: grid; grid-template-columns: 1fr auto; gap: var(--s-3) var(--s-4); align-items: center;
+  padding: var(--s-3) var(--s-4); border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--surface-2); transition: var(--transition); text-decoration: none; color: inherit;
+}
+.problem:hover { border-color: var(--accent); background: var(--surface); transform: translateX(2px); }
+.problem--pack { cursor: default; }
+.problem--pack:hover { border-color: var(--border); background: var(--surface-2); transform: none; }
+.family--pack .family__title { color: var(--text); }
+.problem__main { min-width: 0; }
+.problem__title { font-weight: 600; color: var(--text); display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.problem__tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: var(--s-2); }
+.problem__tag { font-size: var(--fs-xs); color: var(--text-faint); background: var(--surface); border: 1px solid var(--border); padding: .1rem .45rem; border-radius: var(--radius-pill); }
+.problem__side { display: flex; flex-direction: column; align-items: flex-end; gap: .35rem; text-align: right; }
+
+/* difficulty dots */
+.diff { display: inline-flex; gap: 2px; align-items: center; letter-spacing: 1px; color: var(--accent); font-size: .8rem; }
+.diff .dot-empty { color: var(--border-2); }
+.diff__label { font-size: var(--fs-xs); color: var(--text-faint); margin-left: .3rem; }
+
+@media (max-width: 620px) {
+  .problem { grid-template-columns: 1fr; }
+  .problem__side { align-items: flex-start; text-align: left; flex-direction: row; }
+}

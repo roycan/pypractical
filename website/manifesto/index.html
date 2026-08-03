@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Manifesto — PyPractical</title>
+  <meta name="description" content="Seven beliefs that shape every PyPractical assessment. Programming is learned by programming; every student deserves success; assessment should illuminate learning.">
+  <meta name="theme-color" content="#FAF7F2">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The PyPractical Manifesto">
+  <meta property="og:description" content="Seven beliefs that shape every assessment.">
+  <meta property="og:image" content="../assets/img/photos/philosophy.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bulma.min.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <script>(function(){try{var t=localStorage.getItem('pypra-theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <style>
+    .decl-list { display: grid; gap: var(--s-8); }
+    .decl { display: flex; gap: var(--s-4); align-items: baseline; }
+    .decl__num { font-family: var(--font-serif); font-weight: 700; font-size: 1.2rem; color: var(--accent-ink); background: var(--accent-soft); width: 2.6rem; height: 2.6rem; flex: none; display: grid; place-items: center; border-radius: var(--radius); }
+    .decl__text { font-family: var(--font-serif); font-weight: 600; font-size: clamp(1.4rem, 3vw, 2.1rem); line-height: 1.3; color: var(--text); }
+    @media (max-width: 620px) { .decl__text { font-size: 1.35rem; } }
+  </style>
+</head>
+<body data-root="../">
+  <div data-include="nav"></div>
+
+  <main id="main">
+    <header class="hero">
+      <span class="wash" aria-hidden="true"></span>
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <span class="hero__badge"><span class="dot" aria-hidden="true"></span> The north star</span>
+            <h1 class="hero__title">The <em>Manifesto</em>.</h1>
+            <p class="hero__sub">Six beliefs shape every assessment PyPractical creates. They are the test we hold every practical against.</p>
+          </div>
+          <div class="hero__art">
+            <img src="../assets/img/photos/philosophy.webp" alt="Illustration representing the values of curiosity, craftsmanship, and growth in education." width="1280" height="853" loading="eager" decoding="async">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="decl-list">
+          <div class="decl"><span class="decl__num">1</span><span class="decl__text">Programming is learned by programming.</span></div>
+          <div class="decl"><span class="decl__num">2</span><span class="decl__text">Every student deserves to experience success.</span></div>
+          <div class="decl"><span class="decl__num">3</span><span class="decl__text">Teachers deserve tools that respect their time.</span></div>
+          <div class="decl"><span class="decl__num">4</span><span class="decl__text">Assessment should illuminate learning, not obscure it.</span></div>
+          <div class="decl"><span class="decl__num">5</span><span class="decl__text">We build for classrooms, not competitions.</span></div>
+          <div class="decl"><span class="decl__num">6</span><span class="decl__text">Good software engineering and good teaching share the same virtues: clarity, empathy, iteration, and craftsmanship.</span></div>
+        </div>
+
+        <hr class="rule">
+
+        <div class="stack-lg">
+          <blockquote class="pullquote">“Exposure is encouraged. Dependence is not.”</blockquote>
+          <blockquote class="pullquote">“Teach the student in front of you, not the curriculum in front of you.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta">
+          <h2>See these beliefs in practice</h2>
+          <p>The design principles, curriculum, and assessment families all flow from this manifesto.</p>
+          <div class="hero__cta" style="justify-content:center">
+            <a class="btn btn--lg" href="../philosophy/">Explore the philosophy</a>
+            <a class="btn btn--ghost btn--lg" href="../assessment-families/">Browse assessments</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="../assets/js/components.js"></script>
+</body>
+</html>

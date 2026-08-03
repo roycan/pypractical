@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PyPractical — Open Assessment Engineering for Python classrooms</title>
+  <meta name="description" content="PyPractical is the first reference implementation of Open Assessment Engineering: classroom-tested, automatically-gradable Python programming assessments — openly shared and continuously improved.">
+  <meta name="theme-color" content="#FAF7F2">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PyPractical — Open Assessment Engineering">
+  <meta property="og:description" content="Classroom-tested, automatically-gradable Python assessments — openly shared and continuously improved.">
+  <meta property="og:image" content="assets/img/photos/open-assessment-engineering.webp">
+  <!-- Fonts (VIS-001: Cormorant Garamond display, Source Sans 3 body, JetBrains Mono code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Styles: Bulma base, then our token/component layer (loaded after so it wins) -->
+  <link rel="stylesheet" href="assets/vendor/bulma.min.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <!-- No-flash theme bootstrap (must run before paint) -->
+  <script>(function(){try{var t=localStorage.getItem('pypra-theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body data-root="">
+  <div data-include="nav"></div>
+
+  <main id="main">
+    <!-- ============================ HERO ============================ -->
+    <header class="hero">
+      <span class="wash" aria-hidden="true"></span>
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <span class="hero__badge"><span class="dot" aria-hidden="true"></span> Open Assessment Engineering</span>
+            <h1 class="hero__title">A <em>better way</em> to build programming assessments.</h1>
+            <p class="hero__sub">PyPractical brings the discipline of software engineering into the classroom — authentic problems, automatic grading, and a curriculum that builds confidence one small success at a time.</p>
+            <div class="hero__cta">
+              <a class="btn btn--lg" href="assessment-families/">Explore the assessments</a>
+              <a class="btn btn--ghost btn--lg" href="manifesto/">Read the manifesto</a>
+            </div>
+          </div>
+          <div class="hero__art">
+            <img src="assets/img/photos/hero-banner.webp" alt="A teacher guiding students who are collaboratively designing and programming assessments in a modern classroom." width="972" height="879" loading="eager" decoding="async">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================ STATS =========================== -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><div class="stat__num">41</div><div class="stat__label">assessments in the project</div></div>
+          <div class="stat"><div class="stat__num">11</div><div class="stat__label">assessment families</div></div>
+          <div class="stat"><div class="stat__num">1</div><div class="stat__label">public reference family</div></div>
+          <div class="stat"><div class="stat__num">100%</div><div class="stat__label">open framework — CC BY-SA 4.0 + MIT</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== HOW IT'S SHARED ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How PyPractical is shared</span>
+          <h2>An open framework, responsibly stewarded</h2>
+          <p class="lead">Open where openness helps everyone — thoughtful where openness could make teaching harder.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card">
+            <span class="tag tag--sage">Public · Core</span>
+            <h3 style="margin-top:var(--s-3)">The framework</h3>
+            <p class="muted">Philosophy, specifications, standards, workflow, and the scoring model — openly licensed and indexed for every teacher.</p>
+          </article>
+          <article class="card">
+            <span class="tag tag--sage">Public · Reference</span>
+            <h3 style="margin-top:var(--s-3)">Reference examples</h3>
+            <p class="muted">A canonical family demonstrates the format — like a language shipping with example programs, never the ones used for grading.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Educator · Packs</span>
+            <h3 style="margin-top:var(--s-3)">Assessment packs</h3>
+            <p class="muted">Classroom-ready families are distributed to educators — not publicly indexed, to protect assessment validity.</p>
+          </article>
+        </div>
+        <p class="muted" style="margin-top:var(--s-6);max-width:70ch">PyPractical is an open framework for engineering educational assessments. Classroom assessment packs intended for active instructional use are distributed separately to educators — like an open platform whose deployed quizzes remain under a teacher's stewardship.</p>
+      </div>
+    </section>
+
+    <!-- ====================== ASSESSMENT ENGINEERING ================ -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="split">
+          <div>
+            <span class="eyebrow">The central idea</span>
+            <h2>What is Assessment Engineering?</h2>
+            <p class="lead">Great software is built with specifications, standards, version control, automated tests, and continuous improvement. Great assessments deserve the same.</p>
+            <p class="muted" style="margin-top:var(--s-4)">PyPractical treats every assessment as a small engineering artifact — with a problem specification, a Python template, a reference solution, a unit-test suite, and teacher notes. Each one is documented, tested, and openly shared.</p>
+            <p class="muted" style="margin-top:var(--s-4)"><a href="assessment-engineering/">Understand the concept →</a></p>
+          </div>
+          <div>
+            <figure style="margin:0">
+              <img src="assets/img/photos/open-assessment-engineering.webp" alt="Diagram showing software engineering practices merging with educational assessment design into one document titled Open Assessment Engineering." width="1280" height="853" loading="lazy" decoding="async">
+              <figcaption class="muted" style="font-size:var(--fs-sm);margin-top:var(--s-2);font-style:italic">“Educational assessments deserve the same engineering discipline that we expect from great software.”</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== THREE PILLARS ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why teachers adopt it</span>
+          <h2>Built for real classrooms</h2>
+          <p class="lead">Not a course. Not a platform. A growing bank of assessments you can use, adapt, and trust — tomorrow.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card card--hover">
+            <div class="icon-tile" aria-hidden="true"><!-- book/story icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
+            </div>
+            <h3>Authentic stories</h3>
+            <p class="muted">Problems resemble small, real applications — parking garages, libraries, hospitals — so students understand <em>why</em> programming exists. Difficulty comes from programming, never from confusing wording.</p>
+          </article>
+          <article class="card card--hover">
+            <div class="icon-tile" aria-hidden="true"><!-- check/grade icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg>
+            </div>
+            <h3>Automatic grading</h3>
+            <p class="muted">Every assessment ships with a <code>unittest</code> suite. Equal-weight tests, consistent scoring, immediate feedback. Teachers spend less time grading and more time teaching.</p>
+          </article>
+          <article class="card card--hover">
+            <div class="icon-tile" aria-hidden="true"><!-- share/open icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+            </div>
+            <h3>Open & shared</h3>
+            <p class="muted">Dual-licensed (CC BY-SA 4.0 for documents, MIT for code). Adapt, improve, and redistribute — and share your improvements back, so the next teacher doesn't start from zero.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== PULL QUOTE ======================== -->
+    <section class="section section--tight">
+      <div class="container container-narrow">
+        <blockquote class="pullquote">
+          “We were no longer designing a single assessment. We were designing a better way to create assessments.”
+          <cite>— the PyPractical founding story</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ========================= PRINCIPLES TEASER ================== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Governed by principle</span>
+          <h2>Ten design principles, one north star</h2>
+          <p class="lead">Every assessment is shaped by the same rules — one new idea at a time, authentic stories, objective grading, and respect for students' and teachers' time.</p>
+        </div>
+        <div class="grid grid--2">
+          <div class="principle"><h3>One new idea</h3><p>Each assessment introduces a single primary concept; everything else reinforces prior learning.</p></div>
+          <div class="principle"><h3>Early success</h3><p>Students grasp the goal within the first minute. Small wins build the confidence that keeps them programming.</p></div>
+          <div class="principle"><h3>Objective grading</h3><p>Automatically gradable with <code>unittest</code> — behavior, not style; consistent and immediate.</p></div>
+          <div class="principle"><h3>Continuous improvement</h3><p>Every classroom teaches something. Every assessment evolves. Growth is the purpose, not a sign the work was incomplete.</p></div>
+        </div>
+        <p style="margin-top:var(--s-6)"><a class="btn btn--ghost" href="philosophy/">See all 10 principles & the philosophy →</a></p>
+      </div>
+    </section>
+
+    <!-- ============================== CTA =========================== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <h2>Start exploring PyPractical</h2>
+          <p>Browse 41 assessments across 11 families — from first steps in Python to inheritance, polymorphism, and design principles.</p>
+          <div class="hero__cta" style="justify-content:center">
+            <a class="btn btn--lg" href="assessment-families/">Explore assessment families</a>
+            <a class="btn btn--ghost btn--lg" href="contribute/">Contribute</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="assets/js/components.js"></script>
+</body>
+</html>

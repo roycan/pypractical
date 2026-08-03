@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PyPractical — the reference implementation</title>
+  <meta name="description" content="PyPractical is the reference implementation of Open Assessment Engineering: every assessment is a documented, tested artifact with six standard deliverables, organized across a six-stage curriculum.">
+  <meta name="theme-color" content="#FAF7F2">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PyPractical — the reference implementation">
+  <meta property="og:description" content="Every assessment is a documented, tested artifact — six deliverables, six curriculum stages.">
+  <meta property="og:image" content="../assets/img/photos/students-programming.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bulma.min.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <script>(function(){try{var t=localStorage.getItem('pypra-theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body data-root="../">
+  <div data-include="nav"></div>
+
+  <main id="main">
+    <header class="hero">
+      <span class="wash" aria-hidden="true"></span>
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <span class="hero__badge"><span class="dot" aria-hidden="true"></span> The reference implementation</span>
+            <h1 class="hero__title">PyPractical, <em>made concrete</em>.</h1>
+            <p class="hero__sub">Every assessment is a small, well-engineered artifact — documented, tested, and openly shared. Here's exactly what that means.</p>
+            <div class="hero__cta">
+              <a class="btn btn--lg" href="../assessment-families/">Browse the families</a>
+              <a class="btn btn--ghost btn--lg" href="../workflow/">See how they're made</a>
+            </div>
+          </div>
+          <div class="hero__art">
+            <img src="../assets/img/photos/students-programming.webp" alt="Students collaboratively solving practical Python programming problems." width="1280" height="853" loading="eager" decoding="async">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SIX DELIVERABLES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Every assessment, six deliverables</span>
+          <h2>An assessment is not just a problem</h2>
+          <p class="lead">Each practical is a complete package — so a teacher can use it, grade it, and adapt it with confidence.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card"><h3><code>problem.md</code></h3><p class="muted">The story, task, class spec, example, explanation, and hints — written for a Grade&nbsp;9 reading level.</p></article>
+          <article class="card"><h3><code>starter.py</code></h3><p class="muted">Scaffolded code with docstrings and TODOs — guiding students without removing the thinking.</p></article>
+          <article class="card"><h3><code>solution.py</code></h3><p class="muted">The reference implementation: correct, readable, and understandable by a beginner.</p></article>
+          <article class="card"><h3><code>tests.py</code></h3><p class="muted">The <code>unittest</code> suite — equal-weight, behavior-based, automatic grading.</p></article>
+          <article class="card"><h3><code>teacher_notes.md</code></h3><p class="muted">Objectives, common mistakes, difficulty, and pedagogical guidance.</p></article>
+          <article class="card"><h3><code>metadata.yml</code></h3><p class="muted">Title, family, difficulty, estimated time, concepts — structured and machine-readable.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section section--alt section--tight">
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><div class="stat__num">41</div><div class="stat__label">assessments</div></div>
+          <div class="stat"><div class="stat__num">473</div><div class="stat__label">unit tests</div></div>
+          <div class="stat"><div class="stat__num">11</div><div class="stat__label">families</div></div>
+          <div class="stat"><div class="stat__num">6</div><div class="stat__label">curriculum stages</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRICULUM -->
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="eyebrow">A six-stage journey</span>
+          <h2>From first steps to software design</h2>
+          <p class="lead">The curriculum follows how programmers actually grow — one achievable stage at a time.</p>
+        </div>
+        <ol class="timeline" style="list-style:none;padding-left:var(--s-6)">
+          <li class="timeline__item"><span class="timeline__step">Stage 1</span><h3>Thinking Like a Programmer</h3><p class="muted">Variables, I/O, arithmetic, conditionals, loops, functions.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Stage 2</span><h3>Thinking About Objects</h3><p class="muted">Classes, objects, attributes, methods.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Stage 3</span><h3>Objects Working Together</h3><p class="muted">Lists of objects, searching, collaboration.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Stage 4</span><h3>Building Better Software</h3><p class="muted">Inheritance, polymorphism, composition, design.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Stage 5 · roadmap</span><h3>Data and Algorithms</h3><p class="muted">Searching, sorting, dictionaries, files.</p></li>
+          <li class="timeline__item"><span class="timeline__step">Stage 6 · roadmap</span><h3>Projects</h3><p class="muted">Culminating projects that combine everything.</p></li>
+        </ol>
+        <p style="margin-top:var(--s-6)"><a class="btn btn--ghost" href="../assessment-families/">Explore the assessment families →</a></p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta">
+          <h2>Use it in your classroom</h2>
+          <p>Clone the repository, run the unit tests, and grade automatically — or adapt any assessment to your context.</p>
+          <div class="hero__cta" style="justify-content:center">
+            <a class="btn btn--lg" href="../contribute/">How to use & contribute</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="../assets/js/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* =====================================================================
+   tokens.css — PyPractical design tokens
+   Aligned to VIS-001 Visual Identity Guide (visual_identity_guide.md):
+   warm paper palette, terracotta accent, Cormorant Garamond display +
+   Source Sans 3 body, JetBrains Mono code, ~900px reading width,
+   12px cards / 8px buttons, outline icons, subtle paper grain.
+   Light + warm-dark themes via [data-theme="dark"] on <html>.
+   ===================================================================== */
+
+:root {
+  /* ---- Brand palette (light) — from VIS-001 ---------------------- */
+  --c-paper-warm: #FAF7F2;  /* Warm Paper — page background (not white) */
+  --c-linen:      #F2EEE7;  /* Soft Linen — section background */
+  --c-paper:      #FFFFFF;  /* card surface */
+  --c-paper-2:    #F7F2EA;  /* recessed card */
+  --c-ink:        #2B2B2B;  /* Deep Ink — primary text (never pure black) */
+  --c-slate:      #5E5A56;  /* Slate — secondary text */
+  --c-ink-faint:  #8A857E;  /* tertiary / captions */
+  --c-terracotta: #C96A4A;  /* Accent — terracotta (human, earth, classroom) */
+  --c-terra-deep: #A84F33;  /* darker terracotta — hovers, gradient depth */
+  --c-terra-soft: #F3E2D9;  /* terracotta wash on paper */
+  --c-sage:       #7E9C78;  /* Success / growth — sage green */
+  --c-dusty:      #6B8FA8;  /* Dusty Blue — diagrams / tertiary */
+  --c-rule:       #E5DFD4;  /* hairlines */
+  --c-rule-2:     #D6CDBE;  /* stronger hairlines */
+
+  /* ---- Semantic aliases ------------------------------------------ */
+  --bg:           var(--c-paper-warm);
+  --bg-soft:      var(--c-linen);
+  --surface:      var(--c-paper);
+  --surface-2:    var(--c-paper-2);
+  --text:         var(--c-ink);
+  --text-soft:    var(--c-slate);
+  --text-faint:   var(--c-ink-faint);
+  --accent:       var(--c-terracotta);
+  --accent-deep:  var(--c-terra-deep);
+  --accent-ink:   var(--c-terra-deep);
+  --accent-soft:  var(--c-terra-soft);
+  --sage:         var(--c-sage);
+  --dusty:        var(--c-dusty);
+  --border:       var(--c-rule);
+  --border-2:     var(--c-rule-2);
+
+  /* code surface */
+  --code-bg:      #241F1B;
+  --code-ink:     #F2EBDD;
+  --code-border:  #3a3128;
+
+  /* ---- Typography (VIS-001) -------------------------------------- */
+  --font-serif: "Cormorant Garamond", "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans:  "Source Sans 3", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono:  "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* type scale */
+  --fs-xs:    0.78rem;
+  --fs-sm:    0.92rem;
+  --fs-base:  1.125rem;                       /* 18px */
+  --fs-lg:    1.25rem;
+  --fs-xl:    1.5rem;
+  --fs-h1:    clamp(2.5rem, 6vw, 4rem);       /* generous display serif */
+  --fs-h2:    clamp(1.9rem, 3.6vw, 2.7rem);
+  --fs-h3:    1.3rem;                          /* sans, for clarity */
+  --fs-h4:    1.05rem;
+  --lh:       1.65;
+  --lh-tight: 1.15;
+
+  /* ---- Spacing ---------------------------------------------------- */
+  --s-1: .25rem;  --s-2: .5rem;   --s-3: .75rem;  --s-4: 1rem;
+  --s-5: 1.5rem;  --s-6: 2.25rem; --s-7: 3.25rem; --s-8: 4.5rem;  --s-9: 6rem;
+
+  /* ---- Shape (VIS-001: cards 12px, buttons 8px) ------------------ */
+  --radius-sm: 6px;
+  --radius:    10px;
+  --radius-lg: 12px;      /* cards + large blocks */
+  --radius-btn: 8px;      /* buttons */
+  --radius-pill: 999px;   /* tags / chips only */
+
+  /* ---- Depth (soft, like paper on a desk) ------------------------ */
+  --shadow-sm: 0 1px 2px rgba(43,43,43,.05), 0 1px 3px rgba(43,43,43,.04);
+  --shadow-md: 0 4px 14px rgba(43,43,43,.07);
+  --shadow-lg: 0 14px 36px rgba(43,43,43,.10);
+
+  /* ---- Layout (VIS-001: max ~900px; wide variant for dense grids) */
+  --container:       920px;
+  --container-narrow: 720px;
+  --container-wide:  1080px;
+  --header-h:        68px;
+  --transition:      180ms ease;
+
+  /* ---- Bulma override hooks -------------------------------------- */
+  --bulma-primary-h: 13;
+}
+
+/* ---- Warm dark theme (lamplight notebook) ------------------------
+   VIS-001 specifies the paper palette only; this warm-dark reading
+   is proposed so the brief's dark-mode requirement stays on-brand. */
+[data-theme="dark"] {
+  --bg:           #1C1814;
+  --bg-soft:      #23201A;
+  --surface:      #26221C;
+  --surface-2:    #2E2922;
+  --text:         #F1EBDF;
+  --text-soft:    #C5BBAA;
+  --text-faint:   #9A9080;
+  --accent:       #DD8A66;
+  --accent-deep:  #C9704E;
+  --accent-ink:   #E9A98C;
+  --accent-soft:  #3A2A20;
+  --sage:         #93B48C;
+  --dusty:        #8FB0C7;
+  --border:       #3A332B;
+  --border-2:     #4A4137;
+  --code-bg:      #15110D;
+  --code-ink:     #EDE3D2;
+  --code-border:  #2A2420;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.40);
+  --shadow-md: 0 4px 14px rgba(0,0,0,.45);
+  --shadow-lg: 0 14px 36px rgba(0,0,0,.55);
+}
+
+/* Respect OS preference on first visit (theme.js bootstrap manages persistence). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { color-scheme: dark; }
+}

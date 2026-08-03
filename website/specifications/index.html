@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Specifications — the assessment contracts | PyPractical</title>
+  <meta name="description" content="Every PyPractical assessment follows precise specifications: the problem markdown structure, Python templates, unit tests, and metadata — the contracts of Open Assessment Engineering.">
+  <meta name="theme-color" content="#FAF7F2">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Specifications — PyPractical">
+  <meta property="og:description" content="The contracts that make every assessment consistent and trustworthy.">
+  <meta property="og:image" content="../assets/img/photos/specifications.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bulma.min.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/markdown.css">
+  <link rel="stylesheet" href="../assets/css/print.css">
+  <script>(function(){try{var t=localStorage.getItem('pypra-theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <style>
+    .doc-card{font:inherit;text-align:left;width:100%;color:inherit;cursor:pointer;background:var(--surface);}
+    .doc-card.is-active{border-color:var(--accent);box-shadow:var(--shadow-md);}
+    .doc-card:focus-visible{outline:3px solid var(--accent);outline-offset:2px;}
+  </style>
+</head>
+<body data-root="../">
+  <div data-include="nav"></div>
+
+  <main id="main">
+    <header class="hero">
+      <span class="wash" aria-hidden="true"></span>
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <span class="hero__badge"><span class="dot" aria-hidden="true"></span> Specifications</span>
+            <h1 class="hero__title">The <em>contracts</em> behind every assessment.</h1>
+            <p class="hero__sub">Consistency reduces cognitive load. These specifications define exactly how every PyPractical assessment is structured — so any teacher can read, use, and adapt one with confidence.</p>
+          </div>
+          <div class="hero__art">
+            <img src="../assets/img/photos/specifications.webp" alt="Organized engineering documents spread across a desk, connected with colored tabs." width="1280" height="853" loading="eager" decoding="async">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Choose a document</span>
+          <h2>Read any specification</h2>
+          <p class="muted">Select a card to load the full document — rendered live from the repository.</p>
+        </div>
+        <div class="grid grid--3">
+          <button class="doc-card card card--hover is-active" type="button" data-doc="40-problem-markdown-spec.md"><span class="spec__id">SPEC-40</span><h3>Problem Markdown</h3><p class="muted">The required structure of every problem statement.</p></button>
+          <button class="doc-card card card--hover" type="button" data-doc="42-unittest-spec.md"><span class="spec__id">SPEC-42</span><h3>Unit Tests</h3><p class="muted">How test suites are written and organized.</p></button>
+          <button class="doc-card card card--hover" type="button" data-doc="44-metadata-spec.md"><span class="spec__id">SPEC-44</span><h3>Metadata</h3><p class="muted">The <code>metadata.yml</code> schema for each assessment.</p></button>
+          <button class="doc-card card card--hover" type="button" data-doc="30-PROBLEM_TEMPLATE.md"><span class="spec__id">TPL-30</span><h3>Problem Template</h3><p class="muted">The starter scaffold for a new problem.</p></button>
+          <button class="doc-card card card--hover" type="button" data-doc="20-FAMILY_TEMPLATE.md"><span class="spec__id">TPL-20</span><h3>Family Template</h3><p class="muted">The scaffold for a new assessment family.</p></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="eyebrow">Live document</span>
+          <h2 id="docHeading">Specification</h2>
+          <p class="muted"><button type="button" class="btn btn--ghost" style="padding:.4rem .8rem;font-size:var(--fs-sm)" onclick="window.print()">Print this page</button></p>
+        </div>
+        <div class="md-viewer" id="docViewer" data-md="40-problem-markdown-spec.md"></div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta">
+          <h2>Specifications meet standards</h2>
+          <p>Style and scoring standards keep every assessment consistent and fair.</p>
+          <div class="hero__cta" style="justify-content:center">
+            <a class="btn btn--lg" href="../standards/">Read the standards</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="../assets/vendor/marked.min.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/markdown-viewer.js"></script>
+  <script>
+    (function(){
+      var cards=document.querySelectorAll('.doc-card[data-doc]');
+      var viewer=document.getElementById('docViewer');
+      var heading=document.getElementById('docHeading');
+      if(!viewer) return;
+      function select(card){
+        cards.forEach(function(c){c.classList.remove('is-active');});
+        card.classList.add('is-active');
+        viewer.setAttribute('data-md', card.getAttribute('data-doc'));
+        if(heading){var t=card.querySelector('h3');if(t) heading.textContent=t.textContent;}
+        if(window.PYPRA&&window.PYPRA.renderMarkdown) window.PYPRA.renderMarkdown(viewer);
+      }
+      cards.forEach(function(card){card.addEventListener('click',function(){select(card);viewer.scrollIntoView({behavior:'smooth',block:'start'});});});
+    })();
+  </script>
+</body>
+</html>

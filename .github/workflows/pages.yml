@@ -1,0 +1,64 @@
+name: Deploy website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - '*.md'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Keep the Markdown-Viewer reference docs in sync with the repo root.
+      # (The site fetches these from website/_docs/ at runtime.)
+      - name: Bundle source documents into the site
+        run: |
+          mkdir -p website/_docs
+          cp 00-PROJECT_VISION.md \
+             01-MANIFESTO.md \
+             03-DESIGN_PRINCIPLES.md \
+             04-CURRICULUM_PHILOSOPHY.md \
+             05-ASSESSMENT_PHILOSOPHY.md \
+             06-WORKFLOW.md \
+             66-assessment-scoring-std.md \
+             60-python-style-std.md \
+             61-markdown-style-std.md \
+             40-problem-markdown-spec.md \
+             42-unittest-spec.md \
+             44-metadata-spec.md \
+             30-PROBLEM_TEMPLATE.md \
+             20-FAMILY_TEMPLATE.md \
+             CONTRIBUTING.md \
+             website/_docs/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: website
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

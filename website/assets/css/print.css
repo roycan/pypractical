@@ -1,0 +1,40 @@
+/* =====================================================================
+   print.css — print-friendly output, tuned for specification & standard
+   pages. Forces light ink-on-paper regardless of the on-screen theme.
+   ===================================================================== */
+
+@media print {
+  /* force a clean, light, high-contrast paper render */
+  :root, [data-theme="dark"] {
+    --bg: #ffffff; --bg-soft: #ffffff; --surface: #ffffff; --surface-2: #f6f3ec;
+    --text: #16110d; --text-soft: #2b2520; --text-faint: #5b524a;
+    --accent: #9E3F1F; --accent-ink: #9E3F1F; --accent-soft: #f1e7df;
+    --border: #d8cdb5; --border-2: #b9ad93;
+    --code-bg: #211c17; --code-ink: #f2ebdd; --code-border: #2c2520;
+    --shadow-sm: none; --shadow-md: none; --shadow-lg: none;
+  }
+
+  /* hide interactive chrome */
+  .nav, .footer, .cta, .skip-link, .theme-toggle, .nav__burger,
+  .spec__meta a, .btn, .no-print { display: none !important; }
+
+  body { background: #fff !important; font-size: 11pt; line-height: 1.5; }
+  .section { padding-block: 1rem; }
+  .container, .container-narrow { width: 100%; max-width: 100%; margin: 0; padding: 0; }
+
+  /* keep code blocks from breaking awkwardly */
+  .prose pre, pre { white-space: pre-wrap; word-wrap: break-word; border: 1px solid #bbb; page-break-inside: avoid; }
+
+  /* headings: avoid orphaned headings at the bottom of a page */
+  .prose h1, .prose h2, .prose h3, h1, h2, h3 { page-break-after: avoid; }
+  .prose blockquote, .spec, .std, .card { page-break-inside: avoid; }
+
+  /* show the source-document path as a subtle print header */
+  .print-source { display: block !important; font-size: 9pt; color: #777; border-bottom: 1px solid #ccc; padding-bottom: .3rem; margin-bottom: .6rem; }
+
+  /* links: expand to show the URL where helpful */
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+
+  a { color: #16110d !important; text-decoration: underline; }
+}
+.print-source { display: none; }

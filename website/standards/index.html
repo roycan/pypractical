@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Standards — style & scoring | PyPractical</title>
+  <meta name="description" content="PyPractical standards keep every assessment consistent and fair: Python style, Markdown style, and a six-rule assessment scoring model — score equals the percentage of passing unit tests.">
+  <meta name="theme-color" content="#FAF7F2">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Standards — PyPractical">
+  <meta property="og:description" content="Python & Markdown style, plus a six-rule scoring model.">
+  <meta property="og:image" content="../assets/img/photos/standards.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bulma.min.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/markdown.css">
+  <link rel="stylesheet" href="../assets/css/print.css">
+  <script>(function(){try{var t=localStorage.getItem('pypra-theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <style>
+    .doc-card{font:inherit;text-align:left;width:100%;color:inherit;cursor:pointer;background:var(--surface);}
+    .doc-card.is-active{border-color:var(--accent);box-shadow:var(--shadow-md);}
+    .doc-card:focus-visible{outline:3px solid var(--accent);outline-offset:2px;}
+    .formula{font-family:var(--font-mono);font-size:1.05rem;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:var(--s-4) var(--s-5);display:inline-block;}
+  </style>
+</head>
+<body data-root="../">
+  <div data-include="nav"></div>
+
+  <main id="main">
+    <header class="hero">
+      <span class="wash" aria-hidden="true"></span>
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <span class="hero__badge"><span class="dot" aria-hidden="true"></span> Standards</span>
+            <h1 class="hero__title">Consistent. <em>Fair.</em> Objective.</h1>
+            <p class="hero__sub">Standards make assessments predictable for teachers and fair for students. Python and Markdown style keep them readable; a six-rule scoring model keeps grading objective.</p>
+          </div>
+          <div class="hero__art">
+            <img src="../assets/img/photos/standards.webp" alt="Engineers and educators using standards to improve the quality of their work." width="1280" height="853" loading="eager" decoding="async">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SCORING MODEL -->
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="eyebrow">The scoring model</span>
+          <h2>Six rules, one formula</h2>
+          <p class="lead">Every assessment is graded the same way — automatically, objectively, and immediately.</p>
+        </div>
+        <div class="grid grid--2 principles">
+          <div class="principle"><h3>Equal weight</h3><p>Every unit test counts the same.</p></div>
+          <div class="principle"><h3>One behavior each</h3><p>Each test measures one observable behavior.</p></div>
+          <div class="principle"><h3>Percentage score</h3><p>Score = percentage of passing tests.</p></div>
+          <div class="principle"><h3>Independent</h3><p>Tests are independent whenever practical.</p></div>
+          <div class="principle"><h3>Hidden tests</h3><p>Assess documented behavior only — never surprise students.</p></div>
+          <div class="principle"><h3>Balanced count</h3><p>Test count balances coverage with meaningful feedback.</p></div>
+        </div>
+        <p class="text-center" style="margin-top:var(--s-7)"><span class="formula">score = ( passing tests ÷ total tests ) × 100%</span></p>
+      </div>
+    </section>
+
+    <!-- DOC CARDS + VIEWER -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Read the standards</span>
+          <h2>Standard documents</h2>
+          <p class="muted">Select a card to load the full document — rendered live from the repository.</p>
+        </div>
+        <div class="grid grid--3">
+          <button class="doc-card card card--hover is-active" type="button" data-doc="66-assessment-scoring-std.md"><span class="std__id">STD-66</span><h3>Assessment Scoring</h3><p class="muted">The six-rule scoring model in full.</p></button>
+          <button class="doc-card card card--hover" type="button" data-doc="60-python-style-std.md"><span class="std__id">STD-60</span><h3>Python Style</h3><p class="muted">Readable, beginner-friendly Python.</p></button>
+          <button class="doc-card card card--hover" type="button" data-doc="61-markdown-style-std.md"><span class="std__id">STD-61</span><h3>Markdown Style</h3><p class="muted">Consistent assessment documents.</p></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <span class="eyebrow">Live document</span>
+          <h2 id="docHeading">Assessment Scoring</h2>
+          <p class="muted"><button type="button" class="btn btn--ghost" style="padding:.4rem .8rem;font-size:var(--fs-sm)" onclick="window.print()">Print this page</button></p>
+        </div>
+        <div class="md-viewer" id="docViewer" data-md="66-assessment-scoring-std.md"></div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta">
+          <h2>See it graded</h2>
+          <p>Every assessment family ships with its unit-test suite — run them and grade automatically.</p>
+          <div class="hero__cta" style="justify-content:center">
+            <a class="btn btn--lg" href="../assessment-families/">Explore assessment families</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="../assets/vendor/marked.min.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/markdown-viewer.js"></script>
+  <script>
+    (function(){
+      var cards=document.querySelectorAll('.doc-card[data-doc]');
+      var viewer=document.getElementById('docViewer');
+      var heading=document.getElementById('docHeading');
+      if(!viewer) return;
+      function select(card){
+        cards.forEach(function(c){c.classList.remove('is-active');});
+        card.classList.add('is-active');
+        viewer.setAttribute('data-md', card.getAttribute('data-doc'));
+        if(heading){var t=card.querySelector('h3');if(t) heading.textContent=t.textContent;}
+        if(window.PYPRA&&window.PYPRA.renderMarkdown) window.PYPRA.renderMarkdown(viewer);
+      }
+      cards.forEach(function(card){card.addEventListener('click',function(){select(card);viewer.scrollIntoView({behavior:'smooth',block:'start'});});});
+    })();
+  </script>
+</body>
+</html>

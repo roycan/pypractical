@@ -1,0 +1,146 @@
+/* =====================================================================
+   base.css — reset, typography, layout primitives, buttons, utilities
+   Loads after Bulma so our tokens win where needed. (VIS-001 aligned)
+   ===================================================================== */
+
+/* ---- Reset -------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 1rem); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh);
+  color: var(--text);
+  background-color: var(--bg);
+  /* VIS-001: subtle paper grain so screens feel less sterile (~4.5% noise) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 240px 240px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+img, svg, video { max-width: 100%; height: auto; display: block; }
+img { border-radius: var(--radius-lg); }
+a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--accent-deep); }
+
+::selection { background: var(--accent-soft); color: var(--accent-ink); }
+
+/* Visible, on-brand focus ring for keyboard users */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ---- Headings (VIS-001: Cormorant display for h1/h2; sans for small) */
+h1, h2 { font-family: var(--font-serif); line-height: var(--lh-tight); color: var(--text); font-weight: 600; letter-spacing: -.01em; }
+/* Cormorant is delicate at small sizes; h3/h4 use the sans family, heavier, for clarity. */
+h3, h4 { font-family: var(--font-sans); line-height: 1.3; color: var(--text); font-weight: 700; letter-spacing: -.005em; }
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); }
+p { line-height: var(--lh); }
+
+/* ---- Layout primitives ------------------------------------------- */
+.container { width: min(100% - 2.5rem, var(--container)); margin-inline: auto; }
+.container-narrow { width: min(100% - 2rem, var(--container-narrow)); margin-inline: auto; }
+.container-wide { width: min(100% - 2.5rem, var(--container-wide)); margin-inline: auto; }
+
+.section { padding-block: var(--s-9); }
+.section--tight { padding-block: var(--s-7); }
+.section--alt { background: var(--bg-soft); }
+
+.stack > * + * { margin-top: var(--s-5); }
+.stack-sm > * + * { margin-top: var(--s-3); }
+.stack-lg > * + * { margin-top: var(--s-7); }
+
+/* eyebrow / kicker label */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-family: var(--font-sans); font-size: var(--fs-xs); font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink);
+}
+.eyebrow::before { content: ""; width: 1.6rem; height: 2px; background: var(--accent); display: inline-block; }
+
+.lead { font-size: var(--fs-lg); color: var(--text-soft); max-width: 60ch; }
+.text-center { text-align: center; }
+.text-accent { color: var(--accent-ink); }
+.muted { color: var(--text-soft); }
+.measure { max-width: 68ch; }
+
+/* ---- Buttons (VIS-001: 8px radius, soft, slight-darken hover, no bounce) */
+.btn {
+  --_bg: var(--accent); --_fg: #fff; --_bd: var(--accent);
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  font-family: var(--font-sans); font-weight: 600; font-size: var(--fs-base);
+  line-height: 1; padding: .875rem 1.5rem; border-radius: var(--radius-btn);
+  border: 1.5px solid var(--_bd); background: var(--_bg); color: var(--_fg);
+  cursor: pointer; transition: filter var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+  text-decoration: none; white-space: nowrap;
+}
+.btn:hover { color: var(--_fg); filter: brightness(.95); box-shadow: var(--shadow-sm); }
+.btn:active { filter: brightness(.9); }
+.btn--lg { padding: 1rem 1.7rem; font-size: var(--fs-lg); }
+.btn--ghost { --_bg: transparent; --_fg: var(--accent-ink); --_bd: var(--border-2); }
+.btn--ghost:hover { --_bg: var(--accent-soft); --_bd: var(--accent); }
+.btn--sage { --_bg: var(--sage); --_bd: var(--sage); }
+[data-theme="dark"] .btn--ghost { --_fg: var(--text); }
+
+/* ---- Tags / chips / badges --------------------------------------- */
+.tag {
+  display: inline-flex; align-items: center; gap: .35rem;
+  font-size: var(--fs-xs); font-weight: 600; padding: .3rem .7rem;
+  border-radius: var(--radius-pill); background: var(--surface-2);
+  color: var(--text-soft); border: 1px solid var(--border);
+}
+.tag--accent { background: var(--accent-soft); color: var(--accent-ink); border-color: transparent; }
+.tag--sage { background: rgba(126,156,120,.16); color: var(--sage); border-color: transparent; }
+.tag--amber { background: rgba(176,125,46,.14); color: #a9741f; border-color: transparent; }
+[data-theme="dark"] .tag--amber { color: #d9ab5c; }
+
+/* ---- Auto-responsive grid ---------------------------------------- */
+.grid { display: grid; gap: var(--s-5); }
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.grid--4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+/* ---- Generic card (VIS-001: 12px radius, soft paper shadow) ------ */
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: var(--s-6);
+  box-shadow: var(--shadow-sm); transition: box-shadow var(--transition), border-color var(--transition);
+}
+.card--hover:hover { box-shadow: var(--shadow-md); border-color: var(--border-2); }
+.card__icon { width: 44px; height: 44px; color: var(--accent); margin-bottom: var(--s-4); }
+.card h3 { margin-bottom: var(--s-3); }
+
+/* ---- Divider ----------------------------------------------------- */
+.rule { height: 1px; background: var(--border); border: 0; margin-block: var(--s-7); }
+
+/* ---- Accessibility helpers --------------------------------------- */
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: var(--s-4); top: -120%; z-index: 200;
+  background: var(--accent); color: #fff; padding: .75rem 1.1rem; border-radius: var(--radius-btn);
+  font-weight: 600; transition: top var(--transition);
+}
+.skip-link:focus { top: var(--s-4); color: #fff; }
+
+/* Inline code */
+:not(pre) > code {
+  font-family: var(--font-mono); font-size: .9em; background: var(--surface-2);
+  border: 1px solid var(--border); padding: .12em .4em; border-radius: var(--radius-sm); color: var(--accent-ink);
+}
