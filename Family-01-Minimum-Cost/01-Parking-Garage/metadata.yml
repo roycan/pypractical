@@ -18,4 +18,6 @@ concepts:
 
 grading: automatic unittest
 
+classroom_tested: true
+
 version: 1.0

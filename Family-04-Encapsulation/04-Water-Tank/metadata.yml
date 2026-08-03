@@ -1,4 +1,4 @@
- title: Water Tank
+title: Water Tank
 
 family: Encapsulation
 
@@ -15,5 +15,7 @@ concepts:
   - accessors
 
 grading: automatic unittest
+
+classroom_tested: false
 
 version: 1.0

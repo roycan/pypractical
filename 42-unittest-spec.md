@@ -342,14 +342,21 @@ Simple tests are easier to trust and maintain.
 
 # Main Guard
 
-Include
+By convention the main guard is included but **commented out**, because some
+learning-management systems run the suite their own way:
 
 ```python
-if __name__ == "__main__":
-    unittest.main()
+
+# Run locally with:  python3 -m unittest tests
+# if __name__ == "__main__":
+#     unittest.main()
 ```
 
-This allows tests to be executed directly during development.
+The canonical way to run a suite is, from inside the problem folder:
+
+```bash
+python3 -m unittest tests
+```
 
 ---
 

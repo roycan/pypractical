@@ -292,6 +292,9 @@ Key rules:
 - Tests must be independent (no shared mutable state).
 - **NO random inputs** — tests must be deterministic.
 - Every expected value independently verified.
+- **Main guard:** by convention included but **commented out** (some learning-management
+  systems run the suite their own way). The canonical way to run a suite is
+  `python3 -m unittest tests`, from inside the problem folder.
 
 Example structure:
 
@@ -307,8 +310,9 @@ class TestParkingGarage(unittest.TestCase):
         self.assertEqual(result, 25)
 
 
-if __name__ == "__main__":
-    unittest.main()
+# Run locally with:  python3 -m unittest tests
+# if __name__ == "__main__":
+#     unittest.main()
 ```
 
 ---
@@ -378,13 +382,14 @@ From [`61-markdown-style-std.md`](../61-markdown-style-std.md):
 |-------------|---------------------------------------|------------------------|
 | SPEC-001    | 40-problem-markdown-spec.md           | Problem Markdown structure |
 | SPEC-002    | 41-python-template-spec.md            | Starter code structure |
+| SPEC-003    | 44-metadata-spec.md                   | Metadata (`metadata.yml`) schema |
 | SPEC-004    | 42-unittest-spec.md                   | Unit test structure    |
 | SPEC-005    | 43-oop-class-spec.md                  | Class-based (OOP) spec |
 | STD-001     | 60-python-style-std.md                | Python style           |
 | STD-002     | 61-markdown-style-std.md              | Markdown style         |
 | (none)      | 66-assessment-scoring-std.md          | Scoring rules          |
 
-> **Note:** SPEC-003 is skipped/missing in the sequence — a known gap.
+> **Note:** SPEC-003 was previously a gap; it is now defined by [`44-metadata-spec.md`](../44-metadata-spec.md).
 
 ---
 

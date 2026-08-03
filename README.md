@@ -75,45 +75,66 @@ Programming should feel purposeful, approachable, and enjoyable.
 
 ```text
 PyPractical/
-
 ├── README.md
-├── DESIGN_PRINCIPLES.md
-├── CURRICULUM_PHILOSOPHY.md
-├── ASSESSMENT_PHILOSOPHY.md
-├── CONTRIBUTING.md
-├── STYLE_GUIDE.md
-├── WORKFLOW.md
+├── inceptions/context.md          # the project "second brain"
+├── plans/                         # round plans + outcomes
+├── 00-PROJECT_VISION.md ...       # philosophy, specs, and standards
+├── examples/                      # legacy pre-spec snippets
 │
-├── Family-01-Minimum-Cost/
-├── Family-02-Intro-OOP/
-├── Family-03-Collections/
-└── ...
+├── Family-01-Minimum-Cost/              (functions reference)
+├── Family-02-Intro-OOP/                 (SG 3 — Introduction to OOP)
+├── Family-03-Classes-and-Objects/       (SG 4-5)
+├── Family-04-Encapsulation/             (SG 8)
+├── Family-05-Inheritance/               (SG 9)
+├── Family-06-Method-Overriding/         (SG 10)
+├── Family-07-Polymorphism/              (SG 11)
+├── Family-08-Abstraction/               (SG 12)
+├── Family-09-Relationships-Association/ (SG 6)
+├── Family-10-Relationships-Composition/ (SG 7)
+└── Family-11-SOLID-Single-Responsibility/ (SG 27)
 ```
 
-Each family contains a collection of equivalent practical assessments that reinforce the same learning objectives through different authentic stories.
+Each family contains 3-4 equivalent practical assessments (same concept and
+difficulty, different stories) for fairness across class sections. Every problem
+ships six files: `problem.md`, `starter.py`, `solution.py`, `tests.py`,
+`teacher_notes.md`, and `metadata.yml`.
 
 ---
 
 # Current Roadmap
 
-The first release focuses on introductory Python programming.
+## Round 1 — Foundation (complete)
 
-## Family 1 — Minimum Cost
+Two canonical, spec-compliant reference problems plus the class-based spec
+(SPEC-005):
 
-* Parking Garage
-* Internet Café
-* Theme Park
-* School Printing Center
+* **Family-01-Minimum-Cost/01-Parking-Garage** — the function-based reference
+* **Family-03-Classes-and-Objects/01-TV-Recorder** — the class-based (OOP) reference
 
-Future families will introduce:
+## Round 2 — OOP Families (complete)
 
-* Classes and Objects
-* Object Relationships
-* Collections of Objects
-* Inheritance
-* Searching and Sorting
-* File Processing
-* Larger Programming Projects
+A full, auto-gradable Object-Oriented Programming curriculum built in dependency
+order (SG 3 -> 4-5 -> 8 -> 9 -> 10 -> 11 -> 12 -> 6 -> 7 -> 27).
+**11 families, 40 problems, 473 tests — all passing.**
+
+| Family | Topic |
+|---|---|
+| Family-02-Intro-OOP | Introduction to OOP |
+| Family-03-Classes-and-Objects | Classes and Objects |
+| Family-04-Encapsulation | Encapsulation |
+| Family-05-Inheritance | Inheritance |
+| Family-06-Method-Overriding | Method Overriding |
+| Family-07-Polymorphism | Polymorphism |
+| Family-08-Abstraction | Abstraction |
+| Family-09-Relationships-Association | Relationships I |
+| Family-10-Relationships-Composition | Relationships II |
+| Family-11-SOLID-Single-Responsibility | SOLID: Single Responsibility |
+
+Run any suite with `python3 -m unittest tests` from inside the problem folder.
+
+## Round 3 — Data Handling (planned)
+
+Reading and writing data (SG 18 text files -> 19 analysis -> 20 JSON).
 
 ---
 
