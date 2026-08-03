@@ -1,0 +1,21 @@
+title: Studio Booking
+
+family: Classes and Objects
+
+difficulty: 2/5
+
+estimated_time: 20 minutes
+
+language: Python
+
+concepts:
+  - classes
+  - objects
+  - instance variables
+  - methods
+  - constructors
+  - object collaboration
+
+grading: automatic unittest
+
+version: 1.0

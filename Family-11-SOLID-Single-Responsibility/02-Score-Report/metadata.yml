@@ -1,0 +1,21 @@
+title: Score Report
+
+family: SOLID - Single Responsibility
+
+difficulty: 4/5
+
+estimated_time: 25 minutes
+
+language: Python
+
+concepts:
+  - single responsibility principle
+  - SOLID
+  - separation of concerns
+  - classes
+  - objects
+  - methods
+
+grading: automatic unittest
+
+version: 1.0

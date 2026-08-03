@@ -1,0 +1,19 @@
+title: Bank Account
+
+family: Encapsulation
+
+difficulty: 2/5
+
+estimated_time: 20 minutes
+
+concepts:
+  - encapsulation
+  - classes
+  - objects
+  - instance variables
+  - methods
+  - accessors
+
+grading: automatic unittest
+
+version: 1.0

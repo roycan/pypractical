@@ -1,0 +1,21 @@
+title: Team Roster
+
+family: Inheritance
+
+difficulty: 2/5
+
+estimated_time: 20 minutes
+
+language: Python
+
+concepts:
+  - inheritance
+  - subclasses
+  - classes
+  - objects
+  - methods
+  - constructors
+
+grading: automatic unittest
+
+version: 1.0

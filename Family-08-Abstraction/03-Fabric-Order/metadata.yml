@@ -1,0 +1,21 @@
+title: Fabric Order
+
+family: Abstraction
+
+difficulty: 3/5
+
+estimated_time: 20 minutes
+
+language: Python
+
+concepts:
+  - abstraction
+  - abstract methods
+  - inheritance
+  - subclasses
+  - classes
+  - objects
+
+grading: automatic unittest
+
+version: 1.0

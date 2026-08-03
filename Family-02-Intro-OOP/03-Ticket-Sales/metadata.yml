@@ -1,0 +1,20 @@
+title: Ticket Sales
+
+family: Intro to OOP
+
+difficulty: 1/5
+
+estimated_time: 15 minutes
+
+language: Python
+
+concepts:
+  - classes
+  - objects
+  - instance variables
+  - methods
+  - constructors
+
+grading: automatic unittest
+
+version: 1.0

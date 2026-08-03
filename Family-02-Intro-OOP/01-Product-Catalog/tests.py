@@ -72,6 +72,6 @@ class TestProductCatalog(unittest.TestCase):
         product = Product("Marker", 35, 9)
         self.assertEqual(product.total_value(), 315)
 
-
-if __name__ == "__main__":
-    unittest.main()
+# Run locally with:  python3 -m unittest tests
+# if __name__ == "__main__":
+#     unittest.main()

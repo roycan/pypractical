@@ -1,0 +1,21 @@
+title: Price Cart
+
+family: Polymorphism
+
+difficulty: 3/5
+
+estimated_time: 20 minutes
+
+language: Python
+
+concepts:
+  - polymorphism
+  - duck typing
+  - classes
+  - objects
+  - methods
+  - loops
+
+grading: automatic unittest
+
+version: 1.0

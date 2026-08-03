@@ -59,6 +59,6 @@ class TestParkingGarage(unittest.TestCase):
     def test_hidden_case_2(self):
         self.assertEqual(calculate_total_revenue([20], 100, 1500), 1500)
 
-
+# Run locally with:  python3 -m unittest tests
 # if __name__ == "__main__":
 #     unittest.main()

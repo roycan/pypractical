@@ -32,7 +32,7 @@ Key facts:
 - **License:** Dual — CC BY-SA 4.0 (documents) + MIT (code).
 - **Current state:** **Round 1 (Foundation) is COMPLETE.** The repo now contains two
   canonical, spec-compliant, runnable reference problems plus a class-based spec
-  addendum (SPEC-005). Next: Round 2 scales the OOP families. See Section 23 for
+  addendum (SPEC-005). Round 2 (OOP families) is COMPLETE — 40 problems, 473 tests green. See Section 23 for
   progress, and `plans/round-1-foundation-plan.md` for the plan.
 
 ---
@@ -108,7 +108,7 @@ All links are relative from `inceptions/` (hence the `../` prefix).
 
 - [`Family-01-Minimum-Cost/01-Parking-Garage/`](../Family-01-Minimum-Cost/01-Parking-Garage/problem.md)
   — canonical **function-based** reference problem (6 deliverables, 12 tests)
-- [`Family-02-Intro-OOP/01-TV-Recorder/`](../Family-02-Intro-OOP/01-TV-Recorder/problem.md)
+- [`Family-03-Classes-and-Objects/01-TV-Recorder/`](../Family-03-Classes-and-Objects/01-TV-Recorder/problem.md)
   — canonical **class-based (OOP)** reference problem (6 deliverables, 14 tests)
 - [`plans/round-1-foundation-plan.md`](../plans/round-1-foundation-plan.md) — Round 1 plan
   and outcome (task scorecard + results)
@@ -502,7 +502,7 @@ Documented known issues — be aware of these when working in the repo:
    structure as authoritative.**
 6. **Assessment content (Round 1 foundation):** two canonical reference problems now exist
    — `Family-01-Minimum-Cost/01-Parking-Garage/` (function) and
-   `Family-02-Intro-OOP/01-TV-Recorder/` (OOP) — plus SPEC-005. Full isomorphic variants
+   `Family-03-Classes-and-Objects/01-TV-Recorder/` (OOP) — plus SPEC-005. Full isomorphic variants
    per topic are built in Round 2. The legacy `examples/` snippets pre-date the specs and
    are NOT compliant (they use `pass` and lack the test import/guard) — treat the
    `Family-NN/` versions as canonical.
@@ -603,8 +603,10 @@ flowchart TD
 | Round | Scope | Status |
 |---|---|---|
 | Round 1 — Foundation | SPEC-005 addendum + 2 canonical references (function + OOP); Google docstrings standardized | ✅ Complete (2026-08-02); 26/26 tests pass |
-| Round 2 — OOP families | Scale OOP families in dependency order: SG 3 → 4 → 5 → 8 → 9 → 10 → 11 → 12 → 6 → 7 → 27; ~3-4 isomorphic problems each | ⏳ Not started |
+| Round 2 — OOP families | Scale OOP families in dependency order (SG 3 → 4 → 5 → 8 → 9 → 10 → 11 → 12 → 6 → 7 → 27); ~3-4 isomorphic problems each | ✅ Complete (2026-08-03); 40 problems, 473 tests, all green; see `plans/round-2-oop-families-plan.md` |
 | Round 3 — Data handling | SG 18 (files) → 19 (analysis) → 20 (JSON); needs a file-I/O fixture pattern | ⏳ Not started |
+
+> **Round 2 outcome:** 40 problems (1 function reference + 39 OOP), 240 files, 473 tests — all pass via `python3 -m unittest tests` in every folder. Families were renumbered to match teaching order: Family-02-Intro-OOP now covers SG 3, and the TV Recorder moved to Family-03-Classes-and-Objects. The `tests.py` main guards are commented out for LMS compatibility (verify with `python3 -m unittest tests`).
 
 > **Note:** This file should be updated as the project evolves. It is a **living document**.
 > When new families are added, specs change, or conventions evolve, update this context file

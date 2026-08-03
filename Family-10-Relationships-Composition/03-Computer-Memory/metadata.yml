@@ -1,0 +1,22 @@
+title: Computer Memory
+
+family: Relationships - Composition
+
+difficulty: 4/5
+
+estimated_time: 25 minutes
+
+language: Python
+
+concepts:
+  - composition
+  - object ownership
+  - whole-part relationship
+  - classes
+  - objects
+  - lists
+  - loops
+
+grading: automatic unittest
+
+version: 1.0

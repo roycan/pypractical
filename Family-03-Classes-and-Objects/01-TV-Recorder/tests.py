@@ -79,6 +79,6 @@ class TestRecorderSystem(unittest.TestCase):
         data = [(1, 7, 2), (3, 5, 3), (5, 9, 1), (8, 10, 2), (10, 12, 3)]
         self.assertEqual(minimum_recorders(data), 2)
 
-
-if __name__ == "__main__":
-    unittest.main()
+# Run locally with:  python3 -m unittest tests
+# if __name__ == "__main__":
+#     unittest.main()

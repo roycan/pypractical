@@ -1,0 +1,22 @@
+title: Playlist
+
+family: Relationships - Association
+
+difficulty: 3/5
+
+estimated_time: 20 minutes
+
+language: Python
+
+concepts:
+  - object relationships
+  - association
+  - one-to-many
+  - classes
+  - objects
+  - lists
+  - methods
+
+grading: automatic unittest
+
+version: 1.0

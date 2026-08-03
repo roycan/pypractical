@@ -1,0 +1,21 @@
+title: Rental Cost
+
+family: Method Overriding
+
+difficulty: 3/5
+
+estimated_time: 20 minutes
+
+language: Python
+
+concepts:
+  - method overriding
+  - inheritance
+  - subclasses
+  - classes
+  - objects
+  - methods
+
+grading: automatic unittest
+
+version: 1.0
