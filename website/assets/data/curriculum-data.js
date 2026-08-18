@@ -5,7 +5,7 @@
    trivial to adjust here.
    ===================================================================== */
 window.PYPRA_CURRICULUM = {
-  stats: { problems: 41, families: 11, tests: 473 },
+  stats: { problems: 49, families: 13, tests: 584 },
 
   // Distribution tiers (governance): "reference" families are public demos;
   // all other families are "pack" — educator-distributed, never deep-linked
@@ -35,7 +35,7 @@ window.PYPRA_CURRICULUM = {
       id: "s4", num: 4, title: "Building Better Software",
       concepts: ["Inheritance", "Polymorphism", "Composition", "Code Reuse"],
       blurb: "Programming becomes less about writing code and more about designing systems. Families focus on software organization rather than larger algorithms.",
-      families: ["f05", "f06", "f07", "f08", "f10", "f11"]
+      families: ["f05", "f06", "f07", "f08", "f10", "f11", "f12", "f13"]
     },
     {
       id: "s5", num: 5, title: "Data and Algorithms",
@@ -102,7 +102,8 @@ window.PYPRA_CURRICULUM = {
         { slug: "01-Staff-Hierarchy", title: "Staff Hierarchy", difficulty: 2, time: "20 min", tested: false, concepts: ["inheritance","subclasses","classes","objects","methods","constructors"] },
         { slug: "02-Vehicle-Hierarchy", title: "Vehicle Hierarchy", difficulty: 2, time: "20 min", tested: false, concepts: ["inheritance","subclasses","classes","objects","methods","constructors"] },
         { slug: "03-Team-Roster", title: "Team Roster", difficulty: 2, time: "20 min", tested: false, concepts: ["inheritance","subclasses","classes","objects","methods","constructors"] },
-        { slug: "04-Pet-Registry", title: "Pet Registry", difficulty: 2, time: "20 min", tested: false, concepts: ["inheritance","subclasses","classes","objects","methods","constructors"] }
+        { slug: "04-Pet-Registry", title: "Pet Registry", difficulty: 2, time: "20 min", tested: false, concepts: ["inheritance","subclasses","classes","objects","methods","constructors"] },
+        { slug: "05-Animal-Bird", title: "Animal Bird", difficulty: 2, time: "15 min", tested: false, concepts: ["inheritance","subclasses","classes","objects","methods","constructors"] }
       ]
     },
     "f06": {
@@ -146,7 +147,11 @@ window.PYPRA_CURRICULUM = {
         { slug: "01-Library", title: "Library", difficulty: 3, time: "20 min", tested: false, concepts: ["object relationships","association","one-to-many","classes","objects","lists","methods"] },
         { slug: "02-Classroom", title: "Classroom", difficulty: 3, time: "20 min", tested: false, concepts: ["object relationships","association","one-to-many","classes","objects","lists","methods"] },
         { slug: "03-Playlist", title: "Playlist", difficulty: 3, time: "20 min", tested: false, concepts: ["object relationships","association","one-to-many","classes","objects","lists","methods"] },
-        { slug: "04-Team-Roster", title: "Team Roster", difficulty: 3, time: "20 min", tested: false, concepts: ["object relationships","association","one-to-many","classes","objects","lists","methods"] }
+        { slug: "04-Team-Roster", title: "Team Roster", difficulty: 3, time: "20 min", tested: false, concepts: ["object relationships","association","one-to-many","classes","objects","lists","methods"] },
+        { slug: "05-Student-Locker", title: "Student Locker", difficulty: 2, time: "15 min", tested: false, concepts: ["object relationships","association","has-a","classes","objects","methods"] },
+        { slug: "06-Person-ID", title: "Person ID", difficulty: 3, time: "20 min", tested: false, concepts: ["object relationships","association","one-to-one","classes","objects","methods"] },
+        { slug: "07-Student-Club", title: "Student Club", difficulty: 3, time: "20 min", tested: false, concepts: ["object relationships","association","many-to-many","classes","objects","lists","methods"] },
+        { slug: "08-Student-Subject", title: "Student Subject", difficulty: 4, time: "25 min", tested: false, concepts: ["object relationships","association","many-to-many","classes","objects","lists","methods"] }
       ]
     },
     "f10": {
@@ -157,11 +162,28 @@ window.PYPRA_CURRICULUM = {
         { slug: "01-Flashlight", title: "Flashlight", difficulty: 4, time: "25 min", tested: false, concepts: ["composition","object ownership","whole-part relationship","classes","objects","lists","loops"] },
         { slug: "02-Storage-Crate", title: "Storage Crate", difficulty: 4, time: "25 min", tested: false, concepts: ["composition","object ownership","whole-part relationship","classes","objects","lists","loops"] },
         { slug: "03-Computer-Memory", title: "Computer Memory", difficulty: 4, time: "25 min", tested: false, concepts: ["composition","object ownership","whole-part relationship","classes","objects","lists","loops"] },
-        { slug: "04-Passenger-Train", title: "Passenger Train", difficulty: 4, time: "25 min", tested: false, concepts: ["composition","object ownership","whole-part relationship","classes","objects","lists","loops"] }
+        { slug: "04-Passenger-Train", title: "Passenger Train", difficulty: 4, time: "25 min", tested: false, concepts: ["composition","object ownership","whole-part relationship","classes","objects","lists","loops"] },
+        { slug: "05-House-Rooms", title: "House Rooms", difficulty: 4, time: "25 min", tested: false, concepts: ["composition","object ownership","whole-part relationship","classes","objects","lists","loops"] }
       ]
     },
     "f11": {
-      id: "f11", num: 11, folder: "Family-11-SOLID-Single-Responsibility", title: "SOLID — Single Responsibility",
+      id: "f11", num: 11, folder: "Family-11-Relationships-Dependency", title: "Relationships — Dependency",
+      stage: "s4", difficulty: 2,
+      blurb: "Use another object as a method parameter without storing it — the weakest relationship.",
+      problems: [
+        { slug: "01-Grade-Checker", title: "Grade Checker", difficulty: 2, time: "15 min", tested: false, concepts: ["object relationships","dependency","uses-a","classes","objects","methods","if"] }
+      ]
+    },
+    "f12": {
+      id: "f12", num: 12, folder: "Family-12-Relationships-Aggregation", title: "Relationships — Aggregation",
+      stage: "s4", difficulty: 3,
+      blurb: "Hold parts that are created outside and passed in — parts that can exist on their own.",
+      problems: [
+        { slug: "01-Computer-Peripherals", title: "Computer Peripherals", difficulty: 3, time: "20 min", tested: false, concepts: ["object relationships","aggregation","whole-part","classes","objects","lists","methods"] }
+      ]
+    },
+    "f13": {
+      id: "f13", num: 13, folder: "Family-13-SOLID-Single-Responsibility", title: "SOLID — Single Responsibility",
       stage: "s4", difficulty: 4,
       blurb: "Design classes with one clear reason to change — the first of the SOLID principles.",
       problems: [

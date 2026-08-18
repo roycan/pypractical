@@ -1,0 +1,25 @@
+title: House Rooms
+
+family: Relationships - Composition
+
+difficulty: 4/5
+
+estimated_time: 25 minutes
+
+language: Python
+
+concepts:
+  - object relationships
+  - composition
+  - whole-part
+  - classes
+  - objects
+  - lists
+  - tuples
+  - methods
+
+grading: automatic unittest
+
+classroom_tested: false
+
+version: 1.0

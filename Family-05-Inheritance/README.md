@@ -33,6 +33,7 @@ the previous family
 | 02 | 02-Vehicle-Hierarchy | Vehicle and Motorcycle |
 | 03 | 03-Team-Roster | Player and Captain |
 | 04 | 04-Pet-Registry | Animal and Pet |
+| 05 | 05-Animal-Bird | Animal and Bird |
 
 All variants are isomorphic: same concept and difficulty, different stories, for
 fairness across class sections.

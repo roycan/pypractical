@@ -1,0 +1,24 @@
+title: Student Subject
+
+family: Relationships - Association
+
+difficulty: 4/5
+
+estimated_time: 25 minutes
+
+language: Python
+
+concepts:
+  - object relationships
+  - association
+  - many-to-many
+  - classes
+  - objects
+  - lists
+  - methods
+
+grading: automatic unittest
+
+classroom_tested: false
+
+version: 1.0

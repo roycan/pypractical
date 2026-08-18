@@ -34,7 +34,7 @@ the name fits even better.
 | 8 | Family-08-Abstraction | 12 | Abstraction | abstract base (raises NotImplementedError); subclasses implement | 3/5 | 4 |
 | 9 | Family-09-Relationships-Association | 6 | Relationships I | one-to-many association (container has many items) | 3/5 | 4 |
 | 10 | Family-10-Relationships-Composition | 7 | Relationships II | composition (whole creates and owns its parts) | 4/5 | 4 |
-| 11 | Family-11-SOLID-Single-Responsibility | 27 | SOLID: Single Responsibility | split data handling from presentation | 4/5 | 3 |
+| 13 | Family-13-SOLID-Single-Responsibility | 27 | SOLID: Single Responsibility | split data handling from presentation | 4/5 | 3 |
 
 ## Conventions locked this round
 
@@ -75,7 +75,7 @@ the name fits even better.
 | Family-08 (SG 12) | 4 | 12 |
 | Family-09 (SG 6) | 4 | 11 |
 | Family-10 (SG 7) | 4 | 11 |
-| Family-11 (SG 27) | 3 | 11 |
+| Family-13 (SG 27) | 3 | 11 |
 
 ## Notes for Round 3
 

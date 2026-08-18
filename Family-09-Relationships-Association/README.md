@@ -4,21 +4,22 @@
 
 ## Overview
 
-Students model a one-to-many association: a container object holds a list of items
-and can count them or find one by a key — the structure behind libraries,
-classrooms, and playlists.
+Students model association at several multiplicities: a basic has-a link, a
+one-to-one link, a one-to-many container, and a many-to-many link where both
+sides hold lists — the structure behind lockers, ID cards, libraries, clubs, and
+enrollments.
 
 ## Primary Learning Objective
 
-A one-to-many association: a container holds many items and can find one by key.
+Association: one object holds a reference to another, at varying multiplicities.
 
 ## Concepts Reinforced
 
 - Object relationships
 - Association (a "has-a" relationship)
-- One-to-many multiplicity (one container, many items)
+- Basic has-a, one-to-one, one-to-many, and many-to-many multiplicities
 - Classes and objects
-- Lists as instance state
+- A single object reference or a list as instance state
 - Methods that loop over a collection
 
 ## Prerequisites
@@ -33,9 +34,14 @@ the previous family
 | 02 | 02-Classroom | Enrolled students |
 | 03 | 03-Playlist | Saved songs |
 | 04 | 04-Team-Roster | Team players |
+| 05 | 05-Student-Locker | Student and locker |
+| 06 | 06-Person-ID | Person and ID card |
+| 07 | 07-Student-Club | Student and clubs |
+| 08 | 08-Student-Subject | Student and subjects |
 
-All variants are isomorphic: same concept and difficulty, different stories, for
-fairness across class sections.
+Problems 01–04 are isomorphic (one-to-many). Problems 05–08 cover basic has-a,
+one-to-one, and many-to-many multiplicities for a complete association
+progression.
 
 ## Learning Progression
 

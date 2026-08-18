@@ -1,0 +1,23 @@
+title: Animal Bird
+
+family: Inheritance
+
+difficulty: 2/5
+
+estimated_time: 15 minutes
+
+language: Python
+
+concepts:
+  - inheritance
+  - subclasses
+  - classes
+  - objects
+  - methods
+  - constructors
+
+grading: automatic unittest
+
+classroom_tested: false
+
+version: 1.0

@@ -1,6 +1,6 @@
 # Teacher Notes — Inventory Tag
 
-> Family 11 · SOLID - Single Responsibility · Assessment 03 · Difficulty 4/5 · ~25 minutes
+> Family 13 · SOLID - Single Responsibility · Assessment 03 · Difficulty 4/5 · ~25 minutes
 
 ## Learning Objective
 

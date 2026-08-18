@@ -91,7 +91,7 @@ PyPractical/
 ├── Family-08-Abstraction/               (SG 12)
 ├── Family-09-Relationships-Association/ (SG 6)
 ├── Family-10-Relationships-Composition/ (SG 7)
-└── Family-11-SOLID-Single-Responsibility/ (SG 27)
+└── Family-13-SOLID-Single-Responsibility/ (SG 27)
 ```
 
 Each family contains 3-4 equivalent practical assessments (same concept and
@@ -128,7 +128,7 @@ order (SG 3 -> 4-5 -> 8 -> 9 -> 10 -> 11 -> 12 -> 6 -> 7 -> 27).
 | Family-08-Abstraction | Abstraction |
 | Family-09-Relationships-Association | Relationships I |
 | Family-10-Relationships-Composition | Relationships II |
-| Family-11-SOLID-Single-Responsibility | SOLID: Single Responsibility |
+| Family-13-SOLID-Single-Responsibility | SOLID: Single Responsibility |
 
 Run any suite with `python3 -m unittest tests` from inside the problem folder.
 

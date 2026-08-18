@@ -1,0 +1,23 @@
+title: Student Locker
+
+family: Relationships - Association
+
+difficulty: 2/5
+
+estimated_time: 15 minutes
+
+language: Python
+
+concepts:
+  - object relationships
+  - association
+  - has-a
+  - classes
+  - objects
+  - None
+
+grading: automatic unittest
+
+classroom_tested: false
+
+version: 1.0

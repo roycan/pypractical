@@ -1,0 +1,24 @@
+title: Student Club
+
+family: Relationships - Association
+
+difficulty: 3/5
+
+estimated_time: 20 minutes
+
+language: Python
+
+concepts:
+  - object relationships
+  - association
+  - many-to-many
+  - classes
+  - objects
+  - lists
+  - methods
+
+grading: automatic unittest
+
+classroom_tested: false
+
+version: 1.0

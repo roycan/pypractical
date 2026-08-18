@@ -1,4 +1,4 @@
-"""Inventory Tag -- Family 11, Assessment 03 (starter).
+"""Inventory Tag -- Family 13, Assessment 03 (starter).
 
 Complete the Stock and Tag classes. Keep each class to ONE responsibility:
 Stock stores the data, Tag formats the summary.

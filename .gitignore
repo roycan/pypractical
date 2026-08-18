@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+
+# Windows Zone.Identifier alternate data streams
+*:Zone.Identifier

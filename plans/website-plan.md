@@ -167,7 +167,7 @@ Theme: `[data-theme="dark"]` on `<html>`; `theme.js` toggles + persists in `loca
    - S1 → Family-01-Minimum-Cost
    - S2 → Family-02-Intro-OOP, Family-03-Classes-and-Objects, Family-04-Encapsulation
    - S3 → Family-09-Relationships-Association
-   - S4 → Family-05-Inheritance, Family-06-Method-Overriding, Family-07-Polymorphism, Family-08-Abstraction, Family-10-Relationships-Composition, Family-11-SOLID-Single-Responsibility
+   - S4 → Family-05-Inheritance, Family-06-Method-Overriding, Family-07-Polymorphism, Family-08-Abstraction, Family-10-Relationships-Composition, Family-13-SOLID-Single-Responsibility
    - S5/S6 → *(none yet)*
 
 4. **E10 — explorer v1.** Drill-down (Stage → Family → Problem) + difficulty chips; defer free-text search.

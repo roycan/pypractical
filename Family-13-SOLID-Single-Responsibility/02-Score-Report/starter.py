@@ -1,4 +1,4 @@
-"""Score Report -- Family 11, Assessment 02 (starter).
+"""Score Report -- Family 13, Assessment 02 (starter).
 
 Complete the Score and Report classes. Keep each class to ONE responsibility:
 Score stores the data, Report formats the summary.

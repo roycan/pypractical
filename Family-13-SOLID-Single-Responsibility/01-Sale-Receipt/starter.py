@@ -1,4 +1,4 @@
-"""Sale Receipt -- Family 11, Assessment 01 (starter).
+"""Sale Receipt -- Family 13, Assessment 01 (starter).
 
 Complete the Sale and Receipt classes. Keep each class to ONE responsibility:
 Sale stores the data, Receipt formats the summary.

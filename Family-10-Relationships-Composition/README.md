@@ -34,6 +34,7 @@ the previous family
 | 02 | 02-Storage-Crate | Packed boxes |
 | 03 | 03-Computer-Memory | Memory modules |
 | 04 | 04-Passenger-Train | Train carriages |
+| 05 | 05-House-Rooms | Built-in rooms |
 
 All variants are isomorphic: same concept and difficulty, different stories, for
 fairness across class sections.
@@ -42,7 +43,7 @@ fairness across class sections.
 
 - Previous: Family 09 — Relationships I (Association)
 - Current: Family 10 — Relationships II (Composition)
-- Next: Family 11 — SOLID: Single Responsibility
+- Next: Family 11 — Relationships III (Dependency)
 
 ## Common Student Mistakes
 

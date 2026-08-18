@@ -1,0 +1,24 @@
+title: Computer Peripherals
+
+family: Relationships - Aggregation
+
+difficulty: 3/5
+
+estimated_time: 20 minutes
+
+language: Python
+
+concepts:
+  - object relationships
+  - aggregation
+  - whole-part
+  - classes
+  - objects
+  - lists
+  - methods
+
+grading: automatic unittest
+
+classroom_tested: false
+
+version: 1.0
