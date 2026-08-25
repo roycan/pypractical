@@ -48,7 +48,10 @@ if __name__ == "__main__":
     print(library.count_books())
 
     found = library.find_by_title("Python Basics")
-    print(found.get_author())
+    if found is not None:
+        print(found.get_author())
+    else:
+        print("Not found")
 
     missing = library.find_by_title("No Book")
     print(missing)

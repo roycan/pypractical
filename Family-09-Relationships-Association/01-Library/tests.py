@@ -34,7 +34,11 @@ class TestLibrary(unittest.TestCase):
     def test_find_returns_book(self):
         library = Library()
         library.add_book(Book("Python Basics", "Ada"))
-        self.assertEqual(library.find_by_title("Python Basics").get_author(), "Ada")
+        found = library.find_by_title("Python Basics")
+        if found is not None:
+            self.assertEqual(found.get_author(), "Ada")
+        else:
+            self.fail("Expected to find the book by title")
 
     def test_find_not_found_returns_none(self):
         library = Library()
@@ -47,13 +51,21 @@ class TestLibrary(unittest.TestCase):
         library.add_book(Book("A", "X"))
         library.add_book(Book("B", "Y"))
         library.add_book(Book("C", "Z"))
-        self.assertEqual(library.find_by_title("B").get_author(), "Y")
+        found = library.find_by_title("B")
+        if found is not None:
+            self.assertEqual(found.get_author(), "Y")
+        else:
+            self.fail("Expected to find the book by title")
 
     def test_find_first_match(self):
         library = Library()
         library.add_book(Book("A", "X"))
         library.add_book(Book("A", "W"))
-        self.assertEqual(library.find_by_title("A").get_author(), "X")
+        found = library.find_by_title("A")
+        if found is not None:
+            self.assertEqual(found.get_author(), "X")
+        else:
+            self.fail("Expected to find the book by title")
 
     # --- Hidden ---
 
@@ -69,7 +81,11 @@ class TestLibrary(unittest.TestCase):
         library.add_book(Book("Alpha", "1"))
         library.add_book(Book("Beta", "2"))
         library.add_book(Book("Gamma", "3"))
-        self.assertEqual(library.find_by_title("Gamma").get_author(), "3")
+        found = library.find_by_title("Gamma")
+        if found is not None:
+            self.assertEqual(found.get_author(), "3")
+        else:
+            self.fail("Expected to find the book by title")
 
     def test_hidden_not_found_among_many(self):
         library = Library()
