@@ -38,10 +38,12 @@ the previous family
 | 06 | 06-Person-ID | Person and ID card |
 | 07 | 07-Student-Club | Student and clubs |
 | 08 | 08-Student-Subject | Student and subjects |
+| 09 | 09-Book-Borrowing | Members borrow books |
 
 Problems 01–04 are isomorphic (one-to-many). Problems 05–08 cover basic has-a,
 one-to-one, and many-to-many multiplicities for a complete association
-progression.
+progression. Problem 09 extends the one-to-many shape with two interacting
+classes: a member reads and changes the state of borrowed books.
 
 ## Learning Progression
 
@@ -66,3 +68,4 @@ the percentage of passing tests.
 ## Revision History
 
 - v1.0 — Round 2 (2026-08).
+- v1.1 — Added 09-Book-Borrowing (2026-10).
