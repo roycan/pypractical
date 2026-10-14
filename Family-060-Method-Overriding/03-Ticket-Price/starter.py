@@ -1,4 +1,4 @@
-"""Ticket Price -- Family 06, Assessment 03 (starter).
+"""Ticket Price -- Family 060, Assessment 03 (starter).
 
 The Ticket class is provided and complete. Complete the FirstClass class.
 """

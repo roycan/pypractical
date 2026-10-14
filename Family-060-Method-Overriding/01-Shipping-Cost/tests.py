@@ -1,4 +1,4 @@
-"""Unit tests for Shipping Cost -- Family 06, Assessment 01."""
+"""Unit tests for Shipping Cost -- Family 060, Assessment 01."""
 
 import unittest
 

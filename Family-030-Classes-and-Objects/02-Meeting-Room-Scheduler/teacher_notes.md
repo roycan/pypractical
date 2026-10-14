@@ -1,6 +1,6 @@
 # Teacher Notes — Meeting Room Scheduler
 
-> Family 03 · Classes and Objects · Assessment 02 · Difficulty 2/5 · ~20 minutes
+> Family 030 · Classes and Objects · Assessment 02 · Difficulty 2/5 · ~20 minutes
 
 ## Learning Objective
 

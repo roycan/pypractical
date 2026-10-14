@@ -1,6 +1,6 @@
 # Teacher Notes — Passenger Train
 
-> Family 10 · Relationships - Composition · Assessment 04 · Difficulty 4/5 · ~25 minutes
+> Family 100 · Relationships - Composition · Assessment 04 · Difficulty 4/5 · ~25 minutes
 
 ## Learning Objective
 
@@ -25,11 +25,11 @@ them, and reports their total seats.
 - Returning the count from `total_seats` (or vice versa).
 - An off-by-one error in the loop (for example `range(carriage_count + 1)`).
 - Receiving carriages from outside instead of building them — that is aggregation
-  (Family 09), not composition.
+  (Family 090), not composition.
 
 ## Suggested Teaching Strategy
 
-1. Contrast this with aggregation (Family 09): there, items arrive from outside
+1. Contrast this with aggregation (Family 090): there, items arrive from outside
    via an `add_*` method. Here the whole builds its own parts in `__init__`.
 2. Draw one `Train` box that contains many `Carriage` boxes created by it — the
    carriages cannot exist without the train.

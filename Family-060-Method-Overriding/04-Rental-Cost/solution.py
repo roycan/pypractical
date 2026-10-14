@@ -1,4 +1,4 @@
-"""Rental Cost -- Family 06, Assessment 04 (teacher solution)."""
+"""Rental Cost -- Family 060, Assessment 04 (teacher solution)."""
 
 
 # Provided class. Do NOT modify it.

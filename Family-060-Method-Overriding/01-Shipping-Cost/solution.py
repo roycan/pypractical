@@ -1,4 +1,4 @@
-"""Shipping Cost -- Family 06, Assessment 01 (teacher solution)."""
+"""Shipping Cost -- Family 060, Assessment 01 (teacher solution)."""
 
 
 # Provided class. Do NOT modify it.

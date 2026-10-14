@@ -1,4 +1,4 @@
-"""Score Report -- Family 13, Assessment 02 (teacher solution)."""
+"""Score Report -- Family 130, Assessment 02 (teacher solution)."""
 
 
 class Score:

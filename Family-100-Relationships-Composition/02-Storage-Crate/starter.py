@@ -1,4 +1,4 @@
-"""Storage Crate -- Family 10, Assessment 02 (starter).
+"""Storage Crate -- Family 100, Assessment 02 (starter).
 
 The Box class is provided and complete. Complete the Crate class.
 """

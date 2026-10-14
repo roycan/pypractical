@@ -1,4 +1,4 @@
-"""Price Cart -- Family 07, Assessment 01 (starter).
+"""Price Cart -- Family 070, Assessment 01 (starter).
 
 The FullPrice and HalfPrice classes are provided and complete. Complete the
 Cart class.

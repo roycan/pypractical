@@ -1,4 +1,4 @@
-# Family 10 — Relationships II (Composition)
+# Family 100 — Relationships II (Composition)
 
 > SG 7 · Difficulty 4/5 · ~25 min
 
@@ -41,9 +41,9 @@ fairness across class sections.
 
 ## Learning Progression
 
-- Previous: Family 09 — Relationships I (Association)
-- Current: Family 10 — Relationships II (Composition)
-- Next: Family 11 — Relationships III (Dependency)
+- Previous: Family 090 — Relationships I (Association)
+- Current: Family 100 — Relationships II (Composition)
+- Next: Family 110 — Relationships III (Dependency)
 
 ## Common Student Mistakes
 

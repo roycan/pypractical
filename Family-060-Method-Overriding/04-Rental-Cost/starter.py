@@ -1,4 +1,4 @@
-"""Rental Cost -- Family 06, Assessment 04 (starter).
+"""Rental Cost -- Family 060, Assessment 04 (starter).
 
 The Tool class is provided and complete. Complete the PowerTool class.
 """

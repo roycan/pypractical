@@ -1,4 +1,4 @@
-# Family 13 — SOLID: Single Responsibility
+# Family 130 — SOLID: Single Responsibility
 
 > SG 27 · Difficulty 4/5 · ~25 min
 
@@ -39,8 +39,8 @@ fairness across class sections.
 
 ## Learning Progression
 
-- Previous: Family 10 — Relationships II (Composition)
-- Current: Family 13 — SOLID: Single Responsibility
+- Previous: Family 100 — Relationships II (Composition)
+- Current: Family 130 — SOLID: Single Responsibility
 - Next: Round 3: Data Handling
 
 ## Common Student Mistakes

@@ -1,6 +1,6 @@
 # Teacher Notes — Storage Crate
 
-> Family 10 · Relationships - Composition · Assessment 02 · Difficulty 4/5 · ~25 minutes
+> Family 100 · Relationships - Composition · Assessment 02 · Difficulty 4/5 · ~25 minutes
 
 ## Learning Objective
 
@@ -25,11 +25,11 @@ reports their total size.
 - Returning the count from `total_size` (or vice versa).
 - An off-by-one error in the loop (for example `range(box_count + 1)`).
 - Receiving boxes from outside instead of building them — that is aggregation
-  (Family 09), not composition.
+  (Family 090), not composition.
 
 ## Suggested Teaching Strategy
 
-1. Contrast this with aggregation (Family 09): there, items arrive from outside
+1. Contrast this with aggregation (Family 090): there, items arrive from outside
    via an `add_*` method. Here the whole builds its own parts in `__init__`.
 2. Draw one `Crate` box that contains many `Box` boxes created by it — the boxes
    cannot exist without the crate.

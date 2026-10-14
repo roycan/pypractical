@@ -1,6 +1,6 @@
 # Teacher Notes — Staff Hierarchy
 
-> Family 05 · Inheritance · Assessment 01 · Difficulty 2/5 · ~20 minutes
+> Family 050 · Inheritance · Assessment 01 · Difficulty 2/5 · ~20 minutes
 
 ## Learning Objective
 

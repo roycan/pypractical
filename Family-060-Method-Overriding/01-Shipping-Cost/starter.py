@@ -1,4 +1,4 @@
-"""Shipping Cost -- Family 06, Assessment 01 (starter).
+"""Shipping Cost -- Family 060, Assessment 01 (starter).
 
 The Parcel class is provided and complete. Complete the ExpressParcel class.
 """

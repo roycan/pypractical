@@ -1,6 +1,6 @@
 # Teacher Notes — Computer Memory
 
-> Family 10 · Relationships - Composition · Assessment 03 · Difficulty 4/5 · ~25 minutes
+> Family 100 · Relationships - Composition · Assessment 03 · Difficulty 4/5 · ~25 minutes
 
 ## Learning Objective
 
@@ -25,11 +25,11 @@ them, and reports their total memory.
 - Returning the count from `total_memory` (or vice versa).
 - An off-by-one error in the loop (for example `range(module_count + 1)`).
 - Receiving modules from outside instead of building them — that is aggregation
-  (Family 09), not composition.
+  (Family 090), not composition.
 
 ## Suggested Teaching Strategy
 
-1. Contrast this with aggregation (Family 09): there, items arrive from outside
+1. Contrast this with aggregation (Family 090): there, items arrive from outside
    via an `add_*` method. Here the whole builds its own parts in `__init__`.
 2. Draw one `Computer` box that contains many `Module` boxes created by it — the
    modules cannot exist without the computer.

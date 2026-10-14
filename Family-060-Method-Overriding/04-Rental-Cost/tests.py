@@ -1,4 +1,4 @@
-"""Unit tests for Rental Cost -- Family 06, Assessment 04."""
+"""Unit tests for Rental Cost -- Family 060, Assessment 04."""
 
 import unittest
 

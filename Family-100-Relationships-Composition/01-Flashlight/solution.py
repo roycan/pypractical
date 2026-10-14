@@ -1,4 +1,4 @@
-"""Flashlight -- Family 10, Assessment 01 (teacher solution)."""
+"""Flashlight -- Family 100, Assessment 01 (teacher solution)."""
 
 
 # Provided class. Do NOT modify it.

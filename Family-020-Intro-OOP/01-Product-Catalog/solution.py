@@ -1,4 +1,4 @@
-"""Product Catalog -- Family 02, Assessment 01 (teacher solution)."""
+"""Product Catalog -- Family 020, Assessment 01 (teacher solution)."""
 
 
 class Product:

@@ -1,6 +1,6 @@
 # Teacher Notes — Ticket Price
 
-> Family 06 · Method Overriding · Assessment 03 · Difficulty 3/5 · ~20 minutes
+> Family 060 · Method Overriding · Assessment 03 · Difficulty 3/5 · ~20 minutes
 
 ## Learning Objective
 

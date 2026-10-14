@@ -1,4 +1,4 @@
-# Family 09 — Relationships I (Association)
+# Family 090 — Relationships I (Association)
 
 > SG 6 · Difficulty 3/5 · ~20 min
 
@@ -47,9 +47,9 @@ classes: a member reads and changes the state of borrowed books.
 
 ## Learning Progression
 
-- Previous: Family 08 — Abstraction
-- Current: Family 09 — Relationships I (Association)
-- Next: Family 10 — Relationships II (Composition)
+- Previous: Family 080 — Abstraction
+- Current: Family 090 — Relationships I (Association)
+- Next: Family 100 — Relationships II (Composition)
 
 ## Common Student Mistakes
 

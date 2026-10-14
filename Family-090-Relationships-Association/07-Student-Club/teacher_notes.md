@@ -1,6 +1,6 @@
 # Teacher Notes — Student Club
 
-> Family 09 · Relationships I (Association) · Assessment 07 · Difficulty 3/5 · ~20 minutes
+> Family 090 · Relationships I (Association) · Assessment 07 · Difficulty 3/5 · ~20 minutes
 
 ## Learning Objective
 

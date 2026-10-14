@@ -1,4 +1,4 @@
-"""Weight Scale -- Family 07, Assessment 04 (starter).
+"""Weight Scale -- Family 070, Assessment 04 (starter).
 
 The Light and Heavy classes are provided and complete. Complete the Scale class.
 """

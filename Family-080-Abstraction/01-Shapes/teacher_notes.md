@@ -1,6 +1,6 @@
 # Teacher Notes — Shapes
 
-> Family 08 · Abstraction · Assessment 01 · Difficulty 3/5 · ~20 minutes
+> Family 080 · Abstraction · Assessment 01 · Difficulty 3/5 · ~20 minutes
 
 ## Learning Objective
 

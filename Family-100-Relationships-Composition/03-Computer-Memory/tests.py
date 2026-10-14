@@ -1,4 +1,4 @@
-"""Unit tests for Computer Memory -- Family 10, Assessment 03."""
+"""Unit tests for Computer Memory -- Family 100, Assessment 03."""
 
 import unittest
 

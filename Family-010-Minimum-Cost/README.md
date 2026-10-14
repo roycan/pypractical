@@ -1,4 +1,4 @@
-# Family 01 — Minimum Cost
+# Family 010 — Minimum Cost
 
 > SG (Stage 1, functions) · Difficulty 1/5 · ~15 min
 
@@ -38,8 +38,8 @@ fairness across class sections.
 ## Learning Progression
 
 - Previous: None (Stage 1 entry)
-- Current: Family 01 — Minimum Cost
-- Next: Family 02 — Intro to OOP
+- Current: Family 010 — Minimum Cost
+- Next: Family 020 — Intro to OOP
 
 ## Common Student Mistakes
 

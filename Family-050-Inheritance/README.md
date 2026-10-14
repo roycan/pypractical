@@ -1,4 +1,4 @@
-# Family 05 — Inheritance
+# Family 050 — Inheritance
 
 > SG 9 · Difficulty 2/5 · ~20 min
 
@@ -40,9 +40,9 @@ fairness across class sections.
 
 ## Learning Progression
 
-- Previous: Family 04 — Encapsulation
-- Current: Family 05 — Inheritance
-- Next: Family 06 — Method Overriding
+- Previous: Family 040 — Encapsulation
+- Current: Family 050 — Inheritance
+- Next: Family 060 — Method Overriding
 
 ## Common Student Mistakes
 

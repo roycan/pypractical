@@ -1,6 +1,6 @@
 # Teacher Notes — Internet Cafe Daily Report
 
-> Family 01 · Minimum Cost · Assessment 02 · Difficulty 1/5 · ~15 minutes
+> Family 010 · Minimum Cost · Assessment 02 · Difficulty 1/5 · ~15 minutes
 
 ## Learning Objective
 

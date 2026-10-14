@@ -1,4 +1,4 @@
-# Family 11 — Relationships III (Dependency)
+# Family 110 — Relationships III (Dependency)
 
 > SG 7 · Difficulty 2/5 · ~15 min
 
@@ -34,9 +34,9 @@ the previous family
 
 ## Learning Progression
 
-- Previous: Family 10 — Relationships II (Composition)
-- Current: Family 11 — Relationships III (Dependency)
-- Next: Family 12 — Relationships IV (Aggregation)
+- Previous: Family 100 — Relationships II (Composition)
+- Current: Family 110 — Relationships III (Dependency)
+- Next: Family 120 — Relationships IV (Aggregation)
 
 ## Common Student Mistakes
 

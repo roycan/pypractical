@@ -1,4 +1,4 @@
-"""Unit tests for Weight Scale -- Family 07, Assessment 04."""
+"""Unit tests for Weight Scale -- Family 070, Assessment 04."""
 
 import unittest
 

@@ -1,6 +1,6 @@
 # Teacher Notes — Fuel Tank
 
-> Family 04 · Encapsulation · Assessment 02 · Difficulty 2/5 · ~20 minutes
+> Family 040 · Encapsulation · Assessment 02 · Difficulty 2/5 · ~20 minutes
 
 ## Learning Objective
 

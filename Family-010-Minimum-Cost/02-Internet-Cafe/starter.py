@@ -1,4 +1,4 @@
-"""Internet Cafe Daily Report -- Family 01, Assessment 02 (starter).
+"""Internet Cafe Daily Report -- Family 010, Assessment 02 (starter).
 
 Complete the function calculate_daily_revenue.
 """

@@ -1,4 +1,4 @@
-"""Internet Cafe Daily Report -- Family 01, Assessment 02 (teacher solution)."""
+"""Internet Cafe Daily Report -- Family 010, Assessment 02 (teacher solution)."""
 
 
 def calculate_daily_revenue(usage_hours, hourly_rate, day_pass_fee):

@@ -1,4 +1,4 @@
-# Family 12 — Relationships IV (Aggregation)
+# Family 120 — Relationships IV (Aggregation)
 
 > SG 7 · Difficulty 3/5 · ~20 min
 
@@ -33,9 +33,9 @@ the previous family
 
 ## Learning Progression
 
-- Previous: Family 11 — Relationships III (Dependency)
-- Current: Family 12 — Relationships IV (Aggregation)
-- Next: Family 13 — SOLID: Single Responsibility
+- Previous: Family 110 — Relationships III (Dependency)
+- Current: Family 120 — Relationships IV (Aggregation)
+- Next: Family 130 — SOLID: Single Responsibility
 
 ## Common Student Mistakes
 

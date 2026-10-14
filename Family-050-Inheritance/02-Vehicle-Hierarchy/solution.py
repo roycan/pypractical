@@ -1,4 +1,4 @@
-"""Vehicle Hierarchy -- Family 05, Assessment 02 (teacher solution)."""
+"""Vehicle Hierarchy -- Family 050, Assessment 02 (teacher solution)."""
 
 
 # Provided class. Do NOT modify it.

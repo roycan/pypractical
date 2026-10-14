@@ -35,7 +35,7 @@ window.PYPRA_CURRICULUM = {
       id: "s4", num: 4, title: "Building Better Software",
       concepts: ["Inheritance", "Polymorphism", "Composition", "Code Reuse"],
       blurb: "Programming becomes less about writing code and more about designing systems. Families focus on software organization rather than larger algorithms.",
-      families: ["f05", "f06", "f07", "f08", "f10", "f11", "f12", "f13"]
+      families: ["f05", "f055", "f06", "f07", "f08", "f10", "f11", "f12", "f13"]
     },
     {
       id: "s5", num: 5, title: "Data and Algorithms",
@@ -53,7 +53,7 @@ window.PYPRA_CURRICULUM = {
 
   families: {
     "f01": {
-      id: "f01", num: 1, folder: "Family-01-Minimum-Cost", title: "Minimum Cost",
+      id: "f01", num: 10, folder: "Family-010-Minimum-Cost", title: "Minimum Cost",
       stage: "s1", difficulty: 1,
       blurb: "Compute the cheaper of two billing models — the everyday skill of picking the lowest price.",
       problems: [
@@ -62,7 +62,7 @@ window.PYPRA_CURRICULUM = {
       ]
     },
     "f02": {
-      id: "f02", num: 2, folder: "Family-02-Intro-OOP", title: "Intro to OOP",
+      id: "f02", num: 20, folder: "Family-020-Intro-OOP", title: "Intro to OOP",
       stage: "s2", difficulty: 1,
       blurb: "First steps modeling the world as objects — define a class, give it data and behavior.",
       problems: [
@@ -73,7 +73,7 @@ window.PYPRA_CURRICULUM = {
       ]
     },
     "f03": {
-      id: "f03", num: 3, folder: "Family-03-Classes-and-Objects", title: "Classes and Objects",
+      id: "f03", num: 30, folder: "Family-030-Classes-and-Objects", title: "Classes and Objects",
       stage: "s2", difficulty: 2,
       blurb: "Build small schedulers and recorders where objects cooperate to get a job done.",
       problems: [
@@ -84,7 +84,7 @@ window.PYPRA_CURRICULUM = {
       ]
     },
     "f04": {
-      id: "f04", num: 4, folder: "Family-04-Encapsulation", title: "Encapsulation",
+      id: "f04", num: 40, folder: "Family-040-Encapsulation", title: "Encapsulation",
       stage: "s2", difficulty: 2,
       blurb: "Protect an object's data behind methods — learn accessors and controlled state.",
       problems: [
@@ -95,7 +95,7 @@ window.PYPRA_CURRICULUM = {
       ]
     },
     "f05": {
-      id: "f05", num: 5, folder: "Family-05-Inheritance", title: "Inheritance",
+      id: "f05", num: 50, folder: "Family-050-Inheritance", title: "Inheritance",
       stage: "s4", difficulty: 2,
       blurb: "Share behavior across related types using subclasses and hierarchies.",
       problems: [
@@ -106,8 +106,19 @@ window.PYPRA_CURRICULUM = {
         { slug: "05-Animal-Bird", title: "Animal Bird", difficulty: 2, time: "15 min", tested: false, concepts: ["inheritance","subclasses","classes","objects","methods","constructors"] }
       ]
     },
+    "f055": {
+      id: "f055", num: 55, folder: "Family-055-Encapsulation-Inheritance", title: "Encapsulation and Inheritance",
+      stage: "s4", difficulty: 2,
+      blurb: "Integration exam family: reuse a parent with super().__init__ and validate before storing.",
+      problems: [
+        { slug: "01-Library-Book", title: "Library Book", difficulty: 2, time: "15 min", tested: false, concepts: ["inheritance","super().__init__","encapsulation","protected attributes","input validation","getters"] },
+        { slug: "02-Video-Game-Edition", title: "Video Game Edition", difficulty: 2, time: "15 min", tested: false, concepts: ["inheritance","super().__init__","encapsulation","protected attributes","input validation","getters"] },
+        { slug: "03-Streaming-Account", title: "Streaming Account", difficulty: 2, time: "15 min", tested: false, concepts: ["inheritance","super().__init__","encapsulation","protected attributes","input validation","getters"] },
+        { slug: "04-Sports-Captain", title: "Sports Captain", difficulty: 2, time: "15 min", tested: false, concepts: ["inheritance","super().__init__","encapsulation","protected attributes","input validation","getters"] }
+      ]
+    },
     "f06": {
-      id: "f06", num: 6, folder: "Family-06-Method-Overriding", title: "Method Overriding",
+      id: "f06", num: 60, folder: "Family-060-Method-Overriding", title: "Method Overriding",
       stage: "s4", difficulty: 3,
       blurb: "Specialize inherited behavior by overriding methods in subclasses.",
       problems: [
@@ -118,7 +129,7 @@ window.PYPRA_CURRICULUM = {
       ]
     },
     "f07": {
-      id: "f07", num: 7, folder: "Family-07-Polymorphism", title: "Polymorphism",
+      id: "f07", num: 70, folder: "Family-070-Polymorphism", title: "Polymorphism",
       stage: "s4", difficulty: 3,
       blurb: "Treat different objects the same way through a shared method — one call, many behaviors.",
       problems: [
@@ -129,7 +140,7 @@ window.PYPRA_CURRICULUM = {
       ]
     },
     "f08": {
-      id: "f08", num: 8, folder: "Family-08-Abstraction", title: "Abstraction",
+      id: "f08", num: 80, folder: "Family-080-Abstraction", title: "Abstraction",
       stage: "s4", difficulty: 3,
       blurb: "Define common contracts with abstract classes and abstract methods.",
       problems: [
@@ -140,7 +151,7 @@ window.PYPRA_CURRICULUM = {
       ]
     },
     "f09": {
-      id: "f09", num: 9, folder: "Family-09-Relationships-Association", title: "Relationships — Association",
+      id: "f09", num: 90, folder: "Family-090-Relationships-Association", title: "Relationships — Association",
       stage: "s3", difficulty: 3,
       blurb: "Model one-to-many relationships where objects reference and use each other.",
       problems: [
@@ -155,7 +166,7 @@ window.PYPRA_CURRICULUM = {
       ]
     },
     "f10": {
-      id: "f10", num: 10, folder: "Family-10-Relationships-Composition", title: "Relationships — Composition",
+      id: "f10", num: 100, folder: "Family-100-Relationships-Composition", title: "Relationships — Composition",
       stage: "s4", difficulty: 4,
       blurb: "Build complex objects that own and manage their parts.",
       problems: [
@@ -167,7 +178,7 @@ window.PYPRA_CURRICULUM = {
       ]
     },
     "f11": {
-      id: "f11", num: 11, folder: "Family-11-Relationships-Dependency", title: "Relationships — Dependency",
+      id: "f11", num: 110, folder: "Family-110-Relationships-Dependency", title: "Relationships — Dependency",
       stage: "s4", difficulty: 2,
       blurb: "Use another object as a method parameter without storing it — the weakest relationship.",
       problems: [
@@ -175,7 +186,7 @@ window.PYPRA_CURRICULUM = {
       ]
     },
     "f12": {
-      id: "f12", num: 12, folder: "Family-12-Relationships-Aggregation", title: "Relationships — Aggregation",
+      id: "f12", num: 120, folder: "Family-120-Relationships-Aggregation", title: "Relationships — Aggregation",
       stage: "s4", difficulty: 3,
       blurb: "Hold parts that are created outside and passed in — parts that can exist on their own.",
       problems: [
@@ -183,7 +194,7 @@ window.PYPRA_CURRICULUM = {
       ]
     },
     "f13": {
-      id: "f13", num: 13, folder: "Family-13-SOLID-Single-Responsibility", title: "SOLID — Single Responsibility",
+      id: "f13", num: 130, folder: "Family-130-SOLID-Single-Responsibility", title: "SOLID — Single Responsibility",
       stage: "s4", difficulty: 4,
       blurb: "Design classes with one clear reason to change — the first of the SOLID principles.",
       problems: [

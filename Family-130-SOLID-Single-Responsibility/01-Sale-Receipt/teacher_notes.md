@@ -1,6 +1,6 @@
 # Teacher Notes — Sale Receipt
 
-> Family 13 · SOLID - Single Responsibility · Assessment 01 · Difficulty 4/5 · ~25 minutes
+> Family 130 · SOLID - Single Responsibility · Assessment 01 · Difficulty 4/5 · ~25 minutes
 
 ## Learning Objective
 

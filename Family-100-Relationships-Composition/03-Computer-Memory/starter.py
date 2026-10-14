@@ -1,4 +1,4 @@
-"""Computer Memory -- Family 10, Assessment 03 (starter).
+"""Computer Memory -- Family 100, Assessment 03 (starter).
 
 The Module class is provided and complete. Complete the Computer class.
 """

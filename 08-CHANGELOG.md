@@ -129,6 +129,64 @@ YYYY-MM-DD
 
 # Actual Releases
 
+## Version 0.3.0 — Family 055 Encapsulation + Inheritance Exam Family
+
+Release Date:
+
+2026-10-14
+
+### Added
+
+* `Family-055-Encapsulation-Inheritance/` — the integration practical-exam
+  family (SG 8 + SG 9 in one problem): 4 isomorphic variants
+  (01-Library-Book, 02-Video-Game-Edition, 03-Streaming-Account,
+  04-Sports-Captain), each with the full 6 deliverables. A provided parent
+  class + one student-written child class with `super().__init__(...)` reuse,
+  a protected `_value` with getter, and validate-before-store (`<= 0` rejected
+  with a printed message; `0` documented as the "not recorded" placeholder).
+* Family README following 20-FAMILY_TEMPLATE, including the broken-solution
+  matrix explanation.
+
+### Verified
+
+* Gate P green for all 4 variants: 48 equal-weight tests, 4 worked-example
+  lints, and 16/16 broken-solution mutations caught by their intended tests.
+
+---
+
+## Version 0.2.0 — x10 Renumbering and Verification Gates
+
+Release Date:
+
+2026-10-14
+
+### Added
+
+* `tools/verify.py` — single automated gate entry point:
+  `renumber` (structure + stale-reference audit), `family` (per-problem unit
+  tests + worked-example lint + broken-solution matrix), and `all` (full-repo
+  run). The broken-solution matrix proves each grading test guards its concept
+  by mutating a temp copy of the solution and asserting the right test fails.
+* `tools/renumber_refs.py` — one-shot, mapping-table-driven reference sweep
+  used for the renumbering (kept for the record; content-based one-shot guard).
+
+### Improved
+
+* Family directories renumbered to the zero-padded x10 scheme
+  (Family-01 to Family-010 ... Family-13 to Family-130), inserting gap numbers
+  for future integration families. All living-document references swept; the
+  stale TV-Recorder path in `43-oop-class-spec.md` now points at
+  Family-030-Classes-and-Objects. Historical `plans/` records and this
+  changelog's history keep the old names on purpose.
+
+### Verified
+
+* Baseline gate green before the renumber (50 problem folders, 50 PASS).
+* Gate R and Gate ALL green after the renumber (stale-reference audit clean,
+  all suites still passing via `python3 -m unittest tests`).
+
+---
+
 ## Version 0.1.0 — Round 1 Foundation
 
 Release Date:

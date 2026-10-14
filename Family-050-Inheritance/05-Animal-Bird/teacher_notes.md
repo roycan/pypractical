@@ -1,6 +1,6 @@
 # Teacher Notes — Animal Bird
 
-> Family 05 · Inheritance · Assessment 05 · Difficulty 2/5 · ~15 minutes
+> Family 050 · Inheritance · Assessment 05 · Difficulty 2/5 · ~15 minutes
 
 ## Learning Objective
 

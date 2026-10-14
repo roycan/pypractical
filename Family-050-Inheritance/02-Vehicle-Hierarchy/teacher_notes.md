@@ -1,6 +1,6 @@
 # Teacher Notes — Vehicle Hierarchy
 
-> Family 05 · Inheritance · Assessment 02 · Difficulty 2/5 · ~20 minutes
+> Family 050 · Inheritance · Assessment 02 · Difficulty 2/5 · ~20 minutes
 
 ## Learning Objective
 

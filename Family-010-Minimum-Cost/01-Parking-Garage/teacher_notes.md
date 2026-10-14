@@ -1,6 +1,6 @@
 # Teacher Notes — Parking Garage Daily Report
 
-> Family 01 · Minimum Cost · Assessment 01 · Difficulty 1/5 · ~15 minutes
+> Family 010 · Minimum Cost · Assessment 01 · Difficulty 1/5 · ~15 minutes
 
 ## Learning Objective
 

@@ -1,4 +1,4 @@
-"""Computer Peripherals -- Family 12, Assessment 01 (teacher solution)."""
+"""Computer Peripherals -- Family 120, Assessment 01 (teacher solution)."""
 
 
 # Provided class. Do NOT modify it.

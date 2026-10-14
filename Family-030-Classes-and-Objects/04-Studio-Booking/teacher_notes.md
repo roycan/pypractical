@@ -1,6 +1,6 @@
 # Teacher Notes — Studio Booking
 
-> Family 03 · Classes and Objects · Assessment 04 · Difficulty 2/5 · ~20 minutes
+> Family 030 · Classes and Objects · Assessment 04 · Difficulty 2/5 · ~20 minutes
 
 ## Learning Objective
 

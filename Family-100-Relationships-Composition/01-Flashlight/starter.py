@@ -1,4 +1,4 @@
-"""Flashlight -- Family 10, Assessment 01 (starter).
+"""Flashlight -- Family 100, Assessment 01 (starter).
 
 The Battery class is provided and complete. Complete the Flashlight class.
 """

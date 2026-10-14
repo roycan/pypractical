@@ -1,4 +1,4 @@
-"""Unit tests for Computer Peripherals -- Family 12, Assessment 01."""
+"""Unit tests for Computer Peripherals -- Family 120, Assessment 01."""
 
 import unittest
 

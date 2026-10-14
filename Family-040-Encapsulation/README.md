@@ -1,4 +1,4 @@
-# Family 04 — Encapsulation
+# Family 040 — Encapsulation
 
 > SG 8 · Difficulty 2/5 · ~20 min
 
@@ -39,9 +39,9 @@ fairness across class sections.
 
 ## Learning Progression
 
-- Previous: Family 03 — Classes and Objects
-- Current: Family 04 — Encapsulation
-- Next: Family 05 — Inheritance
+- Previous: Family 030 — Classes and Objects
+- Current: Family 040 — Encapsulation
+- Next: Family 050 — Inheritance
 
 ## Common Student Mistakes
 

@@ -1,4 +1,4 @@
-"""Meeting Room Scheduler -- Family 03, Assessment 02 (starter).
+"""Meeting Room Scheduler -- Family 030, Assessment 02 (starter).
 
 Complete the Meeting and Room classes. Do NOT modify minimum_rooms.
 """

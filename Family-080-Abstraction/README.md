@@ -1,4 +1,4 @@
-# Family 08 — Abstraction
+# Family 080 — Abstraction
 
 > SG 12 · Difficulty 3/5 · ~20 min
 
@@ -40,9 +40,9 @@ fairness across class sections.
 
 ## Learning Progression
 
-- Previous: Family 07 — Polymorphism
-- Current: Family 08 — Abstraction
-- Next: Family 09 — Relationships I (Association)
+- Previous: Family 070 — Polymorphism
+- Current: Family 080 — Abstraction
+- Next: Family 090 — Relationships I (Association)
 
 ## Common Student Mistakes
 

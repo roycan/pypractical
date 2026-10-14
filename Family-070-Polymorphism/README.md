@@ -1,4 +1,4 @@
-# Family 07 — Polymorphism
+# Family 070 — Polymorphism
 
 > SG 11 · Difficulty 3/5 · ~20 min
 
@@ -39,9 +39,9 @@ fairness across class sections.
 
 ## Learning Progression
 
-- Previous: Family 06 — Method Overriding
-- Current: Family 07 — Polymorphism
-- Next: Family 08 — Abstraction
+- Previous: Family 060 — Method Overriding
+- Current: Family 070 — Polymorphism
+- Next: Family 080 — Abstraction
 
 ## Common Student Mistakes
 

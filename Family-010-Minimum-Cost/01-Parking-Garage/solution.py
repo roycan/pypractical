@@ -1,4 +1,4 @@
-"""Parking Garage Daily Report -- Family 01, Assessment 01 (teacher solution)."""
+"""Parking Garage Daily Report -- Family 010, Assessment 01 (teacher solution)."""
 
 
 def calculate_total_revenue(customers, hourly_rate, fixed_rate):

@@ -1,4 +1,4 @@
-"""Parking Fee -- Family 06, Assessment 02 (teacher solution)."""
+"""Parking Fee -- Family 060, Assessment 02 (teacher solution)."""
 
 
 # Provided class. Do NOT modify it.

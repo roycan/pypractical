@@ -1,4 +1,4 @@
-"""Parking Fee -- Family 06, Assessment 02 (starter).
+"""Parking Fee -- Family 060, Assessment 02 (starter).
 
 The Vehicle class is provided and complete. Complete the Truck class.
 """

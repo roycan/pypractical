@@ -1,4 +1,4 @@
-"""Meeting Room Scheduler -- Family 03, Assessment 02 (teacher solution)."""
+"""Meeting Room Scheduler -- Family 030, Assessment 02 (teacher solution)."""
 
 
 class Meeting:

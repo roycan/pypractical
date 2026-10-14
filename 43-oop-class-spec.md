@@ -80,7 +80,7 @@ SPEC-004 ([`42-unittest-spec.md`](42-unittest-spec.md)) applies fully. Add only:
 
 ## 4. Reference example
 
-The upgraded TV Recorder problem (`Family-02-Intro-OOP/01-TV-Recorder/`) is the
+The upgraded TV Recorder problem (`Family-030-Classes-and-Objects/01-TV-Recorder/`) is the
 canonical class-based reference built to this spec.
 
 ## Revision history

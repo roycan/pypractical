@@ -1,6 +1,6 @@
 # Teacher Notes — House Rooms
 
-> Family 10 · Relationships II (Composition) · Assessment 05 · Difficulty 4/5 · ~25 minutes
+> Family 100 · Relationships II (Composition) · Assessment 05 · Difficulty 4/5 · ~25 minutes
 
 ## Learning Objective
 

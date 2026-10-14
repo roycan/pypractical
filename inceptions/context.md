@@ -30,10 +30,10 @@ Key facts:
 - **Grading model:** Automatic via Python `unittest` — score = percentage of passing tests
   (all tests carry equal weight).
 - **License:** Dual — CC BY-SA 4.0 (documents) + MIT (code).
-- **Current state:** **Round 1 (Foundation) is COMPLETE.** The repo now contains two
-  canonical, spec-compliant, runnable reference problems plus a class-based spec
-  addendum (SPEC-005). Round 2 (OOP families) is COMPLETE — 40 problems, 473 tests green. See Section 23 for
-  progress, and `plans/round-1-foundation-plan.md` for the plan.
+- **Current state:** Rounds 1–2 are COMPLETE (50 problem folders), and Round 2.5 added
+  the x10 zero-padded family renumbering, the `tools/verify.py` verification gates, and
+  the `Family-055-Encapsulation-Inheritance` integration exam family (SG 8 + SG 9 in one
+  problem) — 54 problem folders, 649 tests green. See Section 23 for progress.
 
 ---
 
@@ -106,14 +106,31 @@ All links are relative from `inceptions/` (hence the `../` prefix).
 
 ### Assessment Content & Plans (Round 1+)
 
-- [`Family-01-Minimum-Cost/01-Parking-Garage/`](../Family-01-Minimum-Cost/01-Parking-Garage/problem.md)
+- [`Family-010-Minimum-Cost/01-Parking-Garage/`](../Family-010-Minimum-Cost/01-Parking-Garage/problem.md)
   — canonical **function-based** reference problem (6 deliverables, 12 tests)
-- [`Family-03-Classes-and-Objects/01-TV-Recorder/`](../Family-03-Classes-and-Objects/01-TV-Recorder/problem.md)
+- [`Family-030-Classes-and-Objects/01-TV-Recorder/`](../Family-030-Classes-and-Objects/01-TV-Recorder/problem.md)
   — canonical **class-based (OOP)** reference problem (6 deliverables, 14 tests)
+- [`Family-055-Encapsulation-Inheritance/`](../Family-055-Encapsulation-Inheritance/README.md)
+  — **integration practical-exam family** (SG 8 + SG 9 in one problem; 4 isomorphic
+  variants, 48 tests, broken-solution matrix)
 - [`plans/round-1-foundation-plan.md`](../plans/round-1-foundation-plan.md) — Round 1 plan
   and outcome (task scorecard + results)
+- [`plans/family-055-encapsulation-inheritance-plan.md`](../plans/family-055-encapsulation-inheritance-plan.md)
+  — Round 2.5 plan (renumber + Family 055; per-task feasibility/confidence scorecard)
 - `examples/` — legacy pre-spec snippets (parking-garage, internet-cafe, tv-recording);
   kept as-is, superseded by the canonical `Family-NN/` versions
+
+### Verification Tooling
+
+- [`tools/verify.py`](../tools/verify.py) — single gate entry point:
+  `renumber` (structure + stale-reference audit), `family` (per-problem unit tests +
+  worked-example lint + Family-055 broken-solution matrix), `all` (full repo). Exit code
+  0 = gate green. Temporary work copies go under `temp/` (git-ignored).
+- [`tools/renumber_refs.py`](../tools/renumber_refs.py) — one-shot x10 reference sweep,
+  kept for the record (content-based one-shot guard refuses re-runs).
+- [`tools/check_examples.py`](../tools/check_examples.py) and
+  [`run_all_tests.sh`](../run_all_tests.sh) — pre-existing helpers; both keep working
+  after the renumber (their `Family-*/0*/` globs wildcard the family segment).
 
 ---
 
@@ -140,7 +157,7 @@ PyPractical/
 ├── README.md
 ├── CONTRIBUTING.md
 ├── ...
-├── Family-01-Minimum-Cost/
+├── Family-010-Minimum-Cost/
 │   ├── README.md                          (follows 20-FAMILY_TEMPLATE.md)
 │   ├── 01-Parking-Garage/
 │   │   ├── problem.md
@@ -152,10 +169,10 @@ PyPractical/
 │   ├── 02-Internet-Cafe/
 │   ├── 03-Theme-Park/
 │   └── 04-Printing-Center/
-├── Family-02-Intro-OOP/
-├── Family-03-Collections/
-├── Family-04-Inheritance/
-└── Family-05-Searching/
+├── Family-020-Intro-OOP/
+├── Family-030-Collections/
+├── Family-040-Inheritance/
+└── Family-050-Searching/
 ```
 
 Each problem directory contains: `problem.md`, `starter.py`, `solution.py`, `tests.py`,
@@ -506,11 +523,18 @@ Documented known issues — be aware of these when working in the repo:
    `PROJECT_GUIDE.md` shows the detailed per-problem file layout. **Use PROJECT_GUIDE.md's
    structure as authoritative.**
 6. **Assessment content (Round 1 foundation):** two canonical reference problems now exist
-   — `Family-01-Minimum-Cost/01-Parking-Garage/` (function) and
-   `Family-03-Classes-and-Objects/01-TV-Recorder/` (OOP) — plus SPEC-005. Full isomorphic variants
+   — `Family-010-Minimum-Cost/01-Parking-Garage/` (function) and
+   `Family-030-Classes-and-Objects/01-TV-Recorder/` (OOP) — plus SPEC-005. Full isomorphic variants
    per topic are built in Round 2. The legacy `examples/` snippets pre-date the specs and
    are NOT compliant (they use `pass` and lack the test import/guard) — treat the
    `Family-NN/` versions as canonical.
+7. **Family numbering (Round 2.5, 2026-10-14):** family folders use zero-padded x10
+   numbers (`Family-010-Minimum-Cost` ... `Family-130-SOLID-Single-Responsibility`) with
+   gap numbers reserved for integration families (`Family-055-Encapsulation-Inheritance`).
+   Prose uses the same 3-digit numbers ("Family 055", "Family 050"). Enforced by
+   `python3 tools/verify.py renumber`. Historical `plans/` records and CHANGELOG history
+   intentionally keep the old names; `tools/verify.py` / `tools/renumber_refs.py` are
+   skipped by the stale-reference scan because they encode old names as data.
 
 ---
 
@@ -533,6 +557,9 @@ Practical guidance for common operations.
 
 ### Verifying expected outputs
 
+- Run the automated gates first: `python3 tools/verify.py all` (tests + worked-example
+  lint for every problem) and `python3 tools/verify.py family <problem-dir>` (adds the
+  broken-solution matrix where a spec exists).
 - Solve by hand.
 - Cross-check with an independent solution.
 - Peer review.
@@ -611,7 +638,17 @@ flowchart TD
 | Round 2 — OOP families | Scale OOP families in dependency order (SG 3 → 4 → 5 → 8 → 9 → 10 → 11 → 12 → 6 → 7 → 27); ~3-4 isomorphic problems each | ✅ Complete (2026-08-03); 40 problems, 473 tests, all green; see `plans/round-2-oop-families-plan.md` |
 | Round 3 — Data handling | SG 18 (files) → 19 (analysis) → 20 (JSON); needs a file-I/O fixture pattern | ⏳ Not started |
 
-> **Round 2 outcome:** 40 problems (1 function reference + 39 OOP), 240 files, 473 tests — all pass via `python3 -m unittest tests` in every folder. Families were renumbered to match teaching order: Family-02-Intro-OOP now covers SG 3, and the TV Recorder moved to Family-03-Classes-and-Objects. The `tests.py` main guards are commented out for LMS compatibility (verify with `python3 -m unittest tests`).
+> **Round 2 outcome:** 40 problems (1 function reference + 39 OOP), 240 files, 473 tests — all pass via `python3 -m unittest tests` in every folder. Families were renumbered to match teaching order: Family-020-Intro-OOP now covers SG 3, and the TV Recorder moved to Family-030-Classes-and-Objects. The `tests.py` main guards are commented out for LMS compatibility (verify with `python3 -m unittest tests`).
+
+> **Round 2.5 outcome:** family directories renumbered to the zero-padded x10 scheme
+> (`Family-010` ... `Family-130`, gap `Family-055` for integration families); 223 files
+> swept by `tools/renumber_refs.py` with zero stale references afterwards. New
+> `Family-055-Encapsulation-Inheritance` (4 variants, 24 files) assesses SG 8 + SG 9 in
+> one 10–25 minute practical exam: provided parent class + one child class with
+> `super().__init__(...)` reuse, a protected `_value` + getter, and validate-before-store.
+> 54 problem folders, 649 tests green (`python3 tools/verify.py all` and
+> `./run_all_tests.sh`); each Family-055 variant additionally passes its
+> broken-solution matrix (16/16 mutations caught).
 
 > **Note:** This file should be updated as the project evolves. It is a **living document**.
 > When new families are added, specs change, or conventions evolve, update this context file

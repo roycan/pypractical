@@ -1,6 +1,6 @@
 # Teacher Notes — Computer Peripherals
 
-> Family 12 · Relationships IV (Aggregation) · Assessment 01 · Difficulty 3/5 · ~20 minutes
+> Family 120 · Relationships IV (Aggregation) · Assessment 01 · Difficulty 3/5 · ~20 minutes
 
 ## Learning Objective
 

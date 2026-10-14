@@ -1,4 +1,4 @@
-"""Staff Hierarchy -- Family 05, Assessment 01 (teacher solution)."""
+"""Staff Hierarchy -- Family 050, Assessment 01 (teacher solution)."""
 
 
 # Provided class. Do NOT modify it.

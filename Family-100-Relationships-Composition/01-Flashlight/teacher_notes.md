@@ -1,6 +1,6 @@
 # Teacher Notes — Flashlight
 
-> Family 10 · Relationships - Composition · Assessment 01 · Difficulty 4/5 · ~25 minutes
+> Family 100 · Relationships - Composition · Assessment 01 · Difficulty 4/5 · ~25 minutes
 
 ## Learning Objective
 
@@ -25,11 +25,11 @@ counts them, and reports their total capacity.
 - Returning the count from `total_capacity` (or vice versa).
 - An off-by-one error in the loop (for example `range(battery_count + 1)`).
 - Receiving batteries from outside instead of building them — that is
-  aggregation (Family 09), not composition.
+  aggregation (Family 090), not composition.
 
 ## Suggested Teaching Strategy
 
-1. Contrast this with aggregation (Family 09): there, items arrive from outside
+1. Contrast this with aggregation (Family 090): there, items arrive from outside
    via an `add_*` method. Here the whole builds its own parts in `__init__`.
 2. Draw one `Flashlight` box that contains many `Battery` boxes created by it —
    the batteries cannot exist without the flashlight.

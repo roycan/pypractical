@@ -1,6 +1,6 @@
 # Teacher Notes — Weight Scale
 
-> Family 07 · Polymorphism · Assessment 04 · Difficulty 3/5 · ~20 minutes
+> Family 070 · Polymorphism · Assessment 04 · Difficulty 3/5 · ~20 minutes
 
 ## Learning Objective
 

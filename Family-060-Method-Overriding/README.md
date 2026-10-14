@@ -1,4 +1,4 @@
-# Family 06 — Method Overriding
+# Family 060 — Method Overriding
 
 > SG 10 · Difficulty 3/5 · ~20 min
 
@@ -38,9 +38,9 @@ fairness across class sections.
 
 ## Learning Progression
 
-- Previous: Family 05 — Inheritance
-- Current: Family 06 — Method Overriding
-- Next: Family 07 — Polymorphism
+- Previous: Family 050 — Inheritance
+- Current: Family 060 — Method Overriding
+- Next: Family 070 — Polymorphism
 
 ## Common Student Mistakes
 

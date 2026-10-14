@@ -1,4 +1,4 @@
-"""Points Board -- Family 07, Assessment 02 (teacher solution)."""
+"""Points Board -- Family 070, Assessment 02 (teacher solution)."""
 
 
 # Provided class. Do NOT modify it.

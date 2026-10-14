@@ -81,17 +81,18 @@ PyPractical/
 ├── 00-PROJECT_VISION.md ...       # philosophy, specs, and standards
 ├── examples/                      # legacy pre-spec snippets
 │
-├── Family-01-Minimum-Cost/              (functions reference)
-├── Family-02-Intro-OOP/                 (SG 3 — Introduction to OOP)
-├── Family-03-Classes-and-Objects/       (SG 4-5)
-├── Family-04-Encapsulation/             (SG 8)
-├── Family-05-Inheritance/               (SG 9)
-├── Family-06-Method-Overriding/         (SG 10)
-├── Family-07-Polymorphism/              (SG 11)
-├── Family-08-Abstraction/               (SG 12)
-├── Family-09-Relationships-Association/ (SG 6)
-├── Family-10-Relationships-Composition/ (SG 7)
-└── Family-13-SOLID-Single-Responsibility/ (SG 27)
+├── Family-010-Minimum-Cost/              (functions reference)
+├── Family-020-Intro-OOP/                 (SG 3 — Introduction to OOP)
+├── Family-030-Classes-and-Objects/       (SG 4-5)
+├── Family-040-Encapsulation/             (SG 8)
+├── Family-050-Inheritance/               (SG 9)
+├── Family-055-Encapsulation-Inheritance/ (SG 8+9 — integration exam)
+├── Family-060-Method-Overriding/         (SG 10)
+├── Family-070-Polymorphism/              (SG 11)
+├── Family-080-Abstraction/               (SG 12)
+├── Family-090-Relationships-Association/ (SG 6)
+├── Family-100-Relationships-Composition/ (SG 7)
+└── Family-130-SOLID-Single-Responsibility/ (SG 27)
 ```
 
 Each family contains 3-4 equivalent practical assessments (same concept and
@@ -108,8 +109,8 @@ ships six files: `problem.md`, `starter.py`, `solution.py`, `tests.py`,
 Two canonical, spec-compliant reference problems plus the class-based spec
 (SPEC-005):
 
-* **Family-01-Minimum-Cost/01-Parking-Garage** — the function-based reference
-* **Family-03-Classes-and-Objects/01-TV-Recorder** — the class-based (OOP) reference
+* **Family-010-Minimum-Cost/01-Parking-Garage** — the function-based reference
+* **Family-030-Classes-and-Objects/01-TV-Recorder** — the class-based (OOP) reference
 
 ## Round 2 — OOP Families (complete)
 
@@ -119,16 +120,17 @@ order (SG 3 -> 4-5 -> 8 -> 9 -> 10 -> 11 -> 12 -> 6 -> 7 -> 27).
 
 | Family | Topic |
 |---|---|
-| Family-02-Intro-OOP | Introduction to OOP |
-| Family-03-Classes-and-Objects | Classes and Objects |
-| Family-04-Encapsulation | Encapsulation |
-| Family-05-Inheritance | Inheritance |
-| Family-06-Method-Overriding | Method Overriding |
-| Family-07-Polymorphism | Polymorphism |
-| Family-08-Abstraction | Abstraction |
-| Family-09-Relationships-Association | Relationships I |
-| Family-10-Relationships-Composition | Relationships II |
-| Family-13-SOLID-Single-Responsibility | SOLID: Single Responsibility |
+| Family-020-Intro-OOP | Introduction to OOP |
+| Family-030-Classes-and-Objects | Classes and Objects |
+| Family-040-Encapsulation | Encapsulation |
+| Family-050-Inheritance | Inheritance |
+| Family-055-Encapsulation-Inheritance | Encapsulation and Inheritance (Integration) |
+| Family-060-Method-Overriding | Method Overriding |
+| Family-070-Polymorphism | Polymorphism |
+| Family-080-Abstraction | Abstraction |
+| Family-090-Relationships-Association | Relationships I |
+| Family-100-Relationships-Composition | Relationships II |
+| Family-130-SOLID-Single-Responsibility | SOLID: Single Responsibility |
 
 Run any suite with `python3 -m unittest tests` from inside the problem folder.
 

@@ -1,4 +1,4 @@
-"""Sale Receipt -- Family 13, Assessment 01 (teacher solution)."""
+"""Sale Receipt -- Family 130, Assessment 01 (teacher solution)."""
 
 
 class Sale:

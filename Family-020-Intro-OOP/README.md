@@ -1,4 +1,4 @@
-# Family 02 — Intro to OOP
+# Family 020 — Intro to OOP
 
 > SG 3 · Difficulty 1/5 · ~15 min
 
@@ -37,9 +37,9 @@ fairness across class sections.
 
 ## Learning Progression
 
-- Previous: Family 01 — Minimum Cost
-- Current: Family 02 — Intro to OOP
-- Next: Family 03 — Classes and Objects
+- Previous: Family 010 — Minimum Cost
+- Current: Family 020 — Intro to OOP
+- Next: Family 030 — Classes and Objects
 
 ## Common Student Mistakes
 

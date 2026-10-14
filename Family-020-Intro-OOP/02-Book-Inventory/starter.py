@@ -1,4 +1,4 @@
-"""Book Inventory -- Family 02, Assessment 02 (starter).
+"""Book Inventory -- Family 020, Assessment 02 (starter).
 
 Complete the Book class.
 """

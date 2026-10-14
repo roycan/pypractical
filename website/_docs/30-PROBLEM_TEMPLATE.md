@@ -32,7 +32,7 @@ State the assessment family.
 
 Example:
 
-> Family 01 – Minimum Cost Decisions
+> Family 010 – Minimum Cost Decisions
 
 ---
 

@@ -1,4 +1,4 @@
-"""Computer Peripherals -- Family 12, Assessment 01 (starter).
+"""Computer Peripherals -- Family 120, Assessment 01 (starter).
 
 The Peripheral class is provided and complete. Complete the Computer class.
 """

@@ -1,4 +1,4 @@
-"""House Rooms -- Family 10, Assessment 05 (starter).
+"""House Rooms -- Family 100, Assessment 05 (starter).
 
 The Room class is provided and complete. Complete the House class.
 """

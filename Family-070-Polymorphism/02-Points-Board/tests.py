@@ -1,4 +1,4 @@
-"""Unit tests for Points Board -- Family 07, Assessment 02."""
+"""Unit tests for Points Board -- Family 070, Assessment 02."""
 
 import unittest
 

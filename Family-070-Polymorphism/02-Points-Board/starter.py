@@ -1,4 +1,4 @@
-"""Points Board -- Family 07, Assessment 02 (starter).
+"""Points Board -- Family 070, Assessment 02 (starter).
 
 The Easy and Hard classes are provided and complete. Complete the Board class.
 """

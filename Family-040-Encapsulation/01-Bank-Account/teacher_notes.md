@@ -1,6 +1,6 @@
 # Teacher Notes — Bank Account
 
-> Family 04 · Encapsulation · Assessment 01 · Difficulty 2/5 · ~20 minutes
+> Family 040 · Encapsulation · Assessment 01 · Difficulty 2/5 · ~20 minutes
 
 ## Learning Objective
 

@@ -1,4 +1,4 @@
-"""Land Area -- Family 08, Assessment 02 (starter).
+"""Land Area -- Family 080, Assessment 02 (starter).
 
 The Plot class is provided and complete. Complete the Rectangular and Triangular
 classes.

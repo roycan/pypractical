@@ -1,4 +1,4 @@
-"""Studio Booking -- Family 03, Assessment 04 (starter).
+"""Studio Booking -- Family 030, Assessment 04 (starter).
 
 Complete the Session and Studio classes. Do NOT modify minimum_studios.
 """

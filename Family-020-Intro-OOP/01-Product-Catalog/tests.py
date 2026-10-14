@@ -1,4 +1,4 @@
-"""Unit tests for Product Catalog -- Family 02, Assessment 01."""
+"""Unit tests for Product Catalog -- Family 020, Assessment 01."""
 
 import unittest
 

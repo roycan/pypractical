@@ -1,4 +1,4 @@
-"""House Rooms -- Family 10, Assessment 05 (teacher solution)."""
+"""House Rooms -- Family 100, Assessment 05 (teacher solution)."""
 
 
 # Provided class. Do NOT modify it.

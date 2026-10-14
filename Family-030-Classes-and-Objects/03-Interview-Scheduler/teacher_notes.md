@@ -1,6 +1,6 @@
 # Teacher Notes — Interview Scheduler
 
-> Family 03 · Classes and Objects · Assessment 03 · Difficulty 2/5 · ~20 minutes
+> Family 030 · Classes and Objects · Assessment 03 · Difficulty 2/5 · ~20 minutes
 
 ## Learning Objective
 

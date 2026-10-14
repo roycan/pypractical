@@ -1,4 +1,4 @@
-"""Weight Scale -- Family 07, Assessment 04 (teacher solution)."""
+"""Weight Scale -- Family 070, Assessment 04 (teacher solution)."""
 
 
 # Provided class. Do NOT modify it.

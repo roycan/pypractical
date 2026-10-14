@@ -1,4 +1,4 @@
-"""Piggy Bank -- Family 04, Assessment 03 (starter).
+"""Piggy Bank -- Family 040, Assessment 03 (starter).
 
 Complete the PiggyBank class.
 """

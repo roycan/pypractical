@@ -1,6 +1,6 @@
 # Teacher Notes — Seed Order
 
-> Family 02 · Intro to OOP · Assessment 04 · Difficulty 1/5 · ~15 minutes
+> Family 020 · Intro to OOP · Assessment 04 · Difficulty 1/5 · ~15 minutes
 
 ## Learning Objective
 

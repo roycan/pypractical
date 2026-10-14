@@ -1,4 +1,4 @@
-"""Unit tests for Parking Fee -- Family 06, Assessment 02."""
+"""Unit tests for Parking Fee -- Family 060, Assessment 02."""
 
 import unittest
 

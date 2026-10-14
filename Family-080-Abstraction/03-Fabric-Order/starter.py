@@ -1,4 +1,4 @@
-"""Fabric Order -- Family 08, Assessment 03 (starter).
+"""Fabric Order -- Family 080, Assessment 03 (starter).
 
 The Cloth class is provided and complete. Complete the FullRoll and HalfRoll
 classes.

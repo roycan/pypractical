@@ -1,0 +1,116 @@
+# Family 055 — Encapsulation and Inheritance (Integration)
+
+> SG 8 + SG 9 · Difficulty 2/5 · ~15 minutes · Practical-exam integration family
+
+## Overview
+
+This family is the practical-exam integration family: one problem assesses two
+previously taught ideas together. Students write a single child class that
+reuses a provided parent through `super().__init__(...)` (inheritance) and
+protects its own data with a validated, protected attribute (encapsulation).
+The parent class is provided and complete; the exam is the child.
+
+## Primary Learning Objective
+
+Apply inheritance and encapsulation together in one class: reuse a parent with
+`super().__init__(...)` and validate before storing in a protected attribute.
+
+## Concepts Reinforced
+
+- Inheritance and subclasses (`class Book(Publication):`)
+- `super().__init__(...)`
+- Encapsulation with a protected attribute (`_number_of_pages`)
+- Input validation before storing (reject `<= 0`)
+- Getters (accessors)
+
+## Prerequisites
+
+- Family 040 — Encapsulation
+- Family 050 — Inheritance
+
+## Estimated Classroom Time
+
+- Reading the problem: 2–3 minutes
+- Coding: 8–15 minutes
+- Testing: 3–5 minutes
+
+Total: approximately **10–25 minutes** (timed practical exam).
+
+## Difficulty
+
+Beginner+
+
+## Assessment Type
+
+Independent Practical (timed exam covering two topics in one problem).
+
+## Assessment Philosophy
+
+Class-time pressure often forces two topics into one exam. This family exists
+so that combination is deliberate rather than accidental: the skeleton is
+identical across variants, the scope is fixed (one child class, four tasks),
+and the test suite is balanced 5 inheritance / 5 encapsulation / 1 integration
+/ 1 hidden, so neither concept dominates the score. CURRICULUM.md notes that
+some assessments "provide opportunities to integrate multiple ideas" — this is
+that assessment, used after both single-concept families are taught.
+
+## Assessment Variants
+
+| # | Problem | Story | Validated field |
+|---|---|---|---|
+| 01 | 01-Library-Book | School library books | `number_of_pages` |
+| 02 | 02-Video-Game-Edition | Game store deluxe editions | `bonus_levels` |
+| 03 | 03-Streaming-Account | Streaming premium accounts | `max_screens` |
+| 04 | 04-Sports-Captain | Sports club captains | `trophies_won` |
+
+All variants are isomorphic: identical skeleton and difficulty, different
+stories, for fairness across exam sections.
+
+## Learning Progression
+
+- Previous: Family 050 — Inheritance
+- Current: Family 055 — Encapsulation and Inheritance (Integration)
+- Next: Family 060 — Method Overriding
+
+## Common Student Mistakes
+
+- Forgetting `(Publication)` when declaring the child class.
+- Forgetting to call `super().__init__(title, author)`.
+- Storing a public attribute instead of the protected `_number_of_pages`.
+- Checking only `< 0`, letting zero slip through (`<= 0` is required).
+- Printing the warning but forgetting the `0` placeholder fallback.
+- Redefining `display_info()` in the child — not required; the parent's method
+  is inherited and reused unchanged.
+
+## Teaching Notes
+
+Emphasize the division of labor: the parent owns the shared fields and the
+shared `display_info()`; the child only adds its own validated field. The
+`0` fallback is a documented placeholder meaning "not recorded", never a valid
+count — this resolves the "zero is invalid yet stored" trap deliberately. The
+demo in `solution.py` is behind a main guard so it never interferes with the
+auto-grading.
+
+## Automatic Assessment
+
+Each problem ships a `tests.py` with 12 equal-weight deterministic tests. A
+student's score is the percentage of passing tests. The repo-level gate
+`python3 tools/verify.py family <problem-dir>` additionally runs a
+broken-solution matrix: four classic mistakes (no parent, no `super()`, public
+attribute, `< 0` check) are injected into a temp copy of the solution, and each
+must fail exactly the test that guards its concept — proving the tests grade
+what they claim.
+
+## Future Extensions
+
+- Add a validating setter (`set_number_of_pages`) and test post-construction
+  updates (extends toward the full Family 040 pattern).
+- Add method overriding so `display_info()` includes the child's field
+  (moves into Family 060 territory).
+- Build a list of mixed publications and report totals (polymorphism preview).
+
+## Revision History
+
+| Version | Date | Summary |
+|---|---|---|
+| 1.0 | 2026-10-14 | Initial release (4 variants, gate-verified) |

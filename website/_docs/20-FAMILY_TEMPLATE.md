@@ -12,7 +12,7 @@ Families are the building blocks of the curriculum.
 
 Example:
 
-> Family 01 – Minimum Cost Decisions
+> Family 010 – Minimum Cost Decisions
 
 ---
 

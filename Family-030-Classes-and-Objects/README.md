@@ -1,4 +1,4 @@
-# Family 03 — Classes and Objects
+# Family 030 — Classes and Objects
 
 > SG 4-5 · Difficulty 2/5 · ~20 min
 
@@ -39,9 +39,9 @@ fairness across class sections.
 
 ## Learning Progression
 
-- Previous: Family 02 — Intro to OOP
-- Current: Family 03 — Classes and Objects
-- Next: Family 04 — Encapsulation
+- Previous: Family 020 — Intro to OOP
+- Current: Family 030 — Classes and Objects
+- Next: Family 040 — Encapsulation
 
 ## Common Student Mistakes
 

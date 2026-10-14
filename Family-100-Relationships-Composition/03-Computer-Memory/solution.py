@@ -1,4 +1,4 @@
-"""Computer Memory -- Family 10, Assessment 03 (teacher solution)."""
+"""Computer Memory -- Family 100, Assessment 03 (teacher solution)."""
 
 
 # Provided class. Do NOT modify it.
