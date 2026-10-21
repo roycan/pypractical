@@ -1,0 +1,25 @@
+title: Race Car
+
+family: Encapsulation and Inheritance
+
+difficulty: 2/5
+
+estimated_time: 15 minutes
+
+language: Python
+
+concepts:
+  - inheritance
+  - subclasses
+  - super().__init__
+  - encapsulation
+  - protected attributes
+  - input validation
+  - relational validation
+  - getters
+
+grading: automatic unittest
+
+classroom_tested: false
+
+version: 1.0

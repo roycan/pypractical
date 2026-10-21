@@ -111,12 +111,29 @@ def _mutate_boundary(text, spec):
     return new_text if count else None
 
 
+def _mutate_relational_boundary(text, spec):
+    """Rewrite the relational bound '<=' against the parent field to '<'.
+
+    Applies to non-isomorphic practice extensions whose validation compares a
+    proposed value with inherited parent state (e.g. '<= self.max_speed');
+    moving the boundary to '<' wrongly rejects the equal-to-maximum case.
+    """
+    new_text, count = re.subn(r"<=\s*self\.", "< self.", text)
+    return new_text if count else None
+
+
 MUTATIONS = {
     "drop_inheritance": _mutate_drop_inheritance,
     "drop_super": _mutate_drop_super,
     "make_public": _mutate_make_public,
     "boundary": _mutate_boundary,
+    "relational_boundary": _mutate_relational_boundary,
 }
+
+# The four classic mutations shared by the isomorphic exam variants (01-04).
+# Specs without a "mutations" key run exactly this set, so adding a new mutation
+# to MUTATIONS never changes what existing specs are checked against.
+DEFAULT_MUTATIONS = ["drop_inheritance", "drop_super", "make_public", "boundary"]
 
 MATRIX_SPECS = {
     "01-Library-Book": {
@@ -153,6 +170,17 @@ MATRIX_SPECS = {
             "drop_super": "test_captain_inherits_name_via_super",
             "make_public": "test_value_stored_in_protected_attribute",
             "boundary": "test_zero_trophies_prints_warning",
+        },
+    },
+    "05-Race-Car": {
+        "child": "Racer", "parent": "Vehicle", "int_attr": "top_speed",
+        "mutations": ["drop_inheritance", "drop_super", "make_public",
+                      "relational_boundary"],
+        "expected_fails": {
+            "drop_inheritance": "test_racer_is_subclass_of_vehicle",
+            "drop_super": "test_racer_inherits_name_via_super",
+            "make_public": "test_value_stored_in_protected_attribute",
+            "relational_boundary": "test_top_speed_equal_to_max_is_valid",
         },
     },
 }
@@ -267,7 +295,13 @@ def _check_matrix(problem_dir, spec):
     with open(os.path.join(problem_dir, "solution.py"), encoding="utf-8") as handle:
         original = handle.read()
 
-    for name, mutate in MUTATIONS.items():
+    for name in spec.get("mutations", DEFAULT_MUTATIONS):
+        mutate = MUTATIONS.get(name)
+        if mutate is None:
+            print("  FAIL  matrix.%s: unknown mutation name" % name)
+            all_ok = False
+            continue
+
         expected_test = spec["expected_fails"].get(name)
         if expected_test is None:
             print("  FAIL  matrix.%s: no expected test in the spec" % name)
@@ -335,7 +369,8 @@ def gate_problem(problem_dir, label):
     is_family_055 = "Family-055" in problem_dir
     if spec is not None:
         if _check_matrix(problem_dir, spec):
-            print("  ok    broken-solution matrix (4 mutations)")
+            mutation_count = len(spec.get("mutations", DEFAULT_MUTATIONS))
+            print("  ok    broken-solution matrix (%d mutations)" % mutation_count)
         else:
             ok = False
     elif is_family_055:

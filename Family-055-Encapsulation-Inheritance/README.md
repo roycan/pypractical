@@ -56,15 +56,21 @@ that assessment, used after both single-concept families are taught.
 
 ## Assessment Variants
 
-| # | Problem | Story | Validated field |
-|---|---|---|---|
-| 01 | 01-Library-Book | School library books | `number_of_pages` |
-| 02 | 02-Video-Game-Edition | Game store deluxe editions | `bonus_levels` |
-| 03 | 03-Streaming-Account | Streaming premium accounts | `max_screens` |
-| 04 | 04-Sports-Captain | Sports club captains | `trophies_won` |
+| # | Problem | Story | Validated field | Kind |
+|---|---|---|---|---|
+| 01 | 01-Library-Book | School library books | `number_of_pages` | Exam variant |
+| 02 | 02-Video-Game-Edition | Game store deluxe editions | `bonus_levels` | Exam variant |
+| 03 | 03-Streaming-Account | Streaming premium accounts | `max_screens` | Exam variant |
+| 04 | 04-Sports-Captain | Sports club captains | `trophies_won` | Exam variant |
+| 05 | 05-Race-Car | Race car top speeds | `top_speed` | Practice extension |
 
-All variants are isomorphic: identical skeleton and difficulty, different
-stories, for fairness across exam sections.
+Variants 01–04 are isomorphic: identical skeleton and difficulty, different
+stories, for fairness across exam sections. Variant **05-Race-Car** is a
+deliberately **NON-isomorphic practice extension** — not an exam-equivalent
+variant. Its validation rule references parent state
+(`top_speed <= self.max_speed`), so inheritance and encapsulation interlock and
+a solution pattern-matched from 01–04 will not fit. Its invalid-value fallback
+is the parent's `max_speed`, not the `0` placeholder used by 01–04.
 
 ## Learning Progression
 
@@ -114,3 +120,4 @@ what they claim.
 | Version | Date | Summary |
 |---|---|---|
 | 1.0 | 2026-10-14 | Initial release (4 variants, gate-verified) |
+| 1.1 | 2026-10-20 | Added 05-Race-Car: a deliberate NON-isomorphic practice extension whose relational validation interlocks inheritance + encapsulation; `tools/verify.py` gains per-spec mutation selection and a `relational_boundary` mutation |

@@ -33,7 +33,9 @@ Key facts:
 - **Current state:** Rounds 1–2 are COMPLETE (50 problem folders), and Round 2.5 added
   the x10 zero-padded family renumbering, the `tools/verify.py` verification gates, and
   the `Family-055-Encapsulation-Inheritance` integration exam family (SG 8 + SG 9 in one
-  problem) — 54 problem folders, 649 tests green. See Section 23 for progress.
+  problem), including a NON-isomorphic practice extension (`05-Race-Car`) that interlocks
+  inheritance + encapsulation — 55 problem folders, 661 tests green. See Section 23 for
+  progress.
 
 ---
 
@@ -111,8 +113,9 @@ All links are relative from `inceptions/` (hence the `../` prefix).
 - [`Family-030-Classes-and-Objects/01-TV-Recorder/`](../Family-030-Classes-and-Objects/01-TV-Recorder/problem.md)
   — canonical **class-based (OOP)** reference problem (6 deliverables, 14 tests)
 - [`Family-055-Encapsulation-Inheritance/`](../Family-055-Encapsulation-Inheritance/README.md)
-  — **integration practical-exam family** (SG 8 + SG 9 in one problem; 4 isomorphic
-  variants, 48 tests, broken-solution matrix)
+  — **integration practical-exam family** (SG 8 + SG 9 in one problem; 4 isomorphic exam
+  variants + a NON-isomorphic practice extension `05-Race-Car` whose validation references
+  parent state; 60 tests, broken-solution matrix)
 - [`plans/round-1-foundation-plan.md`](../plans/round-1-foundation-plan.md) — Round 1 plan
   and outcome (task scorecard + results)
 - [`plans/family-055-encapsulation-inheritance-plan.md`](../plans/family-055-encapsulation-inheritance-plan.md)
@@ -643,12 +646,18 @@ flowchart TD
 > **Round 2.5 outcome:** family directories renumbered to the zero-padded x10 scheme
 > (`Family-010` ... `Family-130`, gap `Family-055` for integration families); 223 files
 > swept by `tools/renumber_refs.py` with zero stale references afterwards. New
-> `Family-055-Encapsulation-Inheritance` (4 variants, 24 files) assesses SG 8 + SG 9 in
-> one 10–25 minute practical exam: provided parent class + one child class with
-> `super().__init__(...)` reuse, a protected `_value` + getter, and validate-before-store.
-> 54 problem folders, 649 tests green (`python3 tools/verify.py all` and
-> `./run_all_tests.sh`); each Family-055 variant additionally passes its
-> broken-solution matrix (16/16 mutations caught).
+> `Family-055-Encapsulation-Inheritance` (4 exam variants + 1 practice extension, 30 files)
+> assesses SG 8 + SG 9 in one 10–25 minute practical exam: provided parent class + one
+> child class with `super().__init__(...)` reuse, a protected `_value` + getter, and
+> validate-before-store. The 5th problem, `05-Race-Car`, is a deliberately
+> NON-isomorphic practice extension whose validation references the parent's `max_speed`
+> (`top_speed <= self.max_speed`), so inheritance and encapsulation interlock; its invalid
+> fallback clamps to the parent's value rather than the `0` placeholder used by 01–04.
+> 55 problem folders, 661 tests green (`python3 tools/verify.py all` and
+> `./run_all_tests.sh`); each Family-055 problem additionally passes its broken-solution
+> matrix (20/20 mutations caught), and `tools/verify.py` supports per-spec mutation
+> selection so the practice extension can add `relational_boundary` without disturbing the
+> four isomorphic variants.
 
 > **Note:** This file should be updated as the project evolves. It is a **living document**.
 > When new families are added, specs change, or conventions evolve, update this context file
