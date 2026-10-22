@@ -122,18 +122,54 @@ def _mutate_relational_boundary(text, spec):
     return new_text if count else None
 
 
+def _mutate_no_property(text, spec):
+    """Drop the property machinery: remove the '@property' and '@x.setter' lines.
+
+    Applies to the isomorphic exam variants (01-04), whose encapsulation half
+    exposes the protected value through a @property getter and a @x.setter.
+    Removing only '@property' would leave '@x.setter' with no property to attach
+    to (an AttributeError at class-definition time), so both decorators go: the
+    getter and setter become plain methods, the value is no longer exposed as an
+    attribute, and the protected backing field is never set.
+    """
+    new_text, count = re.subn(r"^[ \t]*@property[ \t]*\r?\n", "", text,
+                              flags=re.MULTILINE)
+    if not count:
+        return None
+    new_text, count = re.subn(r"^[ \t]*@\w+\.setter[ \t]*\r?\n", "", new_text,
+                              flags=re.MULTILINE)
+    return new_text if count else None
+
+
+def _mutate_setter_no_validate(text, spec):
+    """Force the setter's guard to never trigger, so it stores invalid values.
+
+    Applies to the isomorphic exam variants (01-04), whose setter is the single
+    validation point. Disabling the guard lets a zero or negative value through
+    both at construction and on a later assignment.
+    """
+    new_text, count = re.subn(r"if\s+\w+\s*<=\s*0\s*:", "if False:", text)
+    return new_text if count else None
+
+
 MUTATIONS = {
     "drop_inheritance": _mutate_drop_inheritance,
     "drop_super": _mutate_drop_super,
     "make_public": _mutate_make_public,
+    "no_property": _mutate_no_property,
+    "setter_no_validate": _mutate_setter_no_validate,
     "boundary": _mutate_boundary,
     "relational_boundary": _mutate_relational_boundary,
 }
 
-# The four classic mutations shared by the isomorphic exam variants (01-04).
-# Specs without a "mutations" key run exactly this set, so adding a new mutation
-# to MUTATIONS never changes what existing specs are checked against.
-DEFAULT_MUTATIONS = ["drop_inheritance", "drop_super", "make_public", "boundary"]
+# The five mutations shared by the isomorphic exam variants (01-04). Specs
+# without a "mutations" key run exactly this set, so adding a new mutation to
+# MUTATIONS never changes what existing specs are checked against. "make_public"
+# is deliberately NOT in this set: renaming the protected backing field to the
+# property name makes the getter recurse, so it is used only by 05-Race-Car,
+# which still exposes its value through a plain getter method.
+DEFAULT_MUTATIONS = ["drop_inheritance", "drop_super", "no_property",
+                     "setter_no_validate", "boundary"]
 
 MATRIX_SPECS = {
     "01-Library-Book": {
@@ -141,7 +177,8 @@ MATRIX_SPECS = {
         "expected_fails": {
             "drop_inheritance": "test_book_is_subclass_of_publication",
             "drop_super": "test_book_inherits_title_via_super",
-            "make_public": "test_value_stored_in_protected_attribute",
+            "no_property": "test_value_stored_in_protected_attribute",
+            "setter_no_validate": "test_post_construction_update_validates",
             "boundary": "test_zero_pages_prints_warning",
         },
     },
@@ -150,7 +187,8 @@ MATRIX_SPECS = {
         "expected_fails": {
             "drop_inheritance": "test_deluxe_edition_is_subclass_of_game",
             "drop_super": "test_deluxe_edition_inherits_title_via_super",
-            "make_public": "test_value_stored_in_protected_attribute",
+            "no_property": "test_value_stored_in_protected_attribute",
+            "setter_no_validate": "test_post_construction_update_validates",
             "boundary": "test_zero_bonus_levels_prints_warning",
         },
     },
@@ -159,7 +197,8 @@ MATRIX_SPECS = {
         "expected_fails": {
             "drop_inheritance": "test_premium_account_is_subclass_of_account",
             "drop_super": "test_premium_account_inherits_email_via_super",
-            "make_public": "test_value_stored_in_protected_attribute",
+            "no_property": "test_value_stored_in_protected_attribute",
+            "setter_no_validate": "test_post_construction_update_validates",
             "boundary": "test_zero_screens_prints_warning",
         },
     },
@@ -168,7 +207,8 @@ MATRIX_SPECS = {
         "expected_fails": {
             "drop_inheritance": "test_captain_is_subclass_of_member",
             "drop_super": "test_captain_inherits_name_via_super",
-            "make_public": "test_value_stored_in_protected_attribute",
+            "no_property": "test_value_stored_in_protected_attribute",
+            "setter_no_validate": "test_post_construction_update_validates",
             "boundary": "test_zero_trophies_prints_warning",
         },
     },

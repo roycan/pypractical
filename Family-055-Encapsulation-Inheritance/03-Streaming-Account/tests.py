@@ -31,6 +31,26 @@ def _construction_output(cls, *args):
     return buffer.getvalue().strip(), obj
 
 
+def _assignment_output(obj, attr, value):
+    """Assign obj.attr = value while capturing stdout.
+
+    Capturing only what is printed DURING the assignment keeps demo output from
+    polluting the validation checks.
+
+    Args:
+        obj: The object to update.
+        attr (str): The attribute name to assign.
+        value: The value to assign.
+
+    Returns:
+        str: The text printed during the assignment.
+    """
+    buffer = io.StringIO()
+    with contextlib.redirect_stdout(buffer):
+        setattr(obj, attr, value)
+    return buffer.getvalue().strip()
+
+
 class TestStreamingAccount(unittest.TestCase):
 
     # --- Inheritance ---
@@ -63,7 +83,7 @@ class TestStreamingAccount(unittest.TestCase):
     def test_value_stored_in_protected_attribute(self):
         premium = PremiumAccount("ben@mail.com", "Ben", 4)
         self.assertTrue(hasattr(premium, "_max_screens"))
-        self.assertEqual(premium.get_max_screens(), 4)
+        self.assertEqual(premium.max_screens, 4)
 
     def test_zero_screens_prints_warning(self):
         out, _ = _construction_output(PremiumAccount, "cy@mail.com", "Cy", 0)
@@ -75,19 +95,25 @@ class TestStreamingAccount(unittest.TestCase):
 
     def test_invalid_screens_stored_as_zero_fallback(self):
         _, premium = _construction_output(PremiumAccount, "cy@mail.com", "Cy", -1)
-        self.assertEqual(premium.get_max_screens(), 0)
+        self.assertEqual(premium.max_screens, 0)
 
     def test_valid_premium_account_prints_no_warning(self):
         out, _ = _construction_output(PremiumAccount, "ben@mail.com", "Ben", 4)
         self.assertNotIn("positive", out.lower())
+
+    def test_post_construction_update_validates(self):
+        premium = PremiumAccount("ben@mail.com", "Ben", 4)
+        out = _assignment_output(premium, "max_screens", -1)
+        self.assertIn("positive", out.lower())
+        self.assertEqual(premium.max_screens, 0)
 
     # --- Integration ---
 
     def test_two_premium_accounts_are_independent(self):
         first = PremiumAccount("ben@mail.com", "Ben", 4)
         second = PremiumAccount("dee@mail.com", "Dee", 2)
-        self.assertEqual(first.get_max_screens(), 4)
-        self.assertEqual(second.get_max_screens(), 2)
+        self.assertEqual(first.max_screens, 4)
+        self.assertEqual(second.max_screens, 2)
 
     # --- Hidden ---
 

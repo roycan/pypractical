@@ -31,6 +31,26 @@ def _construction_output(cls, *args):
     return buffer.getvalue().strip(), obj
 
 
+def _assignment_output(obj, attr, value):
+    """Assign obj.attr = value while capturing stdout.
+
+    Capturing only what is printed DURING the assignment keeps demo output from
+    polluting the validation checks.
+
+    Args:
+        obj: The object to update.
+        attr (str): The attribute name to assign.
+        value: The value to assign.
+
+    Returns:
+        str: The text printed during the assignment.
+    """
+    buffer = io.StringIO()
+    with contextlib.redirect_stdout(buffer):
+        setattr(obj, attr, value)
+    return buffer.getvalue().strip()
+
+
 class TestSportsCaptain(unittest.TestCase):
 
     # --- Inheritance ---
@@ -63,7 +83,7 @@ class TestSportsCaptain(unittest.TestCase):
     def test_value_stored_in_protected_attribute(self):
         captain = Captain("Ben", "Football", 3)
         self.assertTrue(hasattr(captain, "_trophies_won"))
-        self.assertEqual(captain.get_trophies_won(), 3)
+        self.assertEqual(captain.trophies_won, 3)
 
     def test_zero_trophies_prints_warning(self):
         out, _ = _construction_output(Captain, "Cal", "Basketball", 0)
@@ -75,19 +95,25 @@ class TestSportsCaptain(unittest.TestCase):
 
     def test_invalid_trophies_stored_as_zero_fallback(self):
         _, captain = _construction_output(Captain, "Cal", "Basketball", -1)
-        self.assertEqual(captain.get_trophies_won(), 0)
+        self.assertEqual(captain.trophies_won, 0)
 
     def test_valid_captain_prints_no_warning(self):
         out, _ = _construction_output(Captain, "Ben", "Football", 3)
         self.assertNotIn("positive", out.lower())
+
+    def test_post_construction_update_validates(self):
+        captain = Captain("Ben", "Football", 3)
+        out = _assignment_output(captain, "trophies_won", -1)
+        self.assertIn("positive", out.lower())
+        self.assertEqual(captain.trophies_won, 0)
 
     # --- Integration ---
 
     def test_two_captains_are_independent(self):
         first = Captain("Ben", "Football", 3)
         second = Captain("Dee", "Volleyball", 5)
-        self.assertEqual(first.get_trophies_won(), 3)
-        self.assertEqual(second.get_trophies_won(), 5)
+        self.assertEqual(first.trophies_won, 3)
+        self.assertEqual(second.trophies_won, 5)
 
     # --- Hidden ---
 

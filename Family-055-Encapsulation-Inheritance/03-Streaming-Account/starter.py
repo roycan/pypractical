@@ -34,14 +34,13 @@ class PremiumAccount():                        # TODO 1: make PremiumAccount inh
         """
 
         # TODO 2: Call super().__init__(email, owner).
-        # TODO 3: If max_screens is zero or negative, print
-        #         "The number of screens must be positive" and store 0
-        #         (0 means "not recorded"); otherwise store the value in the
-        #         protected attribute _max_screens.
+        # TODO 3: Assign max_screens to self.max_screens so the setter
+        #         below validates and stores it.
 
         return
 
-    def get_max_screens(self):
+    @property
+    def max_screens(self):
         """Return the protected screen limit.
 
         Returns:
@@ -51,3 +50,18 @@ class PremiumAccount():                        # TODO 1: make PremiumAccount inh
         # TODO 4: Return the protected _max_screens.
 
         return 0
+
+    @max_screens.setter
+    def max_screens(self, value):
+        """Validate and store the screen limit.
+
+        Args:
+            value (int): The proposed maximum number of screens.
+        """
+
+        # TODO 5: If value is zero or negative, print
+        #         "The number of screens must be positive" and store 0
+        #         (0 means "not recorded"); otherwise store value in the
+        #         protected attribute _max_screens.
+
+        return

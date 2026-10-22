@@ -16,6 +16,8 @@ concepts:
   - protected attributes
   - input validation
   - getters
+  - "@property"
+  - setters
 
 grading: automatic unittest
 

@@ -30,19 +30,29 @@ class DeluxeEdition(Game):
             bonus_levels (int): The number of bonus levels.
         """
         super().__init__(title, genre)
-        if bonus_levels <= 0:
-            print("The number of bonus levels must be positive")
-            self._bonus_levels = 0
-        else:
-            self._bonus_levels = bonus_levels
+        self.bonus_levels = bonus_levels
 
-    def get_bonus_levels(self):
+    @property
+    def bonus_levels(self):
         """Return the protected bonus level count.
 
         Returns:
             int: The number of bonus levels (0 when it was not recorded).
         """
         return self._bonus_levels
+
+    @bonus_levels.setter
+    def bonus_levels(self, value):
+        """Validate and store the bonus level count.
+
+        Args:
+            value (int): The proposed number of bonus levels.
+        """
+        if value <= 0:
+            print("The number of bonus levels must be positive")
+            self._bonus_levels = 0
+        else:
+            self._bonus_levels = value
 
 
 if __name__ == "__main__":
@@ -51,7 +61,7 @@ if __name__ == "__main__":
 
     deluxe = DeluxeEdition("Elden Ring", "RPG", 40)
     print(deluxe.display_info())
-    print(deluxe.get_bonus_levels())
+    print(deluxe.bonus_levels)
 
     bad_deluxe = DeluxeEdition("Mystery Quest", "Puzzle", -2)
-    print(bad_deluxe.get_bonus_levels())
+    print(bad_deluxe.bonus_levels)

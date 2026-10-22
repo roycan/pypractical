@@ -38,16 +38,22 @@ Each captain should remember:
 ### Captain.\_\_init\_\_(name, club, trophies_won)
 
 Call `super().__init__(name, club)` so the captain inherits the name and club.
-Then validate the trophy count:
+Then assign the trophy count to `self.trophies_won` so the setter below
+validates and stores it.
 
-- if `trophies_won` is zero or negative, print
+### Captain.trophies_won (property)
+
+Use the `@property` decorator so callers read the count as
+`captain.trophies_won` — no parentheses. Return the protected `_trophies_won`.
+
+### Captain.trophies_won (setter)
+
+Use the `@trophies_won.setter` decorator. Validate the trophy count:
+
+- if the value is zero or negative, print
   `"The number of trophies must be positive"` and store `0` as the placeholder
   meaning "not recorded"
 - otherwise store the value in the protected attribute `_trophies_won`
-
-### Captain.get_trophies_won()
-
-Return the protected `_trophies_won`.
 
 ## Constraints
 
@@ -64,10 +70,10 @@ print(member.display_info())
 
 captain = Captain("Ben", "Football", 3)
 print(captain.display_info())
-print(captain.get_trophies_won())
+print(captain.trophies_won)
 
 bad_captain = Captain("Cal", "Basketball", -1)
-print(bad_captain.get_trophies_won())
+print(bad_captain.trophies_won)
 ```
 
 Output
@@ -85,13 +91,17 @@ The number of trophies must be positive
 `member` is a plain `Member`. The `captain` is a `Captain`, so it is also a
 member: its `name` and `club` come from the parent through
 `super().__init__(name, club)`, and its `display_info()` is the parent's method,
-reused unchanged. `bad_captain` is given a negative trophy count, so the
-constructor prints a warning and stores the placeholder `0` — its data is
+reused unchanged. The trophy count is protected: `captain.trophies_won` reads it
+through the `@property` getter, and the `@trophies_won.setter` validates every
+value before it is stored. `bad_captain` is given a negative trophy count, so
+the setter prints a warning and stores the placeholder `0` — its data is
 rejected, not silently kept.
 
 ## Hint
 
 Write `class Captain(Member):` so the captain inherits from the parent. In
-`__init__`, call `super().__init__(name, club)` first. Then check the trophy
-count with `<= 0` before storing it in `self._trophies_won` — zero trophies is
+`__init__`, call `super().__init__(name, club)` first, then assign
+`self.trophies_won = trophies_won` so the setter runs. Decorate the getter with
+`@property` and the setter with `@trophies_won.setter`. In the setter, check the
+value with `<= 0` before storing it in `self._trophies_won` — zero trophies is
 garbage data too.

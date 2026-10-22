@@ -34,14 +34,13 @@ class Captain():                               # TODO 1: make Captain inherit fr
         """
 
         # TODO 2: Call super().__init__(name, club).
-        # TODO 3: If trophies_won is zero or negative, print
-        #         "The number of trophies must be positive" and store 0
-        #         (0 means "not recorded"); otherwise store the value in the
-        #         protected attribute _trophies_won.
+        # TODO 3: Assign trophies_won to self.trophies_won so the setter
+        #         below validates and stores it.
 
         return
 
-    def get_trophies_won(self):
+    @property
+    def trophies_won(self):
         """Return the protected trophy count.
 
         Returns:
@@ -51,3 +50,18 @@ class Captain():                               # TODO 1: make Captain inherit fr
         # TODO 4: Return the protected _trophies_won.
 
         return 0
+
+    @trophies_won.setter
+    def trophies_won(self, value):
+        """Validate and store the trophy count.
+
+        Args:
+            value (int): The proposed number of trophies won.
+        """
+
+        # TODO 5: If value is zero or negative, print
+        #         "The number of trophies must be positive" and store 0
+        #         (0 means "not recorded"); otherwise store value in the
+        #         protected attribute _trophies_won.
+
+        return

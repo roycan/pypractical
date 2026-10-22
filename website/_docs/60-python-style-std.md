@@ -347,6 +347,10 @@ Examples include:
 
 Students should first master fundamental programming concepts.
 
+> **Note:** `@property` and `@<name>.setter` are permitted when encapsulation is
+> the explicit learning objective (SG 8). The Family-055 exam variants use them
+> to expose a protected attribute through a validating setter.
+
 ---
 
 # Error Handling

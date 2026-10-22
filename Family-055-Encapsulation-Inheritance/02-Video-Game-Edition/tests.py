@@ -31,6 +31,26 @@ def _construction_output(cls, *args):
     return buffer.getvalue().strip(), obj
 
 
+def _assignment_output(obj, attr, value):
+    """Assign obj.attr = value while capturing stdout.
+
+    Capturing only what is printed DURING the assignment keeps demo output from
+    polluting the validation checks.
+
+    Args:
+        obj: The object to update.
+        attr (str): The attribute name to assign.
+        value: The value to assign.
+
+    Returns:
+        str: The text printed during the assignment.
+    """
+    buffer = io.StringIO()
+    with contextlib.redirect_stdout(buffer):
+        setattr(obj, attr, value)
+    return buffer.getvalue().strip()
+
+
 class TestVideoGameEdition(unittest.TestCase):
 
     # --- Inheritance ---
@@ -63,7 +83,7 @@ class TestVideoGameEdition(unittest.TestCase):
     def test_value_stored_in_protected_attribute(self):
         deluxe = DeluxeEdition("Elden Ring", "RPG", 40)
         self.assertTrue(hasattr(deluxe, "_bonus_levels"))
-        self.assertEqual(deluxe.get_bonus_levels(), 40)
+        self.assertEqual(deluxe.bonus_levels, 40)
 
     def test_zero_bonus_levels_prints_warning(self):
         out, _ = _construction_output(DeluxeEdition, "Empty", "Puzzle", 0)
@@ -75,19 +95,25 @@ class TestVideoGameEdition(unittest.TestCase):
 
     def test_invalid_bonus_levels_stored_as_zero_fallback(self):
         _, deluxe = _construction_output(DeluxeEdition, "Mystery Quest", "Puzzle", -2)
-        self.assertEqual(deluxe.get_bonus_levels(), 0)
+        self.assertEqual(deluxe.bonus_levels, 0)
 
     def test_valid_deluxe_edition_prints_no_warning(self):
         out, _ = _construction_output(DeluxeEdition, "Elden Ring", "RPG", 40)
         self.assertNotIn("positive", out.lower())
+
+    def test_post_construction_update_validates(self):
+        deluxe = DeluxeEdition("Elden Ring", "RPG", 40)
+        out = _assignment_output(deluxe, "bonus_levels", -2)
+        self.assertIn("positive", out.lower())
+        self.assertEqual(deluxe.bonus_levels, 0)
 
     # --- Integration ---
 
     def test_two_deluxe_editions_are_independent(self):
         first = DeluxeEdition("Elden Ring", "RPG", 40)
         second = DeluxeEdition("Mario Kart", "Racing", 8)
-        self.assertEqual(first.get_bonus_levels(), 40)
-        self.assertEqual(second.get_bonus_levels(), 8)
+        self.assertEqual(first.bonus_levels, 40)
+        self.assertEqual(second.bonus_levels, 8)
 
     # --- Hidden ---
 

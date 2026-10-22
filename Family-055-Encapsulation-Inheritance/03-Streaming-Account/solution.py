@@ -30,19 +30,29 @@ class PremiumAccount(Account):
             max_screens (int): The maximum number of screens.
         """
         super().__init__(email, owner)
-        if max_screens <= 0:
-            print("The number of screens must be positive")
-            self._max_screens = 0
-        else:
-            self._max_screens = max_screens
+        self.max_screens = max_screens
 
-    def get_max_screens(self):
+    @property
+    def max_screens(self):
         """Return the protected screen limit.
 
         Returns:
             int: The maximum number of screens (0 when it was not recorded).
         """
         return self._max_screens
+
+    @max_screens.setter
+    def max_screens(self, value):
+        """Validate and store the screen limit.
+
+        Args:
+            value (int): The proposed maximum number of screens.
+        """
+        if value <= 0:
+            print("The number of screens must be positive")
+            self._max_screens = 0
+        else:
+            self._max_screens = value
 
 
 if __name__ == "__main__":
@@ -51,7 +61,7 @@ if __name__ == "__main__":
 
     premium = PremiumAccount("ben@mail.com", "Ben", 4)
     print(premium.display_info())
-    print(premium.get_max_screens())
+    print(premium.max_screens)
 
     bad_premium = PremiumAccount("cy@mail.com", "Cy", -1)
-    print(bad_premium.get_max_screens())
+    print(bad_premium.max_screens)

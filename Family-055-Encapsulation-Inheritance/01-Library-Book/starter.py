@@ -34,14 +34,13 @@ class Book():                                  # TODO 1: make Book inherit from 
         """
 
         # TODO 2: Call super().__init__(title, author).
-        # TODO 3: If number_of_pages is zero or negative, print
-        #         "The number of pages must be positive" and store 0
-        #         (0 means "not recorded"); otherwise store the value in the
-        #         protected attribute _number_of_pages.
+        # TODO 3: Assign number_of_pages to self.number_of_pages so the
+        #         setter below validates and stores it.
 
         return
 
-    def get_number_of_pages(self):
+    @property
+    def number_of_pages(self):
         """Return the protected page count.
 
         Returns:
@@ -51,3 +50,18 @@ class Book():                                  # TODO 1: make Book inherit from 
         # TODO 4: Return the protected _number_of_pages.
 
         return 0
+
+    @number_of_pages.setter
+    def number_of_pages(self, value):
+        """Validate and store the page count.
+
+        Args:
+            value (int): The proposed page count.
+        """
+
+        # TODO 5: If value is zero or negative, print
+        #         "The number of pages must be positive" and store 0
+        #         (0 means "not recorded"); otherwise store value in the
+        #         protected attribute _number_of_pages.
+
+        return

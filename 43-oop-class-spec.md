@@ -51,6 +51,10 @@ All SPEC-002 rules apply unless overridden here:
 - **No `pass`.** Use the placeholder table below.
 - A **provided helper function** (when used) is included verbatim with a
   `DO NOT MODIFY` docstring; students never change it.
+- **`@property` / `@<name>.setter`** are permitted when encapsulation is the
+  explicit learning objective (SG 8). The getter and setter each carry a
+  docstring like any other method, and the constructor assigns through the
+  setter so validation lives in one place.
 
 ### Placeholder table (replaces SPEC-002's single return rule)
 

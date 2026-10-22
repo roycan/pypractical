@@ -30,19 +30,29 @@ class Captain(Member):
             trophies_won (int): The number of trophies won.
         """
         super().__init__(name, club)
-        if trophies_won <= 0:
-            print("The number of trophies must be positive")
-            self._trophies_won = 0
-        else:
-            self._trophies_won = trophies_won
+        self.trophies_won = trophies_won
 
-    def get_trophies_won(self):
+    @property
+    def trophies_won(self):
         """Return the protected trophy count.
 
         Returns:
             int: The number of trophies won (0 when it was not recorded).
         """
         return self._trophies_won
+
+    @trophies_won.setter
+    def trophies_won(self, value):
+        """Validate and store the trophy count.
+
+        Args:
+            value (int): The proposed number of trophies won.
+        """
+        if value <= 0:
+            print("The number of trophies must be positive")
+            self._trophies_won = 0
+        else:
+            self._trophies_won = value
 
 
 if __name__ == "__main__":
@@ -51,7 +61,7 @@ if __name__ == "__main__":
 
     captain = Captain("Ben", "Football", 3)
     print(captain.display_info())
-    print(captain.get_trophies_won())
+    print(captain.trophies_won)
 
     bad_captain = Captain("Cal", "Basketball", -1)
-    print(bad_captain.get_trophies_won())
+    print(bad_captain.trophies_won)

@@ -38,16 +38,23 @@ Each book should remember:
 ### Book.\_\_init\_\_(title, author, number_of_pages)
 
 Call `super().__init__(title, author)` so the book inherits the title and
-author. Then validate the page count:
+author. Then assign the page count to `self.number_of_pages` so the setter
+below validates and stores it.
 
-- if `number_of_pages` is zero or negative, print
+### Book.number_of_pages (property)
+
+Use the `@property` decorator so callers read the page count as
+`book.number_of_pages` — no parentheses. Return the protected
+`_number_of_pages`.
+
+### Book.number_of_pages (setter)
+
+Use the `@number_of_pages.setter` decorator. Validate the page count:
+
+- if the value is zero or negative, print
   `"The number of pages must be positive"` and store `0` as the placeholder
   meaning "not recorded"
 - otherwise store the value in the protected attribute `_number_of_pages`
-
-### Book.get_number_of_pages()
-
-Return the protected `_number_of_pages`.
 
 ## Constraints
 
@@ -64,10 +71,10 @@ print(publication.display_info())
 
 book = Book("Clean Code", "R. Martin", 464)
 print(book.display_info())
-print(book.get_number_of_pages())
+print(book.number_of_pages)
 
 bad_book = Book("Mystery", "J. Doe", -5)
-print(bad_book.get_number_of_pages())
+print(bad_book.number_of_pages)
 ```
 
 Output
@@ -85,13 +92,17 @@ The number of pages must be positive
 `publication` is a plain `Publication`. The `book` is a `Book`, so it is also a
 publication: its `title` and `author` come from the parent through
 `super().__init__(title, author)`, and its `display_info()` is the parent's
-method, reused unchanged. `bad_book` is given a negative page count, so the
-constructor prints a warning and stores the placeholder `0` — its data is
-rejected, not silently kept.
+method, reused unchanged. The page count is protected: `book.number_of_pages`
+reads it through the `@property` getter, and the `@number_of_pages.setter`
+validates every value before it is stored. `bad_book` is given a negative page
+count, so the setter prints a warning and stores the placeholder `0` — its data
+is rejected, not silently kept.
 
 ## Hint
 
 Write `class Book(Publication):` so the book inherits from the parent. In
-`__init__`, call `super().__init__(title, author)` first. Then check the page
-count with `<= 0` before storing it in `self._number_of_pages` — zero pages is
-garbage data too.
+`__init__`, call `super().__init__(title, author)` first, then assign
+`self.number_of_pages = number_of_pages` so the setter runs. Decorate the getter
+with `@property` and the setter with `@number_of_pages.setter`. In the setter,
+check the value with `<= 0` before storing it in `self._number_of_pages` — zero
+pages is garbage data too.

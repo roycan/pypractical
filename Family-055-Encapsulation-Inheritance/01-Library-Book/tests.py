@@ -31,6 +31,26 @@ def _construction_output(cls, *args):
     return buffer.getvalue().strip(), obj
 
 
+def _assignment_output(obj, attr, value):
+    """Assign obj.attr = value while capturing stdout.
+
+    Capturing only what is printed DURING the assignment keeps demo output from
+    polluting the validation checks.
+
+    Args:
+        obj: The object to update.
+        attr (str): The attribute name to assign.
+        value: The value to assign.
+
+    Returns:
+        str: The text printed during the assignment.
+    """
+    buffer = io.StringIO()
+    with contextlib.redirect_stdout(buffer):
+        setattr(obj, attr, value)
+    return buffer.getvalue().strip()
+
+
 class TestLibraryBook(unittest.TestCase):
 
     # --- Inheritance ---
@@ -63,7 +83,7 @@ class TestLibraryBook(unittest.TestCase):
     def test_value_stored_in_protected_attribute(self):
         book = Book("Clean Code", "R. Martin", 464)
         self.assertTrue(hasattr(book, "_number_of_pages"))
-        self.assertEqual(book.get_number_of_pages(), 464)
+        self.assertEqual(book.number_of_pages, 464)
 
     def test_zero_pages_prints_warning(self):
         out, _ = _construction_output(Book, "Empty", "J. Doe", 0)
@@ -75,19 +95,25 @@ class TestLibraryBook(unittest.TestCase):
 
     def test_invalid_pages_stored_as_zero_fallback(self):
         _, book = _construction_output(Book, "Mystery", "J. Doe", -5)
-        self.assertEqual(book.get_number_of_pages(), 0)
+        self.assertEqual(book.number_of_pages, 0)
 
     def test_valid_book_prints_no_warning(self):
         out, _ = _construction_output(Book, "Clean Code", "R. Martin", 464)
         self.assertNotIn("positive", out.lower())
+
+    def test_post_construction_update_validates(self):
+        book = Book("Clean Code", "R. Martin", 464)
+        out = _assignment_output(book, "number_of_pages", -5)
+        self.assertIn("positive", out.lower())
+        self.assertEqual(book.number_of_pages, 0)
 
     # --- Integration ---
 
     def test_two_books_are_independent(self):
         first = Book("Clean Code", "R. Martin", 464)
         second = Book("The Hobbit", "J.R.R. Tolkien", 310)
-        self.assertEqual(first.get_number_of_pages(), 464)
-        self.assertEqual(second.get_number_of_pages(), 310)
+        self.assertEqual(first.number_of_pages, 464)
+        self.assertEqual(second.number_of_pages, 310)
 
     # --- Hidden ---
 
